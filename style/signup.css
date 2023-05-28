@@ -1,0 +1,884 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Eczar");
+
+body {
+  position: relative;
+  background: #ffeed9;
+}
+
+.signup__groups {
+  /* home__text */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  gap: 10px;
+
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  top: 50px;
+}
+
+.signup__title {
+  /* home__text */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  margin-bottom: 20px;
+  gap: 10px;
+
+  width: auto;
+  height: 66px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signup__title p {
+  /* signup */
+
+  width: auto;
+  height: 50px;
+
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  /* identical to box height, or 50px */
+
+  letter-spacing: 0.02em;
+
+  color: #403930;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signup__card {
+  /* testimonial__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  gap: 15px;
+
+  width: 650px;
+  height: auto;
+
+  background: #ffe5cc;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signemail__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signemail__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signemail__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signemail__input input {
+  /* A visual guide could */
+
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signusername__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signusername__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signusername__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signusername__input input {
+  /* A visual guide could */
+
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signsex__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signsex__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signsex__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 0px 20px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signsex__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: fit-content;
+  height: 45px;
+}
+
+.signsex__box p {
+  /* A visual guide could */
+
+  width: fit-content;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signtelephone__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signtelephone__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signtelephone__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signtelephone__input input {
+  /* A visual guide could */
+
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+
+.signage__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signage__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signage__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signage__input input {
+  /* A visual guide could */
+
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signcountry__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signcountry__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signcountry__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signcountry__input select {
+  /* A visual guide could */
+
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+
+.password__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.password__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.password__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.signup__card .password__input input {
+  /* A visual guide could */
+
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  border: none;
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.signagree__input {
+  display: flex;
+  
+  width: 543px;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.signup__button {
+  /* signup__button */
+  box-sizing: border-box;
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  margin-top: 5px;
+  gap: 10px;
+
+  width: auto;
+  height: 60px;
+
+  background: #4e5e80;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.signup__button a button {
+  /* Get signuped */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  color: #f3f2ff;
+  background-color: transparent;
+  border-color: transparent;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.have__account {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+
+  width: 391px;
+  height: 24px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 4;
+  flex-grow: 0;
+}
+
+.have__account a,
+p {
+  /* A visual guide could */
+
+  width: 391px;
+  height: 24px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.character img {
+  /* Char1 */
+  position: fixed;
+  width: auto;
+  height: 400px;
+
+  right: 20px;
+  bottom: 20px;
+}

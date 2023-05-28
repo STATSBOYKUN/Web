@@ -261,7 +261,7 @@ body {
   flex-grow: 0;
 }
 
-.password__input input {
+.login__card .password__input input {
   /* A visual guide could */
 
   width: 500px;
