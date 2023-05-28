@@ -2,8 +2,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans");
 @import url("https://fonts.googleapis.com/css2?family=Eczar");
 
+* {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80; 
+  border-radius: 6px;
+}
+
 body {
-  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   background: #ffeed9;
 }
 
@@ -17,13 +39,14 @@ navbar {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  
-  position: sticky;
+
+  margin-left: 50px;
+  width: 100%;
+  position: fixed;
   top: 0px;
-  z-index: 10;
-  border-radius: 16px 16px 0px 0px;
 
   background: #ffddbf;
+  z-index: 10;
 }
 
 .logo img {
@@ -81,7 +104,7 @@ navbar {
   align-items: center;
   padding: 0px;
   gap: 20px;
-
+  margin-right: 70px;
   /* Inside auto layout */
 
   flex: none;
