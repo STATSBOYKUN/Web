@@ -1,39 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../style/login.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animisc</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/login.css" />
+    <link rel="icon" href="../assets/Logo/title.svg" type="image/png">
   </head>
   <body>
-    <nav>
-      <div class="nav-logo">
-        <a href="#"><img src="logo.png" alt="Logo"></a>
+    <div class="login__groups">
+      <div class="login__title">
+        <p>Login</p>
       </div>
-      <div class="nav-items">
-        <ul>
-          <li><a href="#">Menu 1</a></li>
-          <li><a href="#">Menu 2</a></li>
-          <li><a href="#">Menu 3</a></li>
-        </ul>
+
+      <div class="login__card">
+        <div class="username__items">
+          <div class="username__text">
+            <p>Username or Email</p>
+          </div>
+
+          <div class="username__input">
+            <input type="text" placeholder="Enter username or email" />
+          </div>
+        </div>
+
+        <div class="password__items">
+          <div class="password__text">
+            <p>Password</p>
+          </div>
+
+          <div class="password__input">
+            <input type="password" placeholder="Enter password" required />
+          </div>
+        </div>
+
+        <div class="forgot__pasword">
+          <a href="../pages/forgot.html">Forgot Password?</a>
+        </div>
+
+        <div class="login__button">
+          <a href="../pages/index.html">
+            <button>Login</button>
+          </a>
+          <img src="../assets/Icons/chevron-right-square.svg" />
+        </div>
+
+        <div class="have__account">
+          <p>
+            Don't have an account? <a href="../signup.html">Register here</a>
+          </p>
+        </div>
       </div>
-    </nav>
-    <div class="container">
-      <form>
-        <h1>Login</h1>
-        <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
-
-        <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-      </form>
     </div>
-    <script src="login.js"></script>
+
+    <div class="character">
+      <img src="../assets/Char2/Char2 (1).png" alt="char" />
+    </div>
   </body>
 </html>
