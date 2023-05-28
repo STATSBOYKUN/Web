@@ -221,24 +221,6 @@ navbar {
   flex-grow: 0;
 }
 
-.testimonial__titles .p2 {
-  /* Visit Community >> */
-
-  width: fit-content;
-  height: 36px;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 150%;
-  /* identical to box height, or 36px */
-
-  color: #4e5e80;
-
-  /* Inside auto layout */
-}
-
 .testimonial__text {
   /* testimonial__text */
 
@@ -261,77 +243,23 @@ navbar {
   flex-grow: 0;
 }
 
-.ceo__groups {
+.start__buttons {
+  /* start__button */
+  box-sizing: border-box;
+  /* Auto layout */
+
   display: flex;
   flex-direction: row;
   justify-content: center;
-  z-index: 9;
-
-  padding: 0px 500px;
-  gap: 50px;
-}
-
-.ceo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  padding: 24px 10px;
+  gap: 10px;
 
-  gap: 5px;
-}
+  width: fit-content;
+  height: 70px;
 
-.ceo img {
-  border-radius: 10px; /* Adjust the value to control the roundness of the corners */
-  overflow: hidden;
-}
-
-.ceo__title {
-  /* Some of my favorite testimonials from my clients */
-
-  width: 100%;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  /* identical to box height, or 30px */
-
-  text-align: center;
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.ceo__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  gap: 20px;
-  width: 600px;
-}
-
-.ceo__text .p1 {
-  /* Some of my favorite testimonials from my clients */
-
-  width: 100%;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  /* identical to box height, or 30px */
-
-  text-align: left;
-  padding-top: 10px;
-  color: #594f43;
+  background: #4e5e80;
+  border-radius: 16px;
 
   /* Inside auto layout */
 
@@ -340,22 +268,22 @@ navbar {
   flex-grow: 0;
 }
 
-.ceo__text .p2 {
-  /* Some Generous Words */
+.start__buttons img {
+  height: 50px;
+}
 
-  width: 100%;
-
-  text-align: left;
-  font-family: "Eczar";
+.start__buttons a button {
+  /* Get Started */
+  font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 125%;
-  /* identical to box height, or 50px */
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
 
-  letter-spacing: 0.02em;
-
-  color: #403930;
+  color: #f3f2ff;
+  background-color: transparent;
+  border-color: transparent;
 
   /* Inside auto layout */
 
@@ -405,36 +333,4 @@ footer p {
 .love {
   color: #d40202;
   scale: 2;
-}
-
-.character1 img {
-  /* Char1 */
-  position: fixed;
-  width: auto;
-  height: 250px;
-
-  left: 20px;
-  bottom: 90px;
-
-  transform: scaleX(-1);
-}
-
-.character2 img {
-  /* Char1 */
-  position: fixed;
-  width: auto;
-  height: 250px;
-
-  right: 20px;
-  bottom: 90px;
-}
-
-.character3 img {
-  /* Char1 */
-  position: fixed;
-  width: auto;
-  height: 250px;
-
-  right: 200px;
-  bottom: 90px;
 }

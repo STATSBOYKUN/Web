@@ -1266,11 +1266,11 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 26px 0px;
+  height: 20px 0px;
 
   position: absolute;
   width: 100%;
-  height: 82px;
+  height: 60px;
   top: 3700px;
 
   background: #ffddbf;
