@@ -1,55 +1,70 @@
 /* import font */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans");
 @import url("https://fonts.googleapis.com/css2?family=Eczar");
-
+* {
+  margin: 0;
+}
 body {
   position: relative;
   background: #ffeed9;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.login__groups {
+.ticket__groups {
   /* home__text */
 
   /* Auto layout */
+
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   padding: 8px;
   gap: 10px;
 
   position: absolute;
   width: 100%;
-  height: fit-content;
-  top: 50px;
+  height: auto;
+  top: 80px;
 }
 
-.login__title {
+.ticket__title {
   /* home__text */
 
   /* Auto layout */
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
-  margin-bottom: 20px;
   gap: 10px;
 
-  width: 125px;
+  width: auto;
   height: 66px;
 
   /* Inside auto layout */
 
   flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
-.login__title p {
-  /* Login */
+.events__logo img {
+  /* animisc 1 */
 
-  width: 109px;
+  width: 58.28px;
+  height: 50px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.event__title {
+  /* Animisc Opera Show */
+
+  width: auto;
   height: 50px;
 
   font-family: "Eczar";
@@ -66,11 +81,9 @@ body {
   /* Inside auto layout */
 
   flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
-.login__card {
+.ticket__card {
   /* testimonial__groups */
 
   /* Auto layout */
@@ -79,11 +92,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5px;
-  gap: 15px;
+  padding: 20px 0px 20px 0px;
+  gap: 40px;
 
   width: 650px;
-  height: 500px;
+  height: 700px;
 
   background: #ffe5cc;
   border-radius: 16px;
@@ -91,201 +104,9 @@ body {
   /* Inside auto layout */
 
   flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
-.username__items {
-  /* umaru__items */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 5px;
-
-  width: 543px;
-  height: fit-content;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.username__text p {
-  /* Cha Ji-Hun */
-
-  width: 563px;
-  height: fit-content;
-
-  text-align: left;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 25px;
-  margin-left: 5px;
-  margin-bottom: 2px;
-  /* identical to box height, or 125% */
-
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.username__input {
-  /* events__groups */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px 0px 20px 20px;
-  gap: 40px;
-
-  width: 543px;
-  height: fit-content;
-
-  background: #fff9f2;
-  border-radius: 16px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.username__input input {
-  /* A visual guide could */
-
-  width: 500px;
-  height: fit-content;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  /* identical to box height, or 30px */
-
-  background: none;
-  border: none;
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.password__items {
-  /* umaru__items */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 5px;
-
-  width: 543px;
-  height: fit-content;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.password__text p {
-  /* Cha Ji-Hun */
-
-  width: 563px;
-  height: fit-content;
-
-  text-align: left;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 25px;
-  margin-left: 5px;
-  margin-bottom: 2px;
-  /* identical to box height, or 125% */
-
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.password__input {
-  /* events__groups */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px 0px 20px 20px;
-  gap: 40px;
-
-  width: 543px;
-  height: fit-content;
-
-  background: #fff9f2;
-  border-radius: 16px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.login__card .password__input input {
-  /* A visual guide could */
-
-  width: 500px;
-  height: fit-content;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  /* identical to box height, or 30px */
-
-  background: none;
-  border: none;
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.forgot__pasword {
+.name__items {
   /* umaru__items */
 
   /* Auto layout */
@@ -294,24 +115,328 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-
   padding: 0px;
   gap: 5px;
 
-  width: 513px;
+  width: auto;
+  height: 100px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.name__text {
+  /* Cha Ji-Hun */
+
+  width: 100%;
+  height: 25px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.name__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: auto;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.name__input input {
+  /* Get ordered */
+  /* A visual guide could */
+
+  width: 244px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  color: #594f43;
+  border: none;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.number__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+
+  width: 100%;
   height: fit-content;
 
   /* Inside auto layout */
 
   flex: none;
-  order: 2;
-  flex-grow: 0;
 }
 
-.forgot__pasword a {
+.number__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.number__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.number__input input {
   /* A visual guide could */
 
-  width: 391px;
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  background: none;
+  color: #594f43;
+  border: none;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.file__items {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+
+  width: 100%;
+  height: 100px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.file__text p {
+  /* Cha Ji-Hun */
+
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+.file__input {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.file__input input {
+  /* A visual guide could */
+
+  width: 244px;
+  height: 30px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.payment__details {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 513px;
+  height: auto;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.payments__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 100%;
+}
+
+.payments__title p {
+  /* Total Payment */
+
+  width: fit-content;
+  height: 25px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  /* identical to box height, or 125% */
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+.payments__info {
+  /* umaru__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+
+  width: 100%;
+  height: 24px;
+
+  /* Inside auto layout */
+
+  flex: none;
+}
+
+.payments__info .p1,
+.p2 {
+  /* A visual guide could */
+
+  width: fit-content;
   height: 24px;
 
   font-family: "Work Sans";
@@ -326,12 +451,9 @@ body {
   /* Inside auto layout */
 
   flex: none;
-  order: 0;
-  flex-grow: 0;
 }
-
-.login__button {
-  /* login__button */
+.order__button {
+  /* order__button */
   box-sizing: border-box;
   /* Auto layout */
 
@@ -352,12 +474,10 @@ body {
   /* Inside auto layout */
 
   flex: none;
-  order: 3;
-  flex-grow: 0;
 }
 
-.login__button a button {
-  /* Get logined */
+.order__button a button {
+  /* Get ordered */
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
@@ -372,55 +492,6 @@ body {
   /* Inside auto layout */
 
   flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.have__account {
-  /* umaru__items */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 5px;
-
-  width: 391px;
-  height: 24px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 4;
-  flex-grow: 0;
-}
-
-.have__account a,
-p {
-  /* A visual guide could */
-
-  width: 391px;
-  height: 24px;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  /* identical to box height, or 24px */
-
-  text-align: center;
-
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .character img {

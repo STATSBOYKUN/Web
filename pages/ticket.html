@@ -7,57 +7,91 @@
     <title>Animisc</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../style/login.css" />
-    <link rel="icon" href="../assets/Logo/title.svg" type="image/png">
+    <link rel="stylesheet" href="../style/ticket.css" />
+    <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <div class="login__groups">
-      <div class="login__title">
-        <p>Login</p>
+    <div class="ticket__groups">
+      <div class="ticket__title">
+        <div class="events__logo">
+          <img src="../assets/Events/animisc.svg" alt="logo" />
+        </div>
+        <div class="event__title">
+          <p>Animisc Open House</p>
+        </div>
+        <div class="events__logo">
+          <img src="../assets/Events/animisc.svg" alt="logo" />
+        </div>
       </div>
-
-      <div class="login__card">
-        <div class="username__items">
-          <div class="username__text">
-            <p>Username or Email</p>
+      
+      <div class="ticket__card">
+        <div class="name__items">
+          <div class="name__text">
+            <p>Full Name</p>
           </div>
 
-          <div class="username__input">
-            <input type="text" placeholder="Enter username or email" />
-          </div>
-        </div>
-
-        <div class="password__items">
-          <div class="password__text">
-            <p>Password</p>
-          </div>
-
-          <div class="password__input">
-            <input type="password" placeholder="Enter password" required />
+          <div class="name__input">
+            <input type="text" placeholder="Enter name" />
           </div>
         </div>
 
-        <div class="forgot__pasword">
-          <a href="../pages/forgot.html">Forgot Password?</a>
+        <div class="number__items">
+          <div class="number__text">
+            <p>Number of Tickets</p>
+          </div>
+
+          <div class="number__input">
+            <input type="number" value="1" />
+          </div>
         </div>
 
-        <div class="login__button">
+        <div class="file__items">
+          <div class="file__text">
+            <p>Attach File</p>
+          </div>
+
+          <div class="file__input">
+            <input type="file" required />
+          </div>
+        </div>
+
+        <div class="payment__details">
+          <div class="payments__title">
+            <p>Payment Details</p>
+          </div>
+
+          <div class="payments__info">
+            <p class="p1">Tickets</p>
+            <p class="p2">Rp 25.000,00</p>
+          </div>
+
+          <div class="payments__info">
+            <p class="p1">Tax</p>
+            <p class="p2">Rp 0,00</p>
+          </div>
+
+          <div class="payments__info">
+            <p class="p1">Payment Code</p>
+            <p class="p2">Rp 11,00</p>
+          </div>
+
+          <div class="payments__title">
+            <p class="p1">Total</p>
+            <p class="p2">Rp 25.011,00</p>
+          </div>
+        </div>
+
+        <div class="order__button">
           <a href="../pages/index.html">
-            <button type="submit">Login</button>
+            <button type="submit">Order</button>
           </a>
           <img src="../assets/Icons/chevron-right-square.svg" />
-        </div>
-
-        <div class="have__account">
-          <p>
-            Don't have an account? <a href="../pages/register.html">Register here</a>
-          </p>
         </div>
       </div>
     </div>
 
     <div class="character">
-      <img src="../assets/Char2/Char2 (1).png" alt="char" />
+      <img src="../assets/Char2/Char2 (5).png" alt="char" />
     </div>
   </body>
 </html>
