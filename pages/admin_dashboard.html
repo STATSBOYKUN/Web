@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animisc</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/admin_dashboard.css" />
+    <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar__notification">
+        <a href="../pages/notification.html">
+          <img src="../assets/Icons/notification.svg" alt="notification" />
+        </a>
+      </div>
+
+      <div class="sidebar__logo">
+        <img src="../assets/Events/animisc.svg" alt="Animisc" />
+      </div>
+
+      <div class="sidebar__title">
+        <p>Admin</p>
+      </div>
+
+      <div class="sidebar__menu">
+        <p>Dashboard</p>
+        <p>Ticket</p>
+        <p>Users</p>
+        <p>Settings</p>
+
+        <div class="sign__button">
+          <a href="../pages/admin_login.html">
+            <button>Log Out</button>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="dashboard__groups">
+      <div class="visitors__card">
+        <div class="visitors__title">
+          <p>Visitors</p>
+        </div>
+
+        <div class="visitors__details">
+          <div class="visitors__chart"></div>
+
+          <div class="visitors__numbers">
+            <div class="visitors__today">
+              <p>Today :</p>
+              <p>100</p>
+            </div>
+
+            <div class="visitors__total">
+              <p>Total</p>
+              <p>100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard__wrapper">
+        <div class="tickets__groups">
+          <div class="tickets__title">
+            <p>Tickets Sold</p>
+          </div>
+
+          <div class="tickets__details">
+            <div class="tickets__chart"></div>
+
+            <div class="tickets__numbers">
+              <p></p>
+              <p>/100</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="users__groups">
+          <div class="users__title">
+            <p>Users</p>
+          </div>
+
+          <div class="users__details">
+            <div class="users__chart"></div>
+
+            <div class="users__numbers">
+              <p></p>
+              <p>/100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
