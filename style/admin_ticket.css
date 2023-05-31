@@ -1,0 +1,442 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Eczar");
+
+* {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80;
+  border-radius: 6px;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background: #ffeed9;
+}
+
+.sidebar {
+  /* testimonial__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 64px 0px 80px 0px;
+  gap: 20px;
+
+  width: 300px;
+  height: 100%;
+
+  background: #ffddbf;
+
+  /* Inside auto layout */
+}
+
+.sidebar__notification img {
+  /* notification 1 */
+
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar__logo img {
+  width: 155px;
+  height: 133px;
+}
+
+.sidebar__title {
+  /* Admin */
+
+  width: auto;
+  height: 50px;
+
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  /* identical to box height, or 50px */
+
+  letter-spacing: 0.02em;
+
+  color: #403930;
+}
+
+.sidebar__menu {
+  /* nav__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+
+  width: auto;
+  height: auto;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+}
+
+.sidebar__menu a {
+  /* Dashboard */
+
+  width: 100%;
+  height: 30px;
+
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  color: #594f43;
+}
+
+.sign__button {
+  /* sign__button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+
+  width: auto;
+  height: auto;
+
+  background: #4e5e80;
+  border-radius: 16px;
+}
+
+.sign__button a button {
+  /* Sign Up */
+
+  width: auto;
+  height: auto;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+
+  color: #f3f2ff;
+  background: none;
+  border: none;
+}
+
+.dashboard__groups {
+  /* home__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+
+  width: auto;
+  height: 100%;
+
+  background: #fff8f2;
+}
+
+.visitors__card {
+  /* home__text */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 10px;
+
+  width: auto;
+  height: 396px;
+
+  background: #ffe5cc;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+}
+
+.visitors__title {
+  /* Visitors */
+
+  width: 100%;
+  height: 40px;
+
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  /* identical to box height, or 40px */
+
+  letter-spacing: 0.02em;
+
+  color: #4e5e80;
+}
+
+.visitors__details {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 10px;
+
+  width: 100%;
+  height: auto;
+
+  background: #ffe5cc;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.visitors__chart {
+  display: flex;
+}
+
+.visitors__numbers {
+  /* events__text */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+
+  width: 100%;
+  height: 36px;
+}
+
+.visitors__total {
+  /* events__text */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+
+  width: auto;
+  height: 36px;
+}
+
+.visitors__details p {
+  /* Today Visitors : */
+
+  width: auto;
+  height: 36px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.dashboard__wrapper {
+  /* sign__button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 100px;
+
+  width: 100%;
+  height: 306px;
+
+  border-radius: 16px;
+
+}
+
+.tickets__groups,
+.users__groups {
+  /* home__text */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px;
+  gap: 20px;
+
+  width: 390px;
+  height: 306px;
+
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.tickets__title,
+.users__title {
+  /* users__items */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+
+  width: 109px;
+  height: 40px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.tickets__title p,
+.users__title p {
+  /* Tickets */
+
+  width: 109px;
+  height: 40px;
+
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  /* identical to box height, or 40px */
+
+  letter-spacing: 0.02em;
+
+  color: #4e5e80;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.tickets__details,
+.users__details {
+  /* events__groups */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 20px;
+
+  width: 230px;
+  height: 206px;
+
+  border-radius: 16px;
+}
+
+.tickets__chart,
+.users__chart {
+  display: flex;
+}
+
+.tickets__numbers p,
+.users__numbers p {
+  /* 0/100 */
+
+  width: 67px;
+  height: 36px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #594f43;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

@@ -20,21 +20,13 @@
 }
 
 body {
-  /* Events Page */
-
-  /* Auto layout */
-
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 0px;
-
-  position: relative;
   width: 100%;
-  height: 100%;
-
-  background: #fff8f2;
+  background: #ffeed9;
 }
 
 .sidebar {
@@ -109,12 +101,13 @@ body {
   flex-grow: 0;
 }
 
-.sidebar__menu p {
+.sidebar__menu a {
   /* Dashboard */
 
   width: 100%;
   height: 30px;
 
+  text-decoration: none;
   font-family: "Work Sans";
   font-style: normal;
   text-align: left;
