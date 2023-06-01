@@ -73,7 +73,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  padding: 40px 0px;
   gap: 20px;
 
   width: 650px;
@@ -431,6 +431,11 @@ body {
   border: 1px solid #594f43;
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.signagree__input p {
+  margin-left: 5px;
+  width: auto;
 }
 
 .signagree__input input:checked {

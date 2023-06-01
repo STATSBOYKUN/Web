@@ -15,7 +15,7 @@
       <div class="login__title">
         <p>Login</p>
       </div>
-      <form action="">
+      <form onsubmit="handleSubmit(event)" action="">
         <div class="login__card">
           <div class="username__items">
             <div class="username__text">
@@ -39,6 +39,11 @@
 
           <div class="forgot__pasword">
             <a href="../pages/forgot.html">Forgot Password?</a>
+
+            <div class="signagree__input">
+              <input type="checkbox" placeholder="Enter password"/>
+              <p>Remember Me</p>
+            </div>
           </div>
 
           <div class="login__button">
@@ -47,6 +52,7 @@
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />
           </div>
+
 
           <div class="have__account">
             <p>
@@ -63,5 +69,7 @@
         <img src="../assets/Char2/Char2 (1).png" alt="char" />
       </a>
     </div>
+
+    <script src="../script/login.js"></script>
   </body>
 </html>

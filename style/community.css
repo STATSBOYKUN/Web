@@ -237,3 +237,17 @@ footer p {
   color: #d40202;
   scale: 2;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}

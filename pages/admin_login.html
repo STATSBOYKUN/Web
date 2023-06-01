@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <form action="">
+    <form onsubmit="handleSubmit(event)" action="">
       <div class="login__groups">
         <div class="login__title">
           <p>Admin Login</p>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="username__input">
-              <input type="text" placeholder="Enter username or email" />
+              <input type="text" placeholder="Enter username or email" required/>
             </div>
           </div>
 
@@ -58,5 +58,6 @@
         <img src="../assets/Char/Char (4).png" alt="char" />
       </div>
     </form>
+    <script src="../script/admin_login.js"></script>
   </body>
 </html>

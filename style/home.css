@@ -47,7 +47,6 @@ navbar {
 }
 
 .logo img {
-  
   width: auto;
   height: 38.9px;
   padding-left: 20px;
@@ -232,7 +231,7 @@ navbar {
   gap: 10px;
   width: 269px;
   height: 84px;
-  border: 4px solid #4D5566;
+  border: 4px solid #4d5566;
   border-radius: 16px;
 }
 
@@ -706,7 +705,7 @@ navbar {
   width: 269px;
   height: 84px;
 
-  border: 4px solid #4D5566;
+  border: 4px solid #4d5566;
   border-radius: 16px;
 }
 
@@ -770,6 +769,20 @@ footer p {
   scale: 2;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
 @media (height < 600px) {
   .char1 img {
     display: none;
@@ -779,7 +792,8 @@ footer p {
     flex-direction: column;
   }
 
-  .events__groups, .community__groups {
+  .events__groups,
+  .community__groups {
     flex-direction: column;
   }
 }

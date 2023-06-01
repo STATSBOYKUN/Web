@@ -9,9 +9,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style/ticket.css" />
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
+    
   </head>
   <body>
-    <form action="">
+    <form onsubmit="handleSubmit(event)" action="">
       <div class="ticket__groups">
         <div class="ticket__title">
           <div class="events__logo">
@@ -38,17 +39,19 @@
 
           <div class="number__items">
             <div class="number__text">
+              
               <p>Number of Tickets</p>
+              
             </div>
 
             <div class="number__input">
-              <input type="number" value="1" required/>
+              <input onchange="handleTicketChange(event)" type="number" value="1" required/>
             </div>
           </div>
 
           <div class="file__items">
             <div class="file__text">
-              <p>Attach File (max. 500KB)</p>
+              <p>Attach File (max. 300KB)</p>
             </div>
 
             <div class="file__input">
@@ -94,6 +97,10 @@
       <div class="character">
         <img src="../assets/Char/Char (10).png" alt="char" />
       </div>
+
+      
     </form>
+    <script src="../script/update__payment.js"></script>
+    <script src="../script/ticket.js"></script>
   </body>
 </html>

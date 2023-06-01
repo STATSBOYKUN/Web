@@ -222,6 +222,32 @@ body {
   color: #4e5e80;
 }
 
+.signagree__input {
+  display: flex;
+  flex-direction: row;
+  align-content: calc();
+  width: auto;
+}
+
+.signagree__input input {
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #594f43;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signagree__input p {
+  margin-left: 5px;
+  width: auto;
+}
+
+.signagree__input input:checked {
+  border-color: #594f43;
+  background-color: #594f43;
+}
+
 .login__button {
   box-sizing: border-box;
   display: flex;

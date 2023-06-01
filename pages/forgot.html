@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <form action="">
+    <form onsubmit="handleSubmit(event)" action="">
       <div class="login__groups">
         <div class="login__title">
           <p>Forgot Password</p>
@@ -37,7 +37,7 @@
 
           <div class="login__button">
             <a href="../pages/index.html">
-              <button type="submit">Send</button>
+              <button type="submit" id="sendButton">Send</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />
           </div>
@@ -48,5 +48,7 @@
         </div>
       </div>
     </form>
+
+    <script src="../script/forgot.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <form action="">
+    <form onsubmit="handleSubmit(event)" action="">
       <div class="signup__groups">
         <div class="signup__title">
           <p>Sign Up</p>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="signemail__input">
-              <input type="email" placeholder="Enter email" required/>
+              <input type="email" placeholder="Enter email" required />
             </div>
           </div>
 
@@ -34,7 +34,7 @@
             </div>
 
             <div class="signusername__input">
-              <input type="text" placeholder="Enter username" required/>
+              <input type="text" placeholder="Enter username" required />
             </div>
           </div>
 
@@ -45,11 +45,11 @@
 
             <div class="signsex__input">
               <div class="signsex__box">
-                <input type="radio" value="male" checked=""/>
+                <input type="radio" name="sex" value="male"/>
                 <p>Male</p>
               </div>
               <div class="signsex__box">
-                <input type="radio" value="female" />
+                <input type="radio" name="sex" value="female" />
                 <p>Female</p>
               </div>
             </div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="signage__input">
-              <input type="number" value="17" required/>
+              <input type="number" value="17" required />
             </div>
           </div>
 
@@ -86,7 +86,11 @@
             </div>
 
             <div class="signtelephone__input">
-              <input type="text" placeholder="Enter telephone number" required/>
+              <input
+                type="text"
+                placeholder="Enter telephone number"
+                required
+              />
             </div>
           </div>
 
@@ -131,5 +135,7 @@
     <div class="character">
       <img src="../assets/Char3/Char3 (12).png" alt="char" />
     </div>
+
+    <script src="../script/register.js"></script>
   </body>
 </html>
