@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $conn->close();
 
     // Redirect to a success page or do any additional processing
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
   }
 }

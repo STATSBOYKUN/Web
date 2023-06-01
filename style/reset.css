@@ -1,34 +1,49 @@
-/* import font */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans");
 @import url("https://fonts.googleapis.com/css2?family=Eczar");
 
+* {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80;
+  border-radius: 6px;
+}
+
 body {
-  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   background: #ffeed9;
 }
 
 .login__groups {
-  /* home__text */
-
-  /* Auto layout */
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
-  padding: 8px;
+  padding: 30px 0px;
   gap: 10px;
 
-  position: absolute;
+  position: static;
   width: 100%;
   height: fit-content;
   top: 80px;
 }
 
 .login__title {
-  /* home__text */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -38,17 +53,9 @@ body {
 
   width: fit-content;
   height: 66px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .login__title p {
-  /* Login */
-
   width: fit-content;
   height: 50px;
 
@@ -57,24 +64,12 @@ body {
   font-weight: 600;
   font-size: 40px;
   line-height: 125%;
-  /* identical to box height, or 50px */
-
   letter-spacing: 0.02em;
 
   color: #403930;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .login__card {
-  /* testimonial__groups */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,20 +82,9 @@ body {
 
   background: #ffe5cc;
   border-radius: 16px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
-
 .hi__account {
-  /* umaru__items */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,17 +94,9 @@ body {
 
   width: 391px;
   height: 24px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .hi__account p {
-  /* A visual guide could */
-
   width: 391px;
   height: 24px;
 
@@ -129,119 +105,12 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  /* identical to box height, or 24px */
-
   text-align: center;
 
   color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.username__items {
-  /* umaru__items */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 5px;
-
-  width: 543px;
-  height: fit-content;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.username__text p {
-  /* Cha Ji-Hun */
-
-  width: 563px;
-  height: fit-content;
-
-  text-align: left;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 25px;
-  margin-left: 5px;
-  margin-bottom: 2px;
-  /* identical to box height, or 125% */
-
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.username__input {
-  /* events__groups */
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20px 0px 20px 20px;
-  gap: 40px;
-
-  width: 543px;
-  height: fit-content;
-
-  background: #fff9f2;
-  border-radius: 16px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.username__input input {
-  /* A visual guide could */
-
-  width: 500px;
-  height: fit-content;
-
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
-  /* identical to box height, or 30px */
-
-  background: none;
-  border: none;
-  color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .password__items {
-  /* umaru__items */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -251,17 +120,9 @@ body {
 
   width: 543px;
   height: fit-content;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .password__text p {
-  /* Cha Ji-Hun */
-
   width: 563px;
   height: fit-content;
 
@@ -273,22 +134,10 @@ body {
   line-height: 25px;
   margin-left: 5px;
   margin-bottom: 2px;
-  /* identical to box height, or 125% */
-
   color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .password__input {
-  /* events__groups */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -300,17 +149,9 @@ body {
 
   background: #fff9f2;
   border-radius: 16px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
-.login__card .password__input input {
-  /* A visual guide could */
-
+.password__input input {
   width: 500px;
   height: fit-content;
 
@@ -319,24 +160,13 @@ body {
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
-  /* identical to box height, or 30px */
-
   background: none;
-  border: none;
   color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  border: none;
 }
 
 .login__button {
-  /* login__button */
   box-sizing: border-box;
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -350,39 +180,20 @@ body {
 
   background: #4e5e80;
   border-radius: 16px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 3;
-  flex-grow: 0;
 }
 
 .login__button a button {
-  /* Get logined */
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 150%;
-  /* identical to box height, or 36px */
-
   color: #f3f2ff;
   background-color: transparent;
   border-color: transparent;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .have__account {
-  /* umaru__items */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -392,18 +203,10 @@ body {
 
   width: 391px;
   height: 24px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 4;
-  flex-grow: 0;
 }
 
 .have__account a,
 p {
-  /* A visual guide could */
-
   width: 391px;
   height: 24px;
 
@@ -412,21 +215,12 @@ p {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  /* identical to box height, or 24px */
-
   text-align: center;
 
   color: #594f43;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .character img {
-  /* Char1 */
   position: fixed;
   width: auto;
   height: 400px;
