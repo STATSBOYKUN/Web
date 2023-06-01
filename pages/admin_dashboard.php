@@ -16,7 +16,7 @@
   <body>
     <aside class="sidebar">
       <div class="sidebar__notification">
-        <a href="../pages/notification.html">
+        <a href="../pages/notification.php">
           <img src="../assets/Icons/notification.svg" alt="notification" />
         </a>
       </div>
@@ -30,13 +30,13 @@
       </div>
 
       <div class="sidebar__menu">
-        <a href="../pages/admin_dashboard.html">Dashboard</a>
-        <a href="../pages/admin_ticket.html">Ticket</a>
-        <a href="../pages/admin_users.html">Users</a>
-        <a href="../pages/admin_settings.html">Settings</a>
+        <a href="../pages/admin_dashboard.php">Dashboard</a>
+        <a href="../pages/admin_ticket.php">Ticket</a>
+        <a href="../pages/admin_users.php">Users</a>
+        <a href="../pages/admin_settings.php">Settings</a>
 
         <div class="sign__button">
-          <a href="../pages/admin_login.html">
+          <a href="../pages/admin_login.php">
             <button>Log Out</button>
           </a>
         </div>

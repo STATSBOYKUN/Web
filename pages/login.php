@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +43,7 @@
           </div>
 
           <div class="forgot__pasword">
-            <a href="../pages/forgot.html">Forgot Password?</a>
+            <a href="../pages/forgot.php">Forgot Password?</a>
 
             <div class="signagree__input">
               <input type="checkbox" placeholder="Enter password"/>
@@ -47,7 +52,7 @@
           </div>
 
           <div class="login__button">
-            <a href="../pages/index.html">
+            <a href="../pages/index.php">
               <button type="submit">Login</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />
@@ -57,7 +62,7 @@
           <div class="have__account">
             <p>
               Don't have an account?
-              <a href="../pages/register.html">Register here</a>
+              <a href="../pages/register.php">Register here</a>
             </p>
           </div>
         </div>
@@ -65,7 +70,7 @@
     </div>
 
     <div class="character">
-      <a href="../pages/admin_login.html">
+      <a href="../pages/admin_login.php">
         <img id="characterImage" src="../assets/Char2/Char2 (1).png" alt="char" />
       </a>
     </div>

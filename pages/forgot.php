@@ -36,7 +36,7 @@
           </div>
 
           <div class="login__button">
-            <a href="../pages/index.html">
+            <a href="../pages/index.php">
               <button type="submit" id="sendButton">Send</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />

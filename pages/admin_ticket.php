@@ -7,13 +7,13 @@
     <title>Animisc</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../style/admin_users.css" />
+    <link rel="stylesheet" href="../style/admin_ticket.css" />
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
     <aside class="sidebar">
       <div class="sidebar__notification">
-        <a href="../pages/notification.html">
+        <a href="../pages/notification.php">
           <img src="../assets/Icons/notification.svg" alt="notification" />
         </a>
       </div>
@@ -27,13 +27,13 @@
       </div>
 
       <div class="sidebar__menu">
-        <a href="../pages/admin_dashboard.html">Dashboard</a>
-        <a href="../pages/admin_ticket.html">Ticket</a>
-        <a href="../pages/admin_users.html">Users</a>
-        <a href="../pages/admin_settings.html">Settings</a>
+        <a href="../pages/admin_dashboard.php">Dashboard</a>
+        <a href="../pages/admin_ticket.php">Ticket</a>
+        <a href="../pages/admin_users.php">Users</a>
+        <a href="../pages/admin_settings.php">Settings</a>
 
         <div class="sign__button">
-          <a href="../pages/admin_login.html">
+          <a href="../pages/admin_login.php">
             <button>Log Out</button>
           </a>
         </div>
@@ -43,17 +43,13 @@
     <div class="dashboard__groups">
       <div class="dashboard__wrapper">
         <div class="visitors__title">
-          <p>Users</p>
+          <p>Tickets</p>
         </div>
 
         <form action="">
           <div class="search__wrapper">
             <div class="search__input">
-              <input
-                type="text"
-                placeholder="Search with email or username ...."
-                required
-              />
+              <input type="text" placeholder="Search with username or fullname ...." required />
             </div>
 
             <div class="sign__button">
@@ -71,41 +67,33 @@
           <table>
             <tr>
               <th>No</th>
-              <th>Email</th>
               <th>Username</th>
-              <th>Sex</th>
-              <th>Telephone</th>
-              <th>Age</th>
-              <th>Country</th>
-              <th>Update</th>
-              <th>Delete</th>
+              <th>Full Name</th>
+              <th>Order Date</th>
+              <th>Invoices</th>
+              <th>Status</th>
             </tr>
             <tr>
               <td>1</td>
               <td>John Doe</td>
               <td>Animisc</td>
-              <td>12.00</td>
-              <td>Transfer</td>
-              <td>Success</td>
+              <td>Free</td>
               <td>Transfer</td>
               <td>
-                <a href=""
-                  ><img
-                    src="../assets/Icons/bx-edit.svg"
-                /></a>
-              </td>
-              <td>
-                <a href=""
-                  ><img
-                    id="img2"
-                    src="../assets/Icons/bx-trash.svg"
-                    alt=""
-                /></a>
+                <div class="dropdown">
+                  <button class="dropdown__button">Select Status</button>
+                  <div class="dropdown__content">
+                    <p>Review</p>
+                    <p>Success</p>
+                    <p>Canceled</p>
+                  </div>
+                </div>
               </td>
             </tr>
           </table>
         </div>
       </div>
     </div>
+    <script src="../script/admin_ticket.js"></script>
   </body>
 </html>

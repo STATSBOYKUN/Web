@@ -14,29 +14,29 @@
     <navbar>
       <div class="logo">
         <!-- image with link -->
-        <a href="../pages/index.html">
+        <a href="../pages/index.php">
           <img src="../assets/Logo/logo.png" alt="logo" />
         </a>
       </div>
 
       <div class="nav__items">
         <ul>
-          <li><a href="../pages/index.html">Home</a></li>
-          <li><a href="../pages/events.html">Events</a></li>
-          <li><a href="../pages/community.html">Community</a></li>
-          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/index.php">Home</a></li>
+          <li><a href="../pages/events.php">Events</a></li>
+          <li><a href="../pages/community.php">Community</a></li>
+          <li><a href="../pages/about.php">About</a></li>
         </ul>
       </div>
 
       <div class="users__items">
         <div class="notification">
-          <a href="../pages/notification.html">
+          <a href="../pages/notification.php">
             <img src="../assets/Icons/notification.svg" alt="notification" />
           </a>
         </div>
 
         <div class="sign__button">
-          <a href="../pages/login.html">
+          <a href="../pages/login.php">
             <button>Sign In</button>
           </a>
         </div>

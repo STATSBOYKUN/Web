@@ -7,25 +7,19 @@
     <title>Animisc</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../style/admin_login.css" />
+    <link rel="stylesheet" href="../style/reset.css" />
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <form onsubmit="handleSubmit(event)" action="">
+    <form action="">
       <div class="login__groups">
         <div class="login__title">
-          <p>Admin Login</p>
+          <p>Reset Account</p>
         </div>
 
         <div class="login__card">
-          <div class="username__items">
-            <div class="username__text">
-              <p>Username or Email</p>
-            </div>
-
-            <div class="username__input">
-              <input type="text" placeholder="Enter username or email" required/>
-            </div>
+          <div class="hi__account">
+            <p>Hi, <span>Username</span></p>
           </div>
 
           <div class="password__items">
@@ -38,26 +32,37 @@
             </div>
           </div>
 
+          <div class="password__items">
+            <div class="password__text">
+              <p>Confirm Password</p>
+            </div>
+
+            <div class="password__input">
+              <input type="password" placeholder="Re-enter password" required />
+            </div>
+          </div>
+
           <div class="login__button">
-            <a href="../pages/admin_dashboard.html">
-              <button type="submit">Login</button>
+            <a href="../pages/index.php">
+              <button type="submit">Reset</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />
           </div>
 
-          <div class="forgot__pasword">
+          <div class="have__account">
             <p>
-              Not an admin?
-              <a href="../pages/login.html">Click here</a>
+              Have remember your account?
+              <a href="../pages/login.php">Login here</a>
             </p>
           </div>
         </div>
       </div>
 
       <div class="character">
-        <img src="../assets/Char/Char (4).png" alt="char" />
+        <img src="../assets/Char/Char (7).png" alt="char" />
       </div>
     </form>
-    <script src="../script/admin_login.js"></script>
+
+    <script src="../script/reset.js"></script>
   </body>
 </html>

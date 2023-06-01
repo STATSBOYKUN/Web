@@ -14,29 +14,29 @@
     <navbar>
       <div class="logo">
         <!-- image with link -->
-        <a href="../pages/index.html">
+        <a href="../pages/index.php">
           <img src="../assets/Logo/logo.png" alt="logo" />
         </a>
       </div>
 
       <div class="nav__items">
         <ul>
-          <li><a href="../pages/index.html">Home</a></li>
-          <li><a href="../pages/events.html">Events</a></li>
-          <li><a href="../pages/community.html">Community</a></li>
-          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/index.php">Home</a></li>
+          <li><a href="../pages/events.php">Events</a></li>
+          <li><a href="../pages/community.php">Community</a></li>
+          <li><a href="../pages/about.php">About</a></li>
         </ul>
       </div>
 
       <div class="users__items">
         <div class="notification">
-          <a href="../pages/notification.html">
+          <a href="../pages/notification.php">
             <img src="../assets/Icons/notification.svg" alt="notification" />
           </a>
         </div>
 
         <div class="sign__button">
-          <a href="../pages/login.html">
+          <a href="../pages/login.php">
             <button>Sign In</button>
           </a>
         </div>
@@ -58,14 +58,14 @@
 
           <div class="welcome__buttons">
             <div class="start__buttons">
-              <a href="../pages/index.html#home">
+              <a href="../pages/index.php#home">
                 <button>Get Started</button>
               </a>
               <img src="../assets/Icons/chevron-right-square.svg" />
             </div>
 
             <div class="about__button">
-              <a href="../pages/about.html">
+              <a href="../pages/about.php">
                 <button>About Us</button>
               </a>
             </div>
@@ -103,7 +103,7 @@
                 lalalala <br />
                 lalala
               </p>
-              <a href="../pages/events.html">Visit Events >></a>
+              <a href="../pages/events.php">Visit Events >></a>
             </div>
             <div>
               <img src="../assets/Events/4305916.jpg" alt="" />
@@ -114,7 +114,7 @@
             <div class="community__text">
               <p class="p1">Community</p>
               <p class="p2">Lalala lalalala lalala</p>
-              <a href="../pages/community.html">Visit Community >></a>
+              <a href="../pages/community.php">Visit Community >></a>
             </div>
             <div>
               <img src="../assets/Events/4305916.jpg" alt="" />
