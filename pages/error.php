@@ -23,6 +23,11 @@
             <button>/Back</button>
           </a>
         </div>
+
+        <div class="character">
+          <img src="../assets/Char/Char (6).png" alt="char" />
+        </div>
+        
       </div>
     </main>
   </body>

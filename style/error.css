@@ -127,6 +127,15 @@ a {
   border-color: transparent;
 }
 
+.character img {
+  position: fixed;
+  width: auto;
+  height: 400px;
+
+  right: 0px;
+  bottom: 0px;
+}
+
 .start__buttons:hover {
   scale: 1.1;
 }

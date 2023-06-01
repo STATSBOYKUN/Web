@@ -10,6 +10,7 @@ function encryptData($data, $encryptionKey) {
     return base64_encode($iv . $encryptedData);
 }
 
+
 // Decrypt function
 function decryptData($encryptedData, $encryptionKey) {
     $data = base64_decode($encryptedData);
@@ -21,10 +22,11 @@ function decryptData($encryptedData, $encryptionKey) {
 }
 
 // Example usage
-$dataToEncrypt = 'Hello, World!';
 $encryptedData = encryptData($dataToEncrypt, $encryptionKey);
 
 echo "Encrypted Data: $encryptedData\n";
+
+$encryptedData = 'R4GIJlZa2D6AXDxKa2Kr4C8yN2VVNFQ2M2ZudnBKQlM5cFBqU2c9PQ==';
 
 $decryptedData = decryptData($encryptedData, $encryptionKey);
 
