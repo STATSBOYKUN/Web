@@ -46,11 +46,23 @@
           <p>Users</p>
         </div>
 
-        <div class="sign__button">
-          <a href="../pages/admin_login.html">
-            <button>Search</button>
-          </a>
-        </div>
+        <form action="">
+          <div class="search__wrapper">
+            <div class="search__input">
+              <input
+                type="text"
+                placeholder="Search with email or username ...."
+                required
+              />
+            </div>
+
+            <div class="sign__button">
+              <a href="#">
+                <button>Search</button>
+              </a>
+            </div>
+          </div>
+        </form>
       </div>
 
       <div class="visitors__card">
@@ -65,7 +77,8 @@
               <th>Telephone</th>
               <th>Age</th>
               <th>Country</th>
-              <th>Action</th>
+              <th>Update</th>
+              <th>Delete</th>
             </tr>
             <tr>
               <td>1</td>
@@ -75,9 +88,21 @@
               <td>Transfer</td>
               <td>Success</td>
               <td>Transfer</td>
-              <td>Success</td>
+              <td>
+                <a href=""
+                  ><img
+                    src="../assets/Icons/bx-edit.svg"
+                /></a>
+              </td>
+              <td>
+                <a href=""
+                  ><img
+                    id="img2"
+                    src="../assets/Icons/bx-trash.svg"
+                    alt=""
+                /></a>
+              </td>
             </tr>
-            
           </table>
         </div>
       </div>

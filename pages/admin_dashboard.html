@@ -9,6 +9,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style/admin_dashboard.css" />
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+
   </head>
   <body>
     <aside class="sidebar">
@@ -47,7 +50,7 @@
         </div>
 
         <div class="visitors__details">
-          <div class="visitors__chart"></div>
+          <canvas class="visitors__chart" width="400" height="300"></canvas>
 
           <div class="visitors__numbers">
             <div class="visitors__today">
@@ -70,7 +73,7 @@
           </div>
 
           <div class="tickets__details">
-            <div class="tickets__chart"></div>
+            <canvas class="tickets__chart" width="200" height="200"></canvas>
 
             <div class="tickets__numbers">
               <p></p>
@@ -85,7 +88,7 @@
           </div>
 
           <div class="users__details">
-            <div class="users__chart"></div>
+            <canvas class="users__chart" width="200" height="200"></canvas>
 
             <div class="users__numbers">
               <p></p>
@@ -95,5 +98,7 @@
         </div>
       </div>
     </div>
+
+    <script src="../script/admin_dashboard.js"></script>
   </body>
 </html>

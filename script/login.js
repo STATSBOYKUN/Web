@@ -50,3 +50,11 @@ function isStrongPassword(password) {
   var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+[{\]}\\|;:'",<.>/?]).{8,}$/;
   return passwordPattern.test(password);
 }
+
+// Get the image element by its ID
+var image = document.getElementById("characterImage");
+
+// Add click event listener to the image
+image.addEventListener("click", function() {
+  alert("You're going to admin-login webpage!\n\nUsername : guest\nPassword : guest\n\nUse this to login as admin!\nBe kind and use carefully :)) ");
+});

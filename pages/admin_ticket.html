@@ -46,11 +46,19 @@
           <p>Tickets</p>
         </div>
 
-        <div class="sign__button">
-          <a href="../pages/admin_login.html">
-            <button>Search</button>
-          </a>
-        </div>
+        <form action="">
+          <div class="search__wrapper">
+            <div class="search__input">
+              <input type="text" placeholder="Search with username or fullname ...." required />
+            </div>
+
+            <div class="sign__button">
+              <a href="#">
+                <button>Search</button>
+              </a>
+            </div>
+          </div>
+        </form>
       </div>
 
       <div class="visitors__card">
@@ -59,9 +67,8 @@
           <table>
             <tr>
               <th>No</th>
-              <th>Name</th>
+              <th>Username</th>
               <th>Full Name</th>
-              <th>Email</th>
               <th>Order Date</th>
               <th>Invoices</th>
               <th>Status</th>
@@ -70,7 +77,6 @@
               <td>1</td>
               <td>John Doe</td>
               <td>Animisc</td>
-              <td>12.00</td>
               <td>Free</td>
               <td>Transfer</td>
               <td>
@@ -84,26 +90,6 @@
                 </div>
               </td>
             </tr>
-
-            <tr>
-              <td>1</td>
-              <td>John Doe</td>
-              <td>Animisc</td>
-              <td>12.00</td>
-              <td>Free</td>
-              <td>Transfer</td>
-              <td>
-                <div class="dropdown">
-                  <button class="dropdown__button">Select Status</button>
-                  <div class="dropdown__content">
-                    <p>Review</p>
-                    <p>Success</p>
-                    <p>Canceled</p>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            
           </table>
         </div>
       </div>
