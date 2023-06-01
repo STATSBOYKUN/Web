@@ -134,6 +134,10 @@ body {
   border: none;
 }
 
+.username__input input:focus{
+  outline: none;
+}
+
 .password__items {
   display: flex;
   flex-direction: column;
@@ -172,7 +176,7 @@ body {
   border-radius: 16px;
 }
 
-.login__card .password__input input {
+.password__input input {
   width: 500px;
   height: fit-content;
 
@@ -184,6 +188,10 @@ body {
   background: none;
   color: #594f43;
   border: none;
+}
+
+.password__input input:focus{
+  outline: none;
 }
 
 .forgot__pasword {
@@ -210,12 +218,17 @@ body {
   color: #594f43;
 }
 
+.forgot__pasword a:hover {
+  color: #4e5e80;
+}
+
 .login__button {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
   padding: 12px 24px;
   gap: 10px;
 
@@ -235,6 +248,10 @@ body {
   color: #f3f2ff;
   background-color: transparent;
   border-color: transparent;
+}
+
+.login__button:hover {
+  scale: 1.1;
 }
 
 .have__account {
@@ -263,11 +280,75 @@ p {
   color: #594f43;
 }
 
+.have__account a:hover {
+  color: #4e5e80;
+}
+
 .character img {
   position: fixed;
   width: auto;
   height: 400px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  animation: glitchFadeIn 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+}
 
-  right: 20px;
-  bottom: 20px;
+@keyframes glitchFadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  20% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media (height < 768px) {
+  .character img {
+    position: fixed;
+    width: auto;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+  }
 }

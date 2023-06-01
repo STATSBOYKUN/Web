@@ -73,8 +73,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5px;
-  padding-bottom: 20px;
+  padding: 20px 0px;
   gap: 20px;
 
   width: 650px;
@@ -221,7 +220,7 @@ body {
 .signsex__box {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   width: fit-content;
@@ -232,6 +231,7 @@ body {
   width: fit-content;
   height: fit-content;
 
+  margin-left: 10px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
@@ -240,6 +240,20 @@ body {
 
   background: none;
   color: #594f43;
+}
+
+.signsex__box input {
+  width: 20px;
+  height: 20px;
+  
+  border: 1px solid #594f43;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signsex__box input:checked {
+  border-color: #594f43;
+  background-color: #594f43;
 }
 
 .signtelephone__items {
@@ -409,6 +423,21 @@ body {
   width: 543px;
 }
 
+.signagree__input input {
+  margin-left: 15px;
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #594f43;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signagree__input input:checked {
+  border-color: #594f43;
+  background-color: #594f43;
+}
+
 .signup__button {
   box-sizing: border-box;
 
@@ -416,6 +445,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
   padding: 12px 24px;
   gap: 10px;
 
@@ -436,6 +466,10 @@ body {
   color: #f3f2ff;
   background-color: transparent;
   border-color: transparent;
+}
+
+.signup__button:hover {
+  scale: 1.1;
 }
 
 .have__account {
@@ -471,6 +505,20 @@ p {
   width: auto;
   height: 400px;
 
-  right: 20px;
-  bottom: 20px;
+  right: 0px;
+  bottom: 0px;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (height < 768px) {
+  .character img {
+    position: fixed;
+    width: auto;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+  }
 }

@@ -24,8 +24,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: auto;
   background: #ffe5cc;
 }
 
@@ -79,6 +78,11 @@ navbar {
   color: #594f43;
 }
 
+.nav__items a:hover {
+  font-size: 22px;
+  color: #4e5e80;
+}
+
 .users__items {
   display: flex;
   flex-direction: row;
@@ -114,6 +118,10 @@ navbar {
   text-decoration: none;
 
   color: #f3f2ff;
+}
+
+.sign__button:hover {
+  scale: 1.1;
 }
 
 .testimonial__groups {
@@ -286,4 +294,15 @@ footer p {
   height: 250px;
   right: 200px;
   bottom: 90px;
+}
+
+@media (height < 768px) {
+  .character1, .character2,  .character3 {
+    display: none;
+  }
+
+  footer {
+    position: static;
+    margin-top: 40px;
+  }
 }

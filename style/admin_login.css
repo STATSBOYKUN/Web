@@ -49,12 +49,12 @@ body {
   padding: 8px;
   gap: 10px;
 
-  width: 125px;
+  width: auto;
   height: 66px;
 }
 
 .login__title p {
-  width: 109px;
+  width: auto;
   height: 50px;
 
   font-family: "Eczar";
@@ -172,7 +172,7 @@ body {
   border-radius: 16px;
 }
 
-.login__card .password__input input {
+.password__input input {
   width: 500px;
   height: fit-content;
 
@@ -190,16 +190,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   gap: 5px;
 
-  width: 513px;
+  width: 100%;
   height: fit-content;
 }
 
-.forgot__pasword a {
-  width: 391px;
+.forgot__pasword a,p {
+  width: auto;
   height: 24px;
 
   font-family: "Work Sans";
@@ -210,6 +210,10 @@ body {
   color: #594f43;
 }
 
+.forgot__pasword a:hover {
+  color: #4e5e80;
+}
+
 .login__button {
   box-sizing: border-box;
   display: flex;
@@ -218,6 +222,7 @@ body {
   align-items: center;
   padding: 12px 24px;
   gap: 10px;
+  margin-top: 15px;
 
   width: 146px;
   height: 60px;
@@ -237,11 +242,30 @@ body {
   border-color: transparent;
 }
 
+.login__button:hover {
+  scale: 1.1;
+}
+
 .character img {
   position: fixed;
   width: auto;
   height: 400px;
 
-  right: 20px;
-  bottom: 20px;
+  right: 0px;
+  bottom: 0px;
 }
+
+input:focus {
+  outline: none;
+}
+
+@media (height < 768px) {
+  .character img {
+    position: fixed;
+    width: auto;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+

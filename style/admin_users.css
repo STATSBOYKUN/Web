@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Eczar");
+* {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80;
+  border-radius: 6px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #ffeed9;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 300px;
+  height: 100vh;
+  position: static;
+  background: #ffddbf;
+}
+
+.sidebar__notification img {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar__logo img {
+  width: 155px;
+  height: 133px;
+}
+
+.sidebar__title {
+  width: auto;
+  height: 50px;
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #403930;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: auto;
+  height: auto;
+}
+
+.sidebar__menu a {
+  width: 100%;
+  height: 30px;
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #594f43;
+}
+
+.sidebar__menu a:hover {
+  scale: 1.1;
+  color: #4e5e80;
+}
+
+.sign__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 6px;
+  width: auto;
+  height: auto;
+  background: #4e5e80;
+  border-radius: 16px;
+}
+
+.sign__button:hover {
+  scale: 1.1;
+}
+
+.sign__button a button {
+  width: auto;
+  height: auto;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #f3f2ff;
+  background: none;
+  border: none;
+}
+
+.dashboard__groups {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background: #fff8f2;
+  position: static;
+}
+
+.visitors__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  background: #ffe5cc;
+  border-radius: 16px;
+  position: static;
+  margin-left: 15px;
+}
+
+.dashboard__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  gap: 100px;
+  width: 100%;
+  height: auto;
+  position: static;
+}
+
+.visitors__title {
+  padding-left: 20px;
+  width: auto;
+  height: 40px;
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #4e5e80;
+}
+
+.visitors__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  height: auto;
+  background: #ffe5cc;
+  border-radius: 16px;
+}
+
+.visitors__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 0px;
+  gap: 10px;
+  width: auto;
+  height: 100%;
+  background: #ffe5cc;
+  border-radius: 16px;
+  position: static;
+}
+
+.table__wrapper {
+  padding: 20px;
+}
+
+table {
+  height: auto;
+  width: auto;
+}
+
+th{
+  width: auto;
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #594f43;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #594f43;
+}
+
+td {
+  text-align: center;
+  width: 404px;
+  height: 40px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #594f43;
+}
+

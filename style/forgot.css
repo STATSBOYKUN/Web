@@ -168,6 +168,7 @@ body {
   align-items: center;
   padding: 12px 24px;
   gap: 10px;
+  margin-top: 15px;
 
   width: 146px;
   height: 60px;
@@ -187,11 +188,29 @@ body {
   border-color: transparent;
 }
 
+.login__button:hover {
+  scale: 1.1;
+}
+
 .character img {
   position: fixed;
   width: auto;
   height: 400px;
 
-  right: 20px;
-  bottom: 20px;
+  right: 0px;
+  bottom: 0px;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (height < 768px) {
+  .character img {
+    position: fixed;
+    width: auto;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
+  }
 }

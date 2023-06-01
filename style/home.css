@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   width: auto;
-  background: #ffe5cc;
+  background: #ffeed9;
 }
 
 a {
@@ -78,6 +78,11 @@ navbar {
   color: #594f43;
 }
 
+.nav__items a:hover {
+  font-size: 22px;
+  color: #4e5e80;
+}
+
 .users__items {
   display: flex;
   flex-direction: row;
@@ -115,12 +120,16 @@ navbar {
   color: #f3f2ff;
 }
 
+.sign__button:hover {
+  scale: 1.1;
+}
+
 .welcome__groups {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 80px 0px;
+  padding: 80px 20px;
   gap: 40px;
   width: 100%;
   height: fit-content;
@@ -209,6 +218,10 @@ navbar {
   border-color: transparent;
 }
 
+.start__buttons:hover {
+  scale: 1.1;
+}
+
 .about__button {
   box-sizing: border-box;
   display: flex;
@@ -221,6 +234,10 @@ navbar {
   height: 84px;
   border: 4px solid #4D5566;
   border-radius: 16px;
+}
+
+.about__button:hover {
+  scale: 1.1;
 }
 
 .about__button a button {
@@ -244,13 +261,14 @@ navbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 88px 0px;
+  padding: 80px 20px;
   gap: 20px;
   position: static;
   width: 100%;
   height: auto;
   left: 0px;
-  background: #ffddbf80;
+  background: #ffe5cc;
+  border-radius: 16px;
 }
 
 .collaborate__text {
@@ -283,7 +301,7 @@ navbar {
   padding: 30px 0px;
   gap: 80px;
   width: 1080.73px;
-  height: 80px;
+  height: auto;
 }
 
 .collaborate__logo img {
@@ -295,25 +313,26 @@ navbar {
 .home__groups {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 60px 0px;
+  align-items: center;
+  padding: 80px 20px;
+  gap: 20px;
   position: static;
   width: 100%;
   height: auto;
-  left: 0px;
+  border-radius: 16px;
 }
+
 .home__text {
   align-items: flex-start;
-  justify-content: left;
   padding: 20px 0px;
-  padding-left: 40px;
+  padding-left: 20px;
 
-  width: 1142px;
+  width: 100%;
 }
 
 .home__text p {
-  width: 258px;
+  width: auto;
   height: 50px;
 
   font-family: "Eczar";
@@ -333,8 +352,8 @@ navbar {
   align-items: center;
   gap: 20px;
 
-  width: 1142px;
-  height: 820px;
+  width: 100%;
+  height: auto;
 }
 
 .events__groups {
@@ -342,11 +361,11 @@ navbar {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
-  gap: 40px;
+  padding: 40px 0px;
+  gap: 20px;
 
   width: 100%;
-  height: 375px;
+  height: auto;
 
   background: #fff9f2;
   border-radius: 24px;
@@ -357,7 +376,7 @@ navbar {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px 40px 0px 20px;
-
+  gap: 40px;
   width: 464px;
   height: auto;
 }
@@ -398,6 +417,10 @@ navbar {
   color: #4e5e80;
 }
 
+.events__text a:hover {
+  color: #403930;
+}
+
 .events__groups img {
   width: 477px;
   height: 318px;
@@ -408,11 +431,11 @@ navbar {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
-  gap: 40px;
+  padding: 40px 0px;
+  gap: 20px;
 
   width: 100%;
-  height: 375px;
+  height: auto;
 
   background: #fff9f2;
   border-radius: 24px;
@@ -423,7 +446,7 @@ navbar {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px 40px 0px 20px;
-
+  gap: 40px;
   width: 464px;
   height: auto;
 }
@@ -464,6 +487,10 @@ navbar {
   color: #4e5e80;
 }
 
+.community__text a:hover {
+  color: #403930;
+}
+
 .community__groups img {
   width: 477px;
   height: 318px;
@@ -472,16 +499,16 @@ navbar {
 .testimonial__groups {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 64px 8px 80px;
-  gap: 60px;
-
+  padding: 80px 20px;
+  gap: 20px;
   position: static;
   width: 100%;
   height: auto;
-  left: 0px;
 
-  background: #ffeed9;
+  background: #ffe5cc;
+  border-radius: 16px;
 }
 
 .testimonial__titles {
@@ -490,7 +517,7 @@ navbar {
   align-items: center;
   gap: 8px;
 
-  width: 784px;
+  width: 100%;
 }
 
 .testimonial__titles .p1 {
@@ -526,8 +553,8 @@ navbar {
   align-items: center;
   gap: 94px;
 
-  width: 1236px;
-  height: 255px;
+  width: 100%;
+  height: auto;
 }
 
 .testimonial__text #caret__left {
@@ -546,8 +573,8 @@ navbar {
   align-items: flex-start;
   gap: 16px;
 
-  width: 936px;
-  height: 255px;
+  width: 100%;
+  height: auto;
 }
 
 .umaru__items {
@@ -631,7 +658,7 @@ navbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 0px;
+  padding: 80px 20px;
 
   position: static;
   width: 100%;
@@ -683,6 +710,10 @@ navbar {
   border-radius: 16px;
 }
 
+.email__button:hover {
+  scale: 1.1;
+}
+
 .email__button a button {
   font-family: "Work Sans";
   font-style: normal;
@@ -703,6 +734,10 @@ navbar {
 
   width: 607px;
   height: 32px;
+}
+
+.sosmed__icons img:hover {
+  scale: 1.1;
 }
 
 footer {
@@ -733,4 +768,18 @@ footer p {
 .love {
   color: #d40202;
   scale: 2;
+}
+
+@media (height < 600px) {
+  .char1 img {
+    display: none;
+  }
+
+  .collaborate__logo {
+    flex-direction: column;
+  }
+
+  .events__groups, .community__groups {
+    flex-direction: column;
+  }
 }

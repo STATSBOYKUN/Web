@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   width: auto;
-  background: #ffe5cc;
+  background: #ffeed9;
 }
 
 a {
@@ -78,6 +78,11 @@ navbar {
   color: #594f43;
 }
 
+.nav__items a:hover {
+  font-size: 22px;
+  color: #4e5e80;
+}
+
 .users__items {
   display: flex;
   flex-direction: row;
@@ -115,12 +120,16 @@ navbar {
   color: #f3f2ff;
 }
 
+.sign__button:hover {
+  scale: 1.1;
+}
+
 .events__cards {
+  padding: 40px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 64px 8px 80px;
   gap: 40px;
 
   position: static;
@@ -131,6 +140,17 @@ navbar {
 .events__logo img {
   width: 100%;
   height: auto;
+}
+
+.events__titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: auto;
+  height: 80px;
 }
 
 .events__titles .p1 {
@@ -147,7 +167,7 @@ navbar {
 }
 
 .events__titles .p2 {
-  width: 784px;
+  width: auto;
   height: 30px;
 
   font-family: "Work Sans";
@@ -166,7 +186,6 @@ navbar {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0px;
   gap: 15px;
 
   width: auto;
@@ -217,13 +236,14 @@ navbar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 69px 112px 88px;
+  padding: 30px 50px;
 
   position: static;
   width: auto;
   height: 536px;
 
   background: #ffe5cc;
+  border-radius: 16px;
 }
 
 .guest__title {
@@ -257,7 +277,6 @@ navbar {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding: 8px 8px 8px 0px;
   gap: 50px;
 
   width: 100%;
@@ -291,7 +310,6 @@ navbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px;
   gap: 5px;
 
   width: auto;
@@ -316,7 +334,7 @@ navbar {
 }
 
 .guest__names .p2 {
-  width: 205px;
+  width: auto;
   height: 36px;
 
   font-family: "Work Sans";
@@ -337,7 +355,7 @@ navbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 8px 80px;
+  padding: 20px 80px;
   gap: 5px;
 
   position: static;
@@ -379,7 +397,7 @@ navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 8px 8px 0px;
+  padding: 8px 8px;
   gap: 5px;
 
   width: 100%;
@@ -453,6 +471,10 @@ navbar {
   color: #f3f2ff;
   background-color: transparent;
   border-color: transparent;
+}
+
+.buy__buttons:hover {
+  scale: 1.1;
 }
 
 footer {

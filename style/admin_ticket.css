@@ -84,16 +84,25 @@ body {
   color: #594f43;
 }
 
+.sidebar__menu a:hover {
+  scale: 1.1;
+  color: #4e5e80;
+}
+
 .sign__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 4px;
+  padding: 10px 6px;
   width: auto;
   height: auto;
   background: #4e5e80;
   border-radius: 16px;
+}
+
+.sign__button:hover {
+  scale: 1.1;
 }
 
 .sign__button a button {
@@ -132,7 +141,6 @@ body {
   width: 100%;
   height: auto;
   background: #ffe5cc;
-  border-radius: 16px;
   position: static;
 }
 
@@ -141,11 +149,10 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 40px;
   gap: 100px;
   width: 100%;
   height: auto;
-  border-radius: 16px;
   position: static;
 }
 
@@ -171,7 +178,6 @@ body {
   width: auto;
   height: auto;
   background: #ffe5cc;
-  border-radius: 16px;
 }
 
 .visitors__card {
@@ -180,6 +186,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 40px 0px;
+  margin-left: 15px;
   gap: 10px;
   width: auto;
   height: 100%;
@@ -207,6 +214,8 @@ th{
   font-size: 20px;
   line-height: 150%;
   color: #594f43;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #594f43;
 }
 
 td {
@@ -222,3 +231,40 @@ td {
   color: #594f43;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__button {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown__content p {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown__content p:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}

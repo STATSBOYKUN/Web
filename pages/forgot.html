@@ -11,37 +11,42 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <div class="login__groups">
-      <div class="login__title">
-        <p>Forgot Password</p>
-      </div>
+    <form action="">
+      <div class="login__groups">
+        <div class="login__title">
+          <p>Forgot Password</p>
+        </div>
 
-      <div class="login__card">
-        <div class="username__items">
-          <div class="username__text">
-            <p>Username or Telephone Number</p>
+        <div class="login__card">
+          <div class="username__items">
+            <div class="username__text">
+              <p>Email or Telephone Number</p>
+            </div>
+
+            <div class="username__input">
+              <input
+                type="text"
+                placeholder="Enter email or telephone number" required
+              />
+            </div>
           </div>
 
-          <div class="username__input">
-            <input type="text" placeholder="Enter email or telephone number" />
+          <div class="forgot__password">
+            <p>Reset again in 00:00</p>
+          </div>
+
+          <div class="login__button">
+            <a href="../pages/index.html">
+              <button type="submit">Send</button>
+            </a>
+            <img src="../assets/Icons/chevron-right-square.svg" />
           </div>
         </div>
 
-        <div class="forgot__password">
-          <p>Reset again in 00:00</p>
-        </div>
-
-        <div class="login__button">
-          <a href="../pages/index.html">
-            <button type="submit">Send</button>
-          </a>
-          <img src="../assets/Icons/chevron-right-square.svg" />
+        <div class="character">
+          <img src="../assets/Char/Char (6).png" alt="char" />
         </div>
       </div>
-
-      <div class="character">
-        <img src="../assets/Char/Char (6).png" alt="char" />
-      </div>
-    </div>
+    </form>
   </body>
 </html>
