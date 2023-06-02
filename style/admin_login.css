@@ -231,7 +231,7 @@ body {
   border-radius: 16px;
 }
 
-.login__button a button {
+.login__button button {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;

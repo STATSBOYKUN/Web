@@ -7,7 +7,7 @@ class DatabaseConnection
   private $database = "mhs_222112404";
   private $connection;
 
-  public function DatabaseConnection()
+  public function __construct()
   {
 
   }
@@ -18,8 +18,6 @@ class DatabaseConnection
     if ($this->connection->connect_error) {
       die("Connection failed: " . $this->connection->connect_error);
     }
-
-    echo "Connected successfully!";
   }
 
   public function close()
@@ -110,5 +108,39 @@ class DatabaseConnection
       echo "No data found.";
     }
   }
+
+  public function searchAdmin($tableName, $data)
+{
+    $username = $this->connection->real_escape_string($data['username']);
+    $password = $this->connection->real_escape_string($data['password']);
+
+    $query = "SELECT * FROM $tableName WHERE username = '$username' AND password = '$password'";
+    $result = $this->connection->query($query);
+
+    if ($result && $result->num_rows > 0) {
+        return 1; // Record exists
+    } else {
+        return 0; // Record does not exist
+    }
 }
+
+
+  public function searchUsers($tableName, $data)
+  {
+    $columns = implode(", ", array_keys($data));
+    $values = "'" . implode("', '", array_values($data)) . "'";
+
+    $query = "SELECT * FROM $tableName WHERE $columns = $values";
+    $result = $this->connection->query($query);
+
+    if ($result && $result->num_rows > 0) {
+      return 1; // Record exists
+    } else {
+      return 0; // Record does not exist
+    }
+  }
+
+}
+
+
 ?>

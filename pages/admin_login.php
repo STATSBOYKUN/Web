@@ -9,9 +9,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../style/admin_login.css" />
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
+    <script src="../script/admin_login.js"></script>
   </head>
   <body>
-    <form onsubmit="handleSubmit(event)" action="">
+    <form id="admin_login_form" method="post">
       <div class="login__groups">
         <div class="login__title">
           <p>Admin Login</p>
@@ -24,7 +25,7 @@
             </div>
 
             <div class="username__input">
-              <input type="text" placeholder="Enter username or email" required/>
+              <input type="text" id="username" name="username" placeholder="Enter username or email" required/>
             </div>
           </div>
 
@@ -34,12 +35,12 @@
             </div>
 
             <div class="password__input">
-              <input type="password" placeholder="Enter password" required />
+              <input type="password" id="password" name="password" placeholder="Enter password" required />
             </div>
           </div>
 
           <div class="login__button">
-            <a href="../pages/admin_dashboard.php">
+            <a>
               <button type="submit">Login</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />
@@ -58,6 +59,5 @@
         <img src="../assets/Char/Char (4).png" alt="char" />
       </div>
     </form>
-    <script src="../script/admin_login.js"></script>
   </body>
 </html>

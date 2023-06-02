@@ -67,12 +67,3 @@ var form = document.getElementById('loginForm');
 
 // Add submit event listener to the form
 form.addEventListener('submit', handleSubmit);
-
-
-// Get the image element by its ID
-var image = document.getElementById("characterImage");
-
-// Add click event listener to the image
-image.addEventListener("click", function() {
-  alert("You're going to admin-login webpage!\n\nUsername : guest\nPassword : guest\n\nUse this to login as admin!\nBe kind and use carefully :)) ");
-});
