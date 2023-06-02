@@ -3,7 +3,7 @@ function handleSubmit(event) {
 
   // Get the input values
   var email = document.querySelector('input[type="email"]').value;
-  var username = document.querySelector('input[type="text"]').value.toLowerCase();
+  var username = document.querySelector('input[type="text"]').value;
   var sex = document.querySelector('input[name="sex"]:checked');
   var age = document.querySelector('input[type="number"]').value;
   var country = document.getElementById('country').value;
@@ -11,6 +11,28 @@ function handleSubmit(event) {
   var password = document.querySelector('.password__items input[type="password"]').value;
   var confirmPassword = document.querySelectorAll('.password__items input[type="password"]')[1].value;
 
+  // Make AJAX request to check email
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'action_register_email.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        var response = xhr.responseText;
+        if (response === 'invalid') {
+          alert('Login successful!');
+          // Redirect to the desired page
+          window.location.href = 'login.php';
+        } else {
+          alert('Invalid username or password.');
+        }
+      } else {
+        alert('Error: ' + xhr.status);
+      }
+    }
+  };
+  xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
+  
   // Perform validation
   if (email.trim() === '') {
     alert('Please enter your email.');
@@ -87,9 +109,7 @@ function handleSubmit(event) {
     return;
   }
 
-  // If the validation passes, you can proceed with form submission or any other action
-  alert('Form submitted successfully!');
-  // ... Your code here to submit the form or perform other actions
+  document.querySelector('form').submit();
 }
 
 // Helper function to check if email is taken (replace with your own implementation)

@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <form onsubmit="handleSubmit(event)" action="">
+    <form onsubmit="handleSubmit(event)" action="register_action.php" method="post">
       <div class="signup__groups">
         <div class="signup__title">
           <p>Sign Up</p>
@@ -24,7 +24,7 @@
             </div>
 
             <div class="signemail__input">
-              <input type="email" placeholder="Enter email" required />
+              <input type="email" name="email" id="email" placeholder="Enter email" required />
             </div>
           </div>
 
@@ -34,7 +34,7 @@
             </div>
 
             <div class="signusername__input">
-              <input type="text" placeholder="Enter username" required />
+              <input type="text" name="username" id="username" placeholder="Enter username" required />
             </div>
           </div>
 
@@ -45,11 +45,11 @@
 
             <div class="signsex__input">
               <div class="signsex__box">
-                <input type="radio" name="sex" value="male" />
+                <input type="radio" name="sex" id="male" value="male" />
                 <p>Male</p>
               </div>
               <div class="signsex__box">
-                <input type="radio" name="sex" value="female" />
+                <input type="radio" name="sex" id="female" value="female" />
                 <p>Female</p>
               </div>
             </div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="signage__input">
-              <input type="number" value="17" required />
+              <input type="number" name="age" id="age" value="17" required />
             </div>
           </div>
 
@@ -71,7 +71,7 @@
             </div>
 
             <div class="signcountry__input">
-              <select id="country" name="country" required>
+              <select name="country" id="country" required>
                 <option value="Brunei">Brunei</option>
                 <option value="Burma">Burma</option>
                 <option value="Cambodia">Cambodia</option>
@@ -101,7 +101,11 @@
             <div class="signtelephone__input">
               <input
                 type="text"
+                name="telephone"
+                id="telephone"
+                
                 placeholder="Enter telephone number"
+
                 required
               />
             </div>
@@ -113,7 +117,7 @@
             </div>
 
             <div class="password__input">
-              <input type="password" placeholder="Enter password" required />
+              <input type="password" name="password" id="password" placeholder="Enter password" required />
             </div>
           </div>
 

@@ -20,7 +20,7 @@ session_start();
       <div class="login__title">
         <p>Login</p>
       </div>
-      <form onsubmit="handleSubmit(event)" action="">
+      <form onsubmit="handleSubmit(event)" method="post">
         <div class="login__card">
           <div class="username__items">
             <div class="username__text">
@@ -46,7 +46,7 @@ session_start();
             <a href="../pages/forgot.php">Forgot Password?</a>
 
             <div class="signagree__input">
-              <input type="checkbox" placeholder="Enter password"/>
+              <input type="checkbox" id="rememberCheckbox" placeholder="Enter password"/>
               <p>Remember Me</p>
             </div>
           </div>

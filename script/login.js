@@ -1,3 +1,13 @@
+// Check if Remember Me checkbox is checked on page load
+window.addEventListener('load', function() {
+  var rememberCheckbox = document.getElementById('rememberCheckbox');
+
+  // If the checkbox is checked, set the cookies
+  if (rememberCheckbox.checked) {
+    setRememberMeCookies();
+  }
+});
+
 function handleSubmit(event) {
   event.preventDefault(); // Prevent form submission
 
@@ -5,51 +15,59 @@ function handleSubmit(event) {
   var username = document.querySelector('input[type="text"]').value;
   var password = document.querySelector('input[type="password"]').value;
 
-  // Perform validation
-  if (username.trim() === '') {
-    alert('Please enter your username or email.');
-    return;
-  }
+  // Make AJAX request to check email and password against database
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'action_login.php', true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        var response = xhr.responseText;
+        if (response === 'valid') {
+          alert('Login successful!');
+          // Redirect to the desired page
+          window.location.href = 'index.php';
+        } else {
+          alert('Invalid username or password.');
+          window.location.href = 'index.php';
+        }
+      } else {
+        alert('Error: ' + xhr.status);
+      }
+    }
+  };
+  xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
+  setRememberMeCookies();
+}
 
-  // Validate email uniqueness and lowercase
-  var lowercaseEmail = username.toLowerCase();
-  if (isEmailTaken(lowercaseEmail)) {
-    alert('This email is already taken. Please enter a unique email.');
-    return;
-  }
+function setRememberMeCookies() {
+  var rememberCheckbox = document.getElementById('rememberCheckbox');
+  if (rememberCheckbox.checked) {
+    var username = document.querySelector('input[type="text"]').value;
+    var password = document.querySelector('input[type="password"]').value;
+    var expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 30); // 30 days from now
 
-  if (lowercaseEmail !== username) {
-    alert('Email must be lowercase.');
-    return;
-  }
-
-  if (password.trim() === '') {
-    alert('Please enter your password.');
-    return;
-  }
-
-  // Validate password strength
-  if (!isStrongPassword(password)) {
-    alert(
-      'Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character.'
-    );
-    return;
+    // Set cookies
+    document.cookie = 'username=' + encodeURIComponent(username) + '; expires=' + expirationDate.toUTCString() + '; path=/';
+    document.cookie = 'password=' + encodeURIComponent(password) + '; expires=' + expirationDate.toUTCString() + '; path=/';
   }
 }
 
-// Helper function to check if email is taken (replace with your own implementation)
-function isEmailTaken(email) {
-  // Your code to check if the email is already taken
-  // Return true if email is taken, false otherwise
-  return false;
-}
+// Get the image element by its ID
+var image = document.getElementById('characterImage');
 
-// Helper function to check password strength
-function isStrongPassword(password) {
-  // Use regular expressions to validate password strength
-  var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+[{\]}\\|;:'",<.>/?]).{8,}$/;
-  return passwordPattern.test(password);
-}
+// Add click event listener to the image
+image.addEventListener('click', function() {
+  alert("You're going to admin-login webpage!\n\nUsername : guest\nPassword : guest\n\nUse this to login as admin!\nBe kind and use carefully :)) ");
+});
+
+// Get the form element by its ID
+var form = document.getElementById('loginForm');
+
+// Add submit event listener to the form
+form.addEventListener('submit', handleSubmit);
+
 
 // Get the image element by its ID
 var image = document.getElementById("characterImage");
