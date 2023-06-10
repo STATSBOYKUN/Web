@@ -215,7 +215,7 @@ body {
   padding: 20px 0px 20px 20px;
   gap: 40px;
 
-  width: 400px;
+  width: 200px;
   height: fit-content;
 
   background: #fff9f2;
@@ -223,7 +223,7 @@ body {
 }
 
 .search__input input {
-  width: 500px;
+  width: 200px;
   height: fit-content;
 
   font-family: "Work Sans";
@@ -260,7 +260,7 @@ th{
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
-  color: #594f43;
+  color: #4e5e80;
   padding-bottom: 20px;
   border-bottom: 3px solid #594f43;
 }

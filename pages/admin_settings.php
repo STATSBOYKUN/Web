@@ -40,7 +40,7 @@
       </div>
     </aside>
     <div class="visitors__card">
-      <form action="">
+      <form action="../controller/action_settings.php" method="post" >
         <div class="login__groups">
           <div class="login__title">
             <p>Change Password</p>
@@ -53,7 +53,8 @@
               </div>
 
               <div class="password__input">
-                <input type="password" placeholder="Enter password" required />
+                <input pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$"
+              type="password" name="password" id="password" placeholder="Enter password" required />
               </div>
             </div>
 
@@ -64,7 +65,8 @@
 
               <div class="password__input">
                 <input
-                  type="password"
+                pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$"
+              type="confirmPassword" name="confirmPassword" id="password"
                   placeholder="Re-enter password"
                   required
                 />

@@ -1,8 +1,3 @@
-<?php
-session_start();
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +15,7 @@ session_start();
       <div class="login__title">
         <p>Login</p>
       </div>
-      <form onsubmit="handleSubmit(event)" method="post">
+      <form action="../controller/action_login.php" method="post">
         <div class="login__card">
           <div class="username__items">
             <div class="username__text">
@@ -28,7 +23,7 @@ session_start();
             </div>
 
             <div class="username__input">
-              <input type="text" placeholder="Enter username or email" required/>
+              <input type="text" id="username" name="username" placeholder="Enter username or email" required/>
             </div>
           </div>
 
@@ -38,7 +33,7 @@ session_start();
             </div>
 
             <div class="password__input">
-              <input type="password" placeholder="Enter password" required />
+              <input type="password" id="password" name="password" placeholder="Enter password" required />
             </div>
           </div>
 

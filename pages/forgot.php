@@ -11,7 +11,7 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
-    <form onsubmit="handleSubmit(event)" action="">
+    <form action="../controller/action_forgot.php" method="post" >
       <div class="login__groups">
         <div class="login__title">
           <p>Forgot Password</p>
@@ -25,7 +25,7 @@
 
             <div class="username__input">
               <input
-                type="text"
+                type="text" id="username" name="username"
                 placeholder="Enter email or telephone number" required
               />
             </div>
@@ -48,7 +48,5 @@
         </div>
       </div>
     </form>
-
-    <script src="../script/forgot.js"></script>
   </body>
 </html>

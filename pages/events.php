@@ -55,22 +55,22 @@
 
         <div class="time__cards">
           <div class="time__boxs">
-            <p class="counter">00</p>
+            <p id="days" class="counter">00</p>
             <p class="time">days</p>
           </div>
 
           <div class="time__boxs">
-            <p class="counter">00</p>
+            <p id="hours" class="counter">00</p>
             <p class="time">hrs</p>
           </div>
 
           <div class="time__boxs">
-            <p class="counter">00</p>
+            <p id="minutes" class="counter">00</p>
             <p class="time">mins</p>
           </div>
 
           <div class="time__boxs">
-            <p class="counter">00</p>
+            <p id="seconds" class="counter">00</p>
             <p class="time">secs</p>
           </div>
         </div>
@@ -136,6 +136,8 @@
           </a>
         </div>
       </div>
+
+      <script src="../script/events.js" ></script>
     </main>
 
     <footer>

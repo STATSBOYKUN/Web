@@ -51,7 +51,7 @@
             <div class="search__input">
               <input
                 type="text"
-                placeholder="Search with email or username ...."
+                placeholder="Search ... "
                 required
               />
             </div>
@@ -70,7 +70,7 @@
           <!-- table -->
           <table>
             <tr>
-              <th>No</th>
+              <th>#</th>
               <th>Email</th>
               <th>Username</th>
               <th>Sex</th>
@@ -80,29 +80,9 @@
               <th>Update</th>
               <th>Delete</th>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>John Doe</td>
-              <td>Animisc</td>
-              <td>12.00</td>
-              <td>Transfer</td>
-              <td>Success</td>
-              <td>Transfer</td>
-              <td>
-                <a href=""
-                  ><img
-                    src="../assets/Icons/bx-edit.svg"
-                /></a>
-              </td>
-              <td>
-                <a href=""
-                  ><img
-                    id="img2"
-                    src="../assets/Icons/bx-trash.svg"
-                    alt=""
-                /></a>
-              </td>
-            </tr>
+            <?php
+              require_once("../controller/action_adminUsers.php");
+            ?>
           </table>
         </div>
       </div>

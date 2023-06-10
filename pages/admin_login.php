@@ -12,7 +12,7 @@
     <script src="../script/admin_login.js"></script>
   </head>
   <body>
-    <form id="admin_login_form" method="post">
+    <form id="admin_login_form" action="../controller/action_admin.php" method="post">
       <div class="login__groups">
         <div class="login__title">
           <p>Admin Login</p>

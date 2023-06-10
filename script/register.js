@@ -1,133 +1,26 @@
-function handleSubmit(event) {
-  event.preventDefault(); // Prevent form submission
+document.addEventListener("DOMContentLoaded", function() {
+  var userData = localStorage.getItem('user_data');
+  if (userData) {
+    userData = JSON.parse(userData);
 
-  // Get the input values
-  var email = document.querySelector('input[type="email"]').value;
-  var username = document.querySelector('input[type="text"]').value;
-  var sex = document.querySelector('input[name="sex"]:checked');
-  var age = document.querySelector('input[type="number"]').value;
-  var country = document.getElementById('country').value;
-  var telephoneNumber = document.querySelector('.signtelephone__input input[type="text"]').value;
-  var password = document.querySelector('.password__items input[type="password"]').value;
-  var confirmPassword = document.querySelectorAll('.password__items input[type="password"]')[1].value;
-
-  // Make AJAX request to check email
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'action_register_email.php', true);
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        var response = xhr.responseText;
-        if (response === 'invalid') {
-          alert('Login successful!');
-          // Redirect to the desired page
-          window.location.href = 'login.php';
-        } else {
-          alert('Invalid username or password.');
+    // Check if the radio button exists and set its checked property
+    function setRadioButtonValue(radioName, value) {
+      var radioButtons = document.getElementsByName(radioName);
+      if (radioButtons.length > 0) {
+        for (var i = 0; i < radioButtons.length; i++) {
+          if (radioButtons[i].value === value) {
+            radioButtons[i].checked = true;
+            break;
+          }
         }
-      } else {
-        alert('Error: ' + xhr.status);
       }
     }
-  };
-  xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
-  
-  // Perform validation
-  if (email.trim() === '') {
-    alert('Please enter your email.');
-    return;
+
+    document.getElementById('email').value = userData.email || '';
+    document.getElementById('username').value = userData.username || '';
+    setRadioButtonValue('sex', userData.sex);
+    document.getElementById('telephone').value = userData.telephone || '';
+    document.getElementById('age').value = userData.age || '';
+    document.getElementById('country').value = userData.country || '';
   }
-
-  // Validate email uniqueness and lowercase
-  var lowercaseEmail = email.toLowerCase();
-  if (isEmailTaken(lowercaseEmail)) {
-    alert('This email is already taken. Please enter a unique email.');
-    return;
-  }
-
-  if (lowercaseEmail !== email) {
-    alert('Email must be lowercase.');
-    return;
-  }
-
-  if (username.trim() === '') {
-    alert('Please enter your username.');
-    return;
-  }
-
-  if (username !== username.toLowerCase()) {
-    alert('Username must be lowercase.');
-    return;
-  }
-
-  if (!sex) {
-    alert('Please select your sex.');
-    return;
-  }
-
-  if (sex.value === 'male' && document.querySelector('input[name="sex"][value="female"]').checked) {
-    alert('You cannot select both male and female options for sex.');
-    return;
-  }
-
-  if (sex.value === 'female' && document.querySelector('input[name="sex"][value="male"]').checked) {
-    alert('You cannot select both male and female options for sex.');
-    return;
-  }
-
-  if (age < 18) {
-    alert('You must be at least 18 years old to sign up.');
-    return;
-  }
-
-  if (telephoneNumber.trim() === '') {
-    alert('Please enter your telephone number.');
-    return;
-  }
-
-  if (!isTelephoneValid(telephoneNumber)) {
-    alert('Telephone number must be a 10-digit number.');
-    return;
-  }
-
-  if (password.trim() === '') {
-    alert('Please enter your password.');
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert('Passwords do not match. Please re-enter your password.');
-    return;
-  }
-
-  // Validate password strength
-  if (!isStrongPassword(password)) {
-    alert(
-      'Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character.'
-    );
-    return;
-  }
-
-  document.querySelector('form').submit();
-}
-
-// Helper function to check if email is taken (replace with your own implementation)
-function isEmailTaken(email) {
-  // Your code to check if the email is already taken
-  // Return true if email is taken, false otherwise
-  return false;
-}
-
-// Helper function to check if telephone number is valid
-function isTelephoneValid(telephone) {
-  const telephoneRegex = /^\d{10}$/;
-  return telephoneRegex.test(telephone);
-}
-
-// Helper function to check password strength
-function isStrongPassword(password) {
-  // Use regular expressions to validate password strength
-  var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-  return passwordPattern.test(password);
-}
+});

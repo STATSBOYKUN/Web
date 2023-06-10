@@ -1,16 +1,3 @@
-<?php
-session_start(); // Start the session
-
-// Check if the session variable "username" is set
-if (isset($_SESSION["username"])) {
-  // User is logged in, redirect to another page
-  header("Location: login.php");
-  exit(); // Terminate the current script
-}
-
-// Continue with the rest of your code for login page
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +14,7 @@ if (isset($_SESSION["username"])) {
 </head>
 
 <body>
-  <form onsubmit="handleSubmit(event)" action="" method="post">
+  <form action="../controller/action_ticket.php" method="post">
     <div class="ticket__groups">
       <div class="ticket__title">
         <div class="events__logo">
@@ -48,29 +35,27 @@ if (isset($_SESSION["username"])) {
           </div>
 
           <div class="name__input">
-            <input type="text" placeholder="Enter name" required />
+            <input id="name" name="name" type="text" placeholder="Enter name" pattern="[A-Za-z]+" required />
           </div>
         </div>
 
         <div class="number__items">
           <div class="number__text">
-
             <p>Number of Tickets</p>
-
           </div>
 
           <div class="number__input">
-            <input onchange="handleTicketChange(event)" type="number" value="1" required />
+            <input id="tickets" name="tickets" onchange="handleTicketChange(event)" type="number" value="1" min="1" max="5" required />
           </div>
         </div>
 
         <div class="file__items">
           <div class="file__text">
-            <p>Attach File (max. 300KB)</p>
+            <p>Attach Invoices File (max. 300KB)</p>
           </div>
 
           <div class="file__input">
-            <input type="file" required />
+            <input id="invoices" name="invoices" type="file" required />
           </div>
         </div>
 

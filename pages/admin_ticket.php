@@ -49,7 +49,7 @@
         <form action="">
           <div class="search__wrapper">
             <div class="search__input">
-              <input type="text" placeholder="Search with username or fullname ...." required />
+              <input type="text" placeholder="Search ...." required />
             </div>
 
             <div class="sign__button">
@@ -66,13 +66,18 @@
           <!-- table -->
           <table>
             <tr>
-              <th>No</th>
+              <th>#</th>
               <th>Username</th>
               <th>Full Name</th>
               <th>Order Date</th>
               <th>Invoices</th>
               <th>Status</th>
             </tr>
+
+            <?php
+              require_once("../controller/action_adminTickets.php");
+            ?>
+
             <tr>
               <td>1</td>
               <td>John Doe</td>
