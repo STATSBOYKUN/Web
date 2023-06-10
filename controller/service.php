@@ -64,14 +64,43 @@ class DatabaseConnection
   public function insertTickets($tableName, $data)
   {
     $columns = implode(", ", array_keys($data));
-    $values = "'" . implode("', '", array_values($data)) . "'";
+    $placeholders = implode(", ", array_fill(0, count($data), "?"));
 
-    $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
+    // Prepare the SQL statement with placeholders
+    $query = "INSERT INTO $tableName ($columns) VALUES ($placeholders)";
 
-    if ($this->connection->query($query) === true) {
-    } else {
+    // Prepare the statement
+    $stmt = $this->connection->prepare($query);
+
+    // Bind the parameters to the statement
+    $bindTypes = ""; // Parameter types
+    $bindParams = []; // Parameter values
+
+    foreach ($data as $value) {
+      if (is_string($value)) {
+        $bindTypes .= "s";
+      } else {
+        $bindTypes .= "b";
+      }
+
+      $bindParams[] = $value;
     }
+
+    $stmt->bind_param($bindTypes, ...$bindParams);
+
+    // Execute the statement
+    $stmt->execute();
+
+    if ($stmt->affected_rows > 0) {
+      // Success
+    } else {
+      // Error
+    }
+
+    $stmt->close();
   }
+
+
 
   public function getUsers($tableName)
   {
@@ -101,15 +130,25 @@ class DatabaseConnection
   {
     $query = "SELECT * FROM $tableName";
     $result = $this->connection->query($query);
-
+  
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $row['id'] . "</td>";
         echo "<td>" . $row['name'] . "</td>";
         echo "<td>" . $row['email'] . "</td>";
+        echo "<td>" . $row['date'] . "</td>";
         echo "<td>" . $row['tickets'] . "</td>";
-        echo "<td>" . $row['invoices'] . "</td>";
+        echo "<td>";
+  
+        if (!empty($row['invoices'])) {
+          $invoicePath = "../assets/dataImage/" . $row['invoices'];
+          echo "<a href='$invoicePath' class='invoice-link'>View Invoice</a>";
+        } else {
+          echo "No invoice attached";
+        }
+  
+        echo "</td>";
         echo "<td>";
         echo "<div class='dropdown'>";
         echo "<button class='dropdown__button' data-ticket-id='" . $row['id'] . "'>" . $row['status'] . "</button>";
@@ -126,6 +165,11 @@ class DatabaseConnection
       echo "No data found.";
     }
   }
+  
+
+
+
+
 
   public function updateAdmins($tableName, $data, $id)
   {
@@ -184,7 +228,7 @@ class DatabaseConnection
     $query = "DELETE FROM $tableName WHERE id = $id";
 
     if ($this->connection->query($query) === true) {
-      
+
     } else {
     }
   }

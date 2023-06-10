@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <form action="../controller/action_ticket.php" method="post">
+  <form action="../controller/action_ticket.php" method="post" enctype="multipart/form-data">
     <div class="ticket__groups">
       <div class="ticket__title">
         <div class="events__logo">
@@ -35,7 +35,10 @@
           </div>
 
           <div class="name__input">
-            <input id="name" name="name" type="text" placeholder="Enter name" pattern="[A-Za-z]+" required />
+            <input id="name" name="name" type="text" placeholder="Enter name" pattern="[A-Za-z]{3,32}$"
+            title="Please enter name correctly" required />
+            <input type="hidden" id="status" name="status" value="Review" >
+            <input type="hidden" id="currentDate" name="currentDate">
           </div>
         </div>
 
@@ -55,7 +58,8 @@
           </div>
 
           <div class="file__input">
-            <input id="invoices" name="invoices" type="file" required />
+            <input id="invoices" name="invoices" type="file"
+            accept=".jpg, .jpeg, .png" value="" required />
           </div>
         </div>
 

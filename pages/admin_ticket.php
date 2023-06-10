@@ -67,9 +67,10 @@
           <table>
             <tr>
               <th>#</th>
-              <th>Username</th>
               <th>Full Name</th>
+              <th>Email</th>
               <th>Order Date</th>
+              <th>Tickets</th>
               <th>Invoices</th>
               <th>Status</th>
             </tr>
@@ -82,5 +83,6 @@
       </div>
     </div>
     <script src="../script/admin_ticket.js"></script>
+    <script src="../script/preview__invoices.js"></script>
   </body>
 </html>
