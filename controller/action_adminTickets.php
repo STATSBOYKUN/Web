@@ -6,6 +6,6 @@ $connection->connect();
 
 $tableName = "ticket";
 
-$connection -> getUsers($tableName);
+$connection -> getTickets($tableName);
 
 $connection->close();

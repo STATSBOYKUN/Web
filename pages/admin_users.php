@@ -87,5 +87,6 @@
         </div>
       </div>
     </div>
+    <script src="../script/admin_users.js" ></script>
   </body>
 </html>

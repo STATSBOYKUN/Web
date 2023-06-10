@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Eczar");
+* {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80;
+  border-radius: 6px;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #ffeed9;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 300px;
+  height: 100vh;
+  position: static;
+  background: #ffddbf;
+}
+
+.sidebar__notification img {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar__logo img {
+  width: 155px;
+  height: 133px;
+}
+
+.sidebar__title {
+  width: auto;
+  height: 50px;
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  color: #403930;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: auto;
+  height: auto;
+}
+
+.sidebar__menu a {
+  width: 100%;
+  height: 30px;
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #594f43;
+}
+
+.sidebar__menu a:hover {
+  scale: 1.1;
+  color: #4e5e80;
+}
+
+.sign__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 6px;
+  width: auto;
+  height: auto;
+  background: #4e5e80;
+  border-radius: 16px;
+}
+
+.sign__button:hover {
+  scale: 1.1;
+}
+
+.sign__button a button {
+  width: auto;
+  height: auto;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #f3f2ff;
+  background: none;
+  border: none;
+}
+
+.visitors__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background: #ffe5cc;
+  position: static;
+}
+
+.login__groups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+
+  position: static;
+  width: 100%;
+}
+
+.login__title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+
+  width: fit-content;
+  height: 66px;
+}
+
+.login__title p {
+  width: fit-content;
+  height: 50px;
+
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+
+  color: #403930;
+}
+
+.login__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  width: 100%;
+  height: auto;
+
+  background: #ffe5cc;
+  border-radius: 16px;
+}
+
+
+.signemail__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.signemail__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.signemail__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.signemail__input input, .signusername__input input, .signtelephone__input input, .signage__input input, .signcountry__input select, .password__input input{
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  background: none;
+  color: #594f43;
+  border: none;
+}
+
+.signusername__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.signusername__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.signusername__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.signsex__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.signsex__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.signsex__input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 0px 20px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.signsex__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  height: 45px;
+}
+
+.signsex__box p {
+  width: fit-content;
+  height: fit-content;
+
+  margin-left: 10px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  background: none;
+  color: #594f43;
+}
+
+.signsex__box input {
+  width: 20px;
+  height: 20px;
+  
+  border: 1px solid #594f43;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signsex__box input:checked {
+  border-color: #594f43;
+  background-color: #594f43;
+}
+
+.signtelephone__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.signtelephone__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.signtelephone__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+
+.signage__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.signage__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.signage__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.signcountry__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.signcountry__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.signcountry__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.password__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.password__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #594f43;
+}
+
+.password__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+
+.login__button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  margin-top: 15px;
+  gap: 10px;
+
+  width: auto;
+  height: 60px;
+
+  background: #4e5e80;
+  border-radius: 16px;
+}
+
+.login__button a button {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #f3f2ff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.login__button:hover {
+  scale: 1.1;
+}
+
+input:focus {
+  outline: none;
+}

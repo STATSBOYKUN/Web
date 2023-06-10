@@ -88,8 +88,8 @@ class DatabaseConnection
         echo "<td>" . $row['telephone'] . "</td>";
         echo "<td>" . $row['age'] . "</td>";
         echo "<td>" . $row['country'] . "</td>";
-        echo "<td> <a href=''><img src='../assets/Icons/bx-edit.svg'/></a></td>";
-        echo "<td> <a href=''><img id='img2' src='../assets/Icons/bx-trash.svg' alt=''/></a></td>";
+        echo "<td> <a href='../pages/admin_usersUpdate.php?id=", $row["id"], " '><img id='img1' src='../assets/Icons/bx-edit.svg'/></a></td>";
+        echo "<td> <a href='../controller/action_adminUsersDelete.php?id=", $row["id"], "'><img id='img2' src='../assets/Icons/bx-trash.svg' alt='' onclick='return confirmDelete(event)'/></a></td>";
         echo "</tr>";
       }
     } else {
@@ -103,9 +103,6 @@ class DatabaseConnection
     $result = $this->connection->query($query);
 
     if ($result->num_rows > 0) {
-      echo "<table>";
-      echo "<tr><th>ID</th><th>Name</th><th>Email</th></tr>";
-
       while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $row['id'] . "</td>";
@@ -113,13 +110,82 @@ class DatabaseConnection
         echo "<td>" . $row['email'] . "</td>";
         echo "<td>" . $row['tickets'] . "</td>";
         echo "<td>" . $row['invoices'] . "</td>";
-        echo "<td>" . $row['status'] . "</td>";
+        echo "<td>";
+        echo "<div class='dropdown'>";
+        echo "<button class='dropdown__button' data-ticket-id='" . $row['id'] . "'>" . $row['status'] . "</button>";
+        echo "<div class='dropdown__content'>";
+        echo "<p>Review</p>";
+        echo "<p>Success</p>";
+        echo "<p>Canceled</p>";
+        echo "</div>";
+        echo "</div>";
+        echo "</td>";
         echo "</tr>";
       }
-
-      echo "</table>";
     } else {
       echo "No data found.";
+    }
+  }
+
+  public function updateAdmins($tableName, $data, $id)
+  {
+    $updates = [];
+    foreach ($data as $column => $value) {
+      $updates[] = "$column = '$value'";
+    }
+    $updateString = implode(", ", $updates);
+
+    $query = "UPDATE $tableName SET $updateString WHERE id = $id";
+
+    if ($this->connection->query($query) === true) {
+      // Update successful
+    } else {
+      // Update failed
+    }
+  }
+
+  public function updateUsers($tableName, $data, $id)
+  {
+
+    $updates = [];
+    foreach ($data as $column => $value) {
+      $updates[] = "$column = '$value'";
+    }
+    $updateString = implode(", ", $updates);
+
+    $query = "UPDATE $tableName SET $updateString WHERE id = $id";
+
+    if ($this->connection->query($query) === true) {
+      // Update successful
+    } else {
+      // Update failed
+    }
+  }
+
+  public function updateTickets($tableName, $data, $id)
+  {
+    $updates = [];
+    foreach ($data as $column => $value) {
+      $updates[] = "$column = '$value'";
+    }
+    $updateString = implode(", ", $updates);
+
+    $query = "UPDATE $tableName SET $updateString WHERE id = $id";
+
+    if ($this->connection->query($query) === true) {
+      // Update successful
+    } else {
+      // Update failed
+    }
+  }
+
+  public function deleteUsers($tableName, $id)
+  {
+    $query = "DELETE FROM $tableName WHERE id = $id";
+
+    if ($this->connection->query($query) === true) {
+      
+    } else {
     }
   }
 

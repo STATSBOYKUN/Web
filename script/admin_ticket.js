@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // If the change is confirmed, update the text of the dropdown button and apply the selected color
       if (isConfirmed) {
         // Get the dropdown button element
-        var dropdownButton = this.parentNode.previousElementSibling;
+        var dropdownButton = this.parentNode.parentNode.querySelector('.dropdown__button');
 
         // Remove 'selected' class from all dropdown buttons
         dropdownButtons.forEach(function(button) {
@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (status === 'Canceled') {
           dropdownButton.classList.add('canceled');
         }
+
+        // Send an asynchronous request to update the status in the database
+        var ticketId = dropdownButton.dataset.ticketId;
+        updateStatus(ticketId, status);
       }
 
       // Close the dropdown by removing the 'show' class
@@ -68,4 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+  // Function to send an asynchronous request to update the status in the database
+  function updateStatus(ticketId, status) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '../controller/update_status.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Handle the response from the server if needed
+      }
+    };
+    xhr.send('ticketId=' + ticketId + '&status=' + status);
+  }
 });

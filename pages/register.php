@@ -118,7 +118,7 @@
           <div class="password__input">
             <input pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$"
               type="password" name="password" id="password" placeholder="Enter password"
-              title="Password must be at least 8 combination of alphanumeric and special character " required />
+              title="Password must be at least 8 combination of alphanumeric and special character" required />
           </div>
         </div>
 

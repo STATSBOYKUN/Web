@@ -77,24 +77,6 @@
             <?php
               require_once("../controller/action_adminTickets.php");
             ?>
-
-            <tr>
-              <td>1</td>
-              <td>John Doe</td>
-              <td>Animisc</td>
-              <td>Free</td>
-              <td>Transfer</td>
-              <td>
-                <div class="dropdown">
-                  <button class="dropdown__button">Select Status</button>
-                  <div class="dropdown__content">
-                    <p>Review</p>
-                    <p>Success</p>
-                    <p>Canceled</p>
-                  </div>
-                </div>
-              </td>
-            </tr>
           </table>
         </div>
       </div>
