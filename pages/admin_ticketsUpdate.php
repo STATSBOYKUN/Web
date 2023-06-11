@@ -151,6 +151,7 @@
   </div>
 
   <script src="../script/admin_ticketUpdate.js"></script>
+  <script src="../script/preview__invoices.js"></script>
 </body>
 
 </html>

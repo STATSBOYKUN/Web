@@ -161,12 +161,7 @@ class DatabaseConnection
       echo "No data found.";
     }
   }
-  
-
-
-
-
-
+ 
   public function updateAdmins($tableName, $data, $id)
   {
     $updates = [];
