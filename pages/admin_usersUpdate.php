@@ -189,8 +189,6 @@
         </div>
     </form>
   </div>
-
-  <script src="../script/admin_usersUpdate.js"></script>
 </body>
 
 </html>

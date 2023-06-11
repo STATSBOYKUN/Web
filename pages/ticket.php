@@ -36,9 +36,8 @@
 
           <div class="name__input">
             <input id="name" name="name" type="text" placeholder="Enter name" pattern="[A-Za-z]{3,32}$"
-            title="Please enter name correctly" required />
-            <input type="hidden" id="status" name="status" value="Review" >
-            <input type="hidden" id="currentDate" name="currentDate">
+              title="Please enter name correctly" required />
+            <input type="hidden" id="status" name="status" value="Review">
           </div>
         </div>
 
@@ -48,7 +47,8 @@
           </div>
 
           <div class="number__input">
-            <input id="tickets" name="tickets" onchange="handleTicketChange(event)" type="number" value="1" min="1" max="5" required />
+            <input id="tickets" name="tickets" onchange="handleTicketChange(event)" type="number" value="1" min="1"
+              max="5" required />
           </div>
         </div>
 
@@ -58,8 +58,7 @@
           </div>
 
           <div class="file__input">
-            <input id="invoices" name="invoices" type="file"
-            accept=".jpg, .jpeg, .png" value="" required />
+            <input id="invoices" name="invoices" type="file" accept=".jpg, .jpeg, .png" value="" required />
           </div>
         </div>
 

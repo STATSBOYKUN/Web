@@ -18,10 +18,6 @@ function validateForm()
     return true;
 }
 
-$currentDate = date('Y-m-d');
-
-echo '<script>document.getElementById("currentDate").value = "' . $currentDate . '";</script>';
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validateForm()) {
         echo "<script type='text/javascript'>window.location.href = '../pages/ticket.php';</script>";
@@ -34,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $name = $_POST['name'];
     $email = $userData['email'];
-    $date = $_POST['currentDate'];
     $tickets = $_POST['tickets'];
     $status = $_POST['status'];
 
@@ -43,12 +38,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $invoiceTmpFile = $_FILES['invoices']['tmp_name']; // Get the temporary location of the uploaded file
     $folder = "../assets/dataImage/"; // Define the folder to which the file will be moved
 
-    move_uploaded_file($invoiceTmpFile, $folder. $invoiceFile); // Move the file to the specified folder
+    move_uploaded_file($invoiceTmpFile, $folder . $invoiceFile); // Move the file to the specified folder
+
+    // Set the default time zone to Jakarta
+    date_default_timezone_set('Asia/Jakarta');
+
+    // Create a new DateTime object with the current date and time
+    $dateTime = new DateTime();
+
+    // Set the time zone to Jakarta
+    $dateTime->setTimezone(new DateTimeZone('Asia/Jakarta'));
+
+    // Format the date as ISO 8601
+    $currentDate = $dateTime->format('c');
 
     $data = [
         'name' => $name,
         'email' => $email,
-        'date' => $date,
+        'date' => $currentDate,
         'tickets' => $tickets,
         'invoices' => $invoiceFile,
         // Store the file contents in the 'invoices' field

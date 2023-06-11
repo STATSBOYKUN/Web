@@ -151,14 +151,10 @@ class DatabaseConnection
         echo "</td>";
         echo "<td>";
         echo "<div class='dropdown'>";
-        echo "<button class='dropdown__button' data-ticket-id='" . $row['id'] . "'>" . $row['status'] . "</button>";
-        echo "<div class='dropdown__content'>";
-        echo "<p>Review</p>";
-        echo "<p>Success</p>";
-        echo "<p>Canceled</p>";
-        echo "</div>";
+        echo "". $row['status'];
         echo "</div>";
         echo "</td>";
+        echo "<td> <a href='../pages/admin_ticketsUpdate.php?id=", $row["id"], " '><img id='img1' src='../assets/Icons/bx-edit.svg'/></a></td>";
         echo "</tr>";
       }
     } else {

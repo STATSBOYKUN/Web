@@ -275,6 +275,21 @@ td {
   color: #594f43;
 }
 
+.invoice-link {
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: center;
+  font-size: 16px;
+  line-height: 150%;
+  color: #4e5e80;
+  text-decoration: none;
+}
+
+.invoice-link:hover {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
 /* Dropdown styles */
 .dropdown {
   position: relative;

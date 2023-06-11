@@ -24,7 +24,7 @@ if ($password !== $confirmPassword) {
 
 $tableName = "admin";
 
-$sql = "SELECT * FROM users WHERE username = '$username'";
+$sql = "SELECT * FROM $tableName WHERE username = '$username'";
 $result = null;
 
 $result = $connection->executeQuery($sql);
@@ -34,10 +34,10 @@ if ($result !== null && $result->num_rows > 0) {
   echo "<script type='text/javascript'>localStorage.setItem('user_data', JSON.stringify(" . json_encode($data) . "));</script>";
   echo "<script type='text/javascript'>window.location.href = '../pages/register.php';</script>";
 } else {
-  $tableName = "users";
+  $tableName = "admin";
 
   try {
-    $connection->insertAdmins($tableName, $data);
+    $connection->updateAdmins($tableName, $data, $id);
     $connection->close();
 
     echo "<script type='text/javascript'>localStorage.removeItem('user_data');</script>";

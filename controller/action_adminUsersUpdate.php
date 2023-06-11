@@ -35,28 +35,15 @@ if ($password !== $confirmPassword) {
 
 $tableName = "users";
 
-$sql = "SELECT * FROM users WHERE username = '$username'";
-$result = [];
+try {
+  $connection->updateUsers($tableName, $data, $id);
+  $connection->close();
 
-$result = $connection->executeQuery($sql);
+  echo "<script type='text/javascript'>localStorage.removeItem('user_data');</script>";
 
-if (!empty($result) && $result->num_rows > 0) {
-  echo "<script type='text/javascript'>alert('Username already exists!');</script>";
-  echo "<script type='text/javascript'>localStorage.setItem('user_data', JSON.stringify(" . json_encode($data) . "));</script>";
-  echo "<script type='text/javascript'>window.location.href = '../pages/admin_usersUpdate.php?id=$id';</script>";
-} else {
-  $tableName = "users";
+  echo "<script type='text/javascript'>alert('Users Edited!');</script>";
+  echo "<script type='text/javascript'>window.location.href = '../pages/admin_users.php';</script>";
+} catch (Exception $e) {
 
-  try {
-    $connection->updateUsers($tableName, $data, $id);
-    $connection->close();
-
-    echo "<script type='text/javascript'>localStorage.removeItem('user_data');</script>";
-
-    echo "<script type='text/javascript'>alert('Users Edited!');</script>";
-    echo "<script type='text/javascript'>window.location.href = '../pages/admin_users.php';</script>";
-  } catch (Exception $e) {
-
-  }
 }
 ?>

@@ -73,6 +73,7 @@
               <th>Tickets</th>
               <th>Invoices</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
 
             <?php
