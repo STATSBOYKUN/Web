@@ -1,3 +1,13 @@
+<? 
+  session_start();
+  if(isset($_SESSION['username'])){
+    header("location:../pages/index.php");
+  }
+
+  $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
+  $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

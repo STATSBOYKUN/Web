@@ -1,8 +1,12 @@
+// Add an event listener to the rememberCheckbox element
+var rememberCheckbox = document.getElementById('rememberCheckbox');
+rememberCheckbox.addEventListener('change', setRememberMeCookies);
+
+// Function to set remember me cookies
 function setRememberMeCookies() {
-  var rememberCheckbox = document.getElementById('rememberCheckbox');
   if (rememberCheckbox.checked) {
-    var username = document.querySelector('input[type="text"]').value;
-    var password = document.querySelector('input[type="password"]').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
     var expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 30); // 30 days from now
 
@@ -19,3 +23,4 @@ var image = document.getElementById('characterImage');
 image.addEventListener('click', function() {
   alert("You're going to admin-login webpage!\n\nUsername : \nPassword : \n\nUse this to login as admin!\nBe kind and use carefully :)) ");
 });
+

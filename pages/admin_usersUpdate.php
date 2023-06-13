@@ -150,7 +150,7 @@
             </div>
 
             <div class="signtelephone__input">
-              <input type="text" pattern="^08\d{9,15}$" name="telephone" id="telephone"
+              <input type="text" pattern="^\d{9,15}$" name="telephone" id="telephone"
                 placeholder="Enter telephone number" title="Please enter a valid telephone number :)"
                 value="<?php echo $telephone; ?>" required />
             </div>

@@ -43,12 +43,28 @@
         </div>
       </div>
 
+      <?php
+      session_start();
+
+      if (isset($_SESSION['start'])) {
+        $_SESSION['start'] = time();
+      }
+      
+      if (isset($_SESSION['start']) && time() - $_SESSION['start'] > 900) {
+        session_unset();
+        session_destroy();
+      }
+
+      if (!isset($_SESSION['username'])) {
+        echo '
       <div class="sign__button">
         <a href="../pages/login.php">
           <button>Sign In</button>
         </a>
       </div>
-
+      ';
+      } else {
+        echo '
       <div class="profile">
         <a href="../pages/profile.php">
           <img src="../assets/Icons/profile.svg" alt="profile" />
@@ -57,10 +73,13 @@
         <div class="profile__items">
           <ul>
             <li><a>Hi, </a></li>
-            <li><a href="../pages/login.php">Sign Out</a></li>
+            <li><a href="../pages/logOut.php">Sign Out</a></li>
           </ul>
         </div>
       </div>
+      ';
+      }
+      ?>
     </div>
   </navbar>
   <main>
