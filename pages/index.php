@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <?php include '../controller/counterHome.php'; ?>
   <navbar>
     <div class="logo">
       <!-- image with link -->

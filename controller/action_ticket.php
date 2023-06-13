@@ -64,6 +64,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $tableName = "ticket";
     $connection->insertTickets($tableName, $data);
+
+    $username = $_GET['username'];
+    $text = "Your ticket is under review!";
+    $data2 = [
+        'username' => $username,
+        'text' => $text,
+        'time' => $currentDate
+    ];
+
+    $tableName = "notifications";
+    $connection->createNotification($tableName, $data2);
     echo "<script type='text/javascript'>alert('Ticket Submitted!');</script>";
     echo "<script type='text/javascript'>window.location.href = '../pages/events.php';</script>";
 

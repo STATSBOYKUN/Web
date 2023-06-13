@@ -125,9 +125,9 @@
               <select name="status" id="status" required>
                 <?php
                 $statusArray = array(
-                  "Review",
-                  "Confirmed",
-                  "Invalid"
+                  "Pending",
+                  "Approved",
+                  "Rejected"
                 );
 
                 foreach ($statusArray as $statusOption) {

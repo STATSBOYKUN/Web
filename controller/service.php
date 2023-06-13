@@ -130,7 +130,7 @@ class DatabaseConnection
   {
     $query = "SELECT * FROM $tableName";
     $result = $this->connection->query($query);
-  
+
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
         echo "<tr>";
@@ -140,18 +140,18 @@ class DatabaseConnection
         echo "<td>" . $row['date'] . "</td>";
         echo "<td>" . $row['tickets'] . "</td>";
         echo "<td>";
-  
+
         if (!empty($row['invoices'])) {
           $invoicePath = "../assets/dataImage/" . $row['invoices'];
           echo "<a href='$invoicePath' class='invoice-link'>View Invoice</a>";
         } else {
           echo "No invoice attached";
         }
-  
+
         echo "</td>";
         echo "<td>";
         echo "<div class='dropdown'>";
-        echo "". $row['status'];
+        echo "" . $row['status'];
         echo "</div>";
         echo "</td>";
         echo "<td> <a href='../pages/admin_ticketsUpdate.php?id=", $row["id"], " '><img id='img1' src='../assets/Icons/bx-edit.svg'/></a></td>";
@@ -161,7 +161,53 @@ class DatabaseConnection
       echo "No data found.";
     }
   }
- 
+
+  public function getNotifications($tableName, $username)
+  {
+    $query = "SELECT * FROM $tableName WHERE username = '$username'";
+    $result = $this->connection->query($query);
+
+    $dateTime = new DateTime();
+    $dateTime->setTimezone(new DateTimeZone('Asia/Jakarta'));
+    $currentDate = $dateTime->format('Y-m-d H:i:s'); // Format the current date and time
+
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        echo "<div class='notification__body'>";
+        echo "<div class='notification__image'>";
+        echo "<img src='../assets/Events/animisc.svg' alt='logo' />";
+        echo "</div>";
+        echo "<div class='notification__text'>";
+        echo "<div class='notification__text1'>";
+        echo "" . $row['text'];
+        echo "</div>";
+        echo "<div class='notification__text2'>Admin •";
+        echo "" . $row['date'];
+
+        // Calculate the difference in seconds
+        $rowDate = new DateTime($row['date']);
+        $interval = $dateTime->diff($rowDate);
+        $secondsDifference = $interval->s;
+        if ($interval->i < 1) {
+          echo " ({$secondsDifference} seconds ago)";
+        } elseif ($interval->h < 1) {
+          echo " ({$interval->i} minutes ago)";
+        } else {
+          echo " ({$interval->h} hours ago)";
+        }
+
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+      }
+    } else {
+      echo "<div>";
+      echo "Notification is empty :).";
+      echo "</div>";
+    }
+
+  }
+
   public function updateAdmins($tableName, $data, $id)
   {
     $updates = [];
@@ -262,7 +308,48 @@ class DatabaseConnection
 
     return null;
   }
+
+  public function createNotification($tableName, $data)
+  {
+    $columns = implode(", ", array_keys($data));
+    $values = "'" . implode("', '", array_values($data)) . "'";
+
+    $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
+
+    if ($this->connection->query($query) === true) {
+      // Insert successful
+    } else {
+      // Insert failed
+    }
+  }
+
+  public function countPage($tableName, $data)
+  {
+    $updates = [];
+    foreach ($data as $column => $value) {
+      $updates[] = "$column = '$value'";
+    }
+    $updateString = implode(", ", $updates);
+
+    $query = "UPDATE $tableName SET $updateString";
+
+    if ($this->connection->query($query) === true) {
+      // Update successful
+    } else {
+      // Update failed
+    }
+  }
+
+  public function getCountPage($tableName)
+  {
+    $query = "SELECT * FROM $tableName";
+    $result = $this->connection->query($query);
+
+    if ($result->num_rows > 0) {
+      return $result->fetch_assoc();
+    }
+
+    return null;
+  }
 }
-
-
 ?>
