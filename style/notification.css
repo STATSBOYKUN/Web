@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Eczar");
+
+* {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80;
+  border-radius: 6px;
+}
+
+.notification {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 400px;
+  height: 50%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000033;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+  z-index: 12;
+}
+
+.notification__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 7px 0px;
+  background: #4e5e80;
+}
+
+.notification__title p{
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.notification__title a {
+  text-decoration: underline;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  padding-right: 10px;
+  color: #fff;
+}
+
+.notification__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #ffeed9;
+  height: 300px;
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+  z-index: 13;
+}
+
+
+.notification__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  padding: 7px 0px;
+  background: #ffddbf;
+}
+
+.notification__image img {
+  width: auto;
+  height: 50px;
+  padding-left: 15px;
+}
+
+.notification__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.notification__text1 {
+  width: auto;
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  color: #4e5e80;
+}
+
+.notification__text2 {
+  text-align: left;
+  width: auto;
+  height: 40px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #594f43;
+}
+
+.notification-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #594f43;
+  opacity: 0.7;
+  backdrop-filter: blur(5px);
+}
