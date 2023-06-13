@@ -11,6 +11,7 @@
     <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   </head>
   <body>
+    <?php include '../controller/counterCommunity.php'; ?>
     <navbar>
       <div class="logo">
         <!-- image with link -->

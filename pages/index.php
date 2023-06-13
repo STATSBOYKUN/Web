@@ -48,6 +48,19 @@
           <button>Sign In</button>
         </a>
       </div>
+
+      <div class="profile">
+        <a href="../pages/profile.php">
+          <img src="../assets/Icons/profile.svg" alt="profile" />
+        </a>
+
+        <div class="profile__items">
+          <ul>
+            <li><a>Hi, </a></li>
+            <li><a href="../pages/login.php">Sign Out</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </navbar>
   <main>

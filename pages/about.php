@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <?php include '../controller/counterAbout.php'; ?>
   <navbar>
     <div class="logo">
       <!-- image with link -->
