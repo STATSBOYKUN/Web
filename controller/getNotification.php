@@ -4,10 +4,17 @@ require_once("service.php");
 $connection = new DatabaseConnection();
 $connection->connect();
 
-$tableName = "notifications";
-$username = $_GET['username'];
+if (!isset($_SESSION['username'])) {
+  echo "<p>";
+  echo "Notification is empty :).";
+  echo "</p>";
+} else {
 
-$connection->getNotifications($tableName, $username);
+  $tableName = "notifications";
+  $username = $_SESSION['username'];
+  
+  $connection->getNotifications($tableName, $username);
+}
 
 $connection->close();
 ?>

@@ -1,5 +1,5 @@
 <?php
-  session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
       if (isset($_SESSION['start'])) {
         $_SESSION['start'] = time();
       }
-      
+
       if (isset($_SESSION['start']) && time() - $_SESSION['start'] > 900) {
         session_unset();
         session_destroy();
@@ -67,17 +67,21 @@
       ';
       } else {
         echo '
-      <div class="profile">
-        <a href="../pages/profile.php">
-          <img src="../assets/Icons/profile.svg" alt="profile" />
+      <div id="profile" class="profile">
+        <a href="#">
+          <img id="profile__img" src="" alt="profile" />
         </a>
+      </div>
 
-        <div class="profile__items">
-          <ul>
-            <li><a>Hi, </a></li>
-            <li><a href="../pages/logOut.php">Sign Out</a></li>
-          </ul>
-        </div>
+      <div id="profile__items" class="profile__items">
+        <ul>
+          <li><img src="../assets/Icons/bx-user-circle.svg" alt="profile" />Hi, 
+        ';
+        echo $username;
+
+        echo ' </li>
+          <li><img src="../assets/Icons/bx-log-out.svg" alt="profile" /><a href="../pages/logOut.php">Sign Out</a></li>
+        </ul>
       </div>
       ';
       }
@@ -141,9 +145,8 @@
           <div class="events__text">
             <p class="p1">Events</p>
             <p class="p2">
-              Lalala <br />
-              lalalala <br />
-              lalala
+              Artists and illustrators showcase their talent at anime events, displaying stunning artwork and offering
+              unique creations to fans.
             </p>
             <a href="../pages/events.php">Visit Events >></a>
           </div>
@@ -155,7 +158,8 @@
         <div class="community__groups">
           <div class="community__text">
             <p class="p1">Community</p>
-            <p class="p2">Lalala lalalala lalala</p>
+            <p class="p2">Fosters a sense of belonging and camaraderie among fans, forming lifelong friendships based on
+              shared interests.</p>
             <a href="../pages/community.php">Visit Community >></a>
           </div>
           <div>
@@ -206,7 +210,7 @@
 
     <div class="communication__groups">
       <p>
-        Let's work together and make everything super cute and super useful.
+        Discover your kawaii powers and embark on an epic journey of adorable utility.
       </p>
 
       <div class="communication">
@@ -238,6 +242,7 @@
 
   <script src="../script/home.js"></script>
   <script src="../script/notification.js"></script>
+  <script src="../script/profile.js"></script>
 
 </body>
 

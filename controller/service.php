@@ -201,9 +201,9 @@ class DatabaseConnection
         echo "</div>";
       }
     } else {
-      echo "<div>";
+      echo "<p>";
       echo "Notification is empty :).";
-      echo "</div>";
+      echo "</p>";
     }
 
   }

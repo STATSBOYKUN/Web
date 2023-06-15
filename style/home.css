@@ -96,6 +96,10 @@ navbar {
   height: 40px;
 }
 
+.users__items .notification__button img:hover {
+  scale: 1.1;
+}
+
 .notification__popup {
   display: none;
   position: absolute;
@@ -132,6 +136,91 @@ navbar {
 }
 
 .sign__button:hover {
+  scale: 1.1;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  gap: 5px;
+  border-radius: 16px;
+  height: 40px;
+  width: auto;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  border-radius: 50%;
+  background: #ffeed9;
+  padding: 10px;
+}
+
+.profile img:hover {
+  scale: 1.1;
+}
+
+.profile__items {
+  width: 200px;
+  height: auto;
+
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: auto;
+  height: auto;
+  margin-top: 65px;
+  margin-right: 25px;
+
+  background: #4e5e80;
+  border-radius: 16px;
+  padding: 6px;
+}
+
+.profile__items ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #f3f2ff;
+  text-align: left;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 4px 20px;
+  gap: 6px;
+}
+
+.profile__items a {
+  color: #f3f2ff;
+}
+
+.profile__items li {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.profile__items a:hover {
+  scale: 1.1;
+}
+
+.profile__items li:hover {
   scale: 1.1;
 }
 
@@ -785,6 +874,7 @@ footer p {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

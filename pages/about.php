@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +13,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../style/about.css" />
+  <link rel="stylesheet" href="../style/notification.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
@@ -32,17 +37,55 @@
     </div>
 
     <div class="users__items">
-      <div class="notification">
-        <a href="../pages/notification.php">
+      <div class="notification__button">
+        <a href="#">
           <img src="../assets/Icons/notification.svg" alt="notification" />
         </a>
+        <div class="notification__popup" id="notificationPopup">
+          <?php include '../pages/notification.php'; ?>
+          <div class="notification-overlay"></div>
+        </div>
       </div>
 
+      <?php
+      if (isset($_SESSION['start'])) {
+        $_SESSION['start'] = time();
+      }
+
+      if (isset($_SESSION['start']) && time() - $_SESSION['start'] > 900) {
+        session_unset();
+        session_destroy();
+      }
+
+      if (!isset($_SESSION['username'])) {
+        echo '
       <div class="sign__button">
         <a href="../pages/login.php">
           <button>Sign In</button>
         </a>
       </div>
+      ';
+      } else {
+        echo '
+      <div id="profile" class="profile">
+        <a href="#">
+          <img id="profile__img" src="" alt="profile" />
+        </a>
+      </div>
+
+      <div id="profile__items" class="profile__items">
+        <ul>
+          <li><img src="../assets/Icons/bx-user-circle.svg" alt="profile" />Hi, 
+        ';
+        echo $username;
+
+        echo ' </li>
+          <li><img src="../assets/Icons/bx-log-out.svg" alt="profile" /><a href="../pages/logOut.php">Sign Out</a></li>
+        </ul>
+      </div>
+      ';
+      }
+      ?>
     </div>
   </navbar>
   <main>
@@ -65,7 +108,20 @@
             offering valuable information, quality services, and a satisfying user experience. Thank you for your
             support, and we hope to continue meeting your expectations with every visit to our website.</p>
 
-          <p class="p2">Chief of Animisc</p>
+          <div class="contact">
+            <p class="p2">Chief of Animisc</p>
+            <div class="sosmed__icons">
+              <a href="https://www.instagram.com/">
+                <img src="../assets/Icons/instagram.svg" />
+              </a>
+              <a href="https://www.pinterest.com/">
+                <img src="../assets/Icons/pinterest.svg" />
+              </a>
+              <a href="https://www.linkedin.com/">
+                <img src="../assets/Icons/linkedin.svg" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -81,6 +137,12 @@
 
 
     </div>
+
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
+    <script src="../script/notification.js"></script>
+    <script src="../script/profile.js"></script>
+    
   </main>
 
   <footer>
