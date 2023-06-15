@@ -176,7 +176,7 @@ session_start();
       </div>
 
       <div class="testimonial__text">
-        <img id="caret__left" src="../assets/Icons/Caret left.svg" />
+        <img id="caret__left" onclick="prev()"  src="../assets/Icons/Caret left.svg" />
         <div class="testimonial__items">
           <div class="umaru__items">
             <div class="umaru__text">
@@ -200,11 +200,11 @@ session_start();
               </p>
             </div>
             <div class="imika__name">
-              <p>Umaru</p>
+              <p>Imika</p>
             </div>
           </div>
         </div>
-        <img id="caret__right" src="../assets/Icons/Caret right.svg" />
+        <img id="caret__right" onclick="next()" src="../assets/Icons/Caret right.svg" />
       </div>
     </div>
 
@@ -221,7 +221,7 @@ session_start();
         </div>
 
         <div class="sosmed__icons">
-          <a href="https://www.instagram.com/">
+          <a href="https://www.instagram.com/umarhp_">
             <img src="../assets/Icons/instagram.svg" />
           </a>
           <a href="https://www.pinterest.com/">

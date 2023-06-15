@@ -677,6 +677,17 @@ navbar {
   height: auto;
 }
 
+#caret__left:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+#caret__right:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+
 .umaru__items {
   display: flex;
   flex-direction: column;
@@ -752,6 +763,17 @@ navbar {
 
   color: #594f43;
 }
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
 
 .communication__groups {
   display: flex;

@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['username'])) {
+  echo "<script>alert('You must log in first!');</script>";
+  header("Location: ../pages/login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

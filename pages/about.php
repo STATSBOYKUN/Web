@@ -111,7 +111,7 @@ session_start();
           <div class="contact">
             <p class="p2">Chief of Animisc</p>
             <div class="sosmed__icons">
-              <a href="https://www.instagram.com/">
+              <a href="https://www.instagram.com/umarhp_">
                 <img src="../assets/Icons/instagram.svg" />
               </a>
               <a href="https://www.pinterest.com/">
@@ -134,7 +134,6 @@ session_start();
       <div class="character3">
         <img src="../assets/Char3/Char3 (4).png" alt="char" />
       </div>
-
 
     </div>
 
