@@ -182,10 +182,9 @@ class DatabaseConnection
         echo "" . $row['text'];
         echo "</div>";
         echo "<div class='notification__text2'>Admin •";
-        echo "" . $row['date'];
 
         // Calculate the difference in seconds
-        $rowDate = new DateTime($row['date']);
+        $rowDate = new DateTime($row['time']);
         $interval = $dateTime->diff($rowDate);
         $secondsDifference = $interval->s;
         if ($interval->i < 1) {

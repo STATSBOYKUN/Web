@@ -9,3 +9,4 @@ $tableName = "ticket";
 $connection -> getTickets($tableName);
 
 $connection->close();
+?>

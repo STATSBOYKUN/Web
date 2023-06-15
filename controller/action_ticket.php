@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("service.php");
 
 $connection = new DatabaseConnection();
@@ -65,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tableName = "ticket";
     $connection->insertTickets($tableName, $data);
 
-    $username = $_GET['username'];
+    $username = $_SESSION['username'];
     $text = "Your ticket is under review!";
     $data2 = [
         'username' => $username,

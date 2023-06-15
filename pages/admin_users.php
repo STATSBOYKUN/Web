@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['admin'])) {
+  echo "<script>alert('You must log in first!');</script>";
+  header("Location: ../pages/admin_login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +42,7 @@
         <a href="../pages/admin_settings.php">Settings</a>
 
         <div class="sign__button">
-          <a href="../pages/admin_login.php">
+          <a href="../pages/logOut.php">
             <button>Log Out</button>
           </a>
         </div>

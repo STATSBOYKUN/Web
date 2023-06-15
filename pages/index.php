@@ -151,7 +151,7 @@ session_start();
             <a href="../pages/events.php">Visit Events >></a>
           </div>
           <div>
-            <img src="../assets/Events/4305916.jpg" alt="" />
+            <img src="../assets/Events/events.png" alt="" />
           </div>
         </div>
 

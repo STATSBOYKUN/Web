@@ -20,6 +20,7 @@ if ($user === null) {
 
 // Compare passwords without using password_verify()
 if ($user && $password === $user['password']) {
+  $_SESSION['admin'] = $_POST['username'];
   echo "<script type='text/javascript'>alert('Login Success!');</script>";
   echo "<script type='text/javascript'>window.location.href = '../pages/admin_dashboard.php';</script>";
 } else {

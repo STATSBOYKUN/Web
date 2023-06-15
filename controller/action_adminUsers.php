@@ -9,3 +9,4 @@ $tableName = "users";
 $connection -> getUsers($tableName);
 
 $connection->close();
+?>
