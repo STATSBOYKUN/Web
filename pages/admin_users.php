@@ -62,6 +62,7 @@ if (!isset($_SESSION['admin'])) {
                 type="text"
                 placeholder="Search ... "
                 required
+                onkeyup="hintUsers(this.value, true)"
               />
             </div>
 
@@ -77,25 +78,11 @@ if (!isset($_SESSION['admin'])) {
       <div class="visitors__card">
         <div class="table__wrapper">
           <!-- table -->
-          <table>
-            <tr>
-              <th>#</th>
-              <th>Email</th>
-              <th>Username</th>
-              <th>Sex</th>
-              <th>Telephone</th>
-              <th>Age</th>
-              <th>Country</th>
-              <th>Update</th>
-              <th>Delete</th>
-            </tr>
-            <?php
-              require_once("../controller/action_adminUsers.php");
-            ?>
-          </table>
+          <table id="table__content" ></table>
         </div>
       </div>
     </div>
     <script src="../script/admin_users.js" ></script>
+    <script src="../script/view__hintUsers.js" ></script>
   </body>
 </html>

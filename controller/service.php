@@ -106,9 +106,20 @@ class DatabaseConnection
   {
     $query = "SELECT * FROM $tableName";
     $result = $this->connection->query($query);
-
+    echo "<tr>";
+    echo "<th>#</th>";
+    echo "<th>Email</th>";
+    echo "<th>Username</th>";
+    echo "<th>Sex</th>";
+    echo "<th>Telephone</th>";
+    echo "<th>Age</th>";
+    echo "<th>Country</th>";
+    echo "<th>Update</th>";
+    echo "<th>Delete</th>";
+    echo "</tr>";
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
+
         echo "<tr>";
         echo "<td>" . $row['id'] . "</td>";
         echo "<td>" . $row['email'] . "</td>";
@@ -306,6 +317,48 @@ class DatabaseConnection
     }
 
     return null;
+  }
+
+  public function hintUsers($tableName, $searchData)
+  {
+    $conditions = [];
+    foreach ($searchData as $field => $value) {
+      $conditions[] = "$field LIKE '%$value%'";
+    }
+    $conditionString = implode(" OR ", $conditions);
+
+    $query = "SELECT * FROM $tableName WHERE $conditionString";
+
+    $result = $this->connection->query($query);
+
+    echo "<tr>";
+    echo "<th>#</th>";
+    echo "<th>Email</th>";
+    echo "<th>Username</th>";
+    echo "<th>Sex</th>";
+    echo "<th>Telephone</th>";
+    echo "<th>Age</th>";
+    echo "<th>Country</th>";
+    echo "<th>Update</th>";
+    echo "<th>Delete</th>";
+    echo "</tr>";
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
+        echo "<td>" . $row['username'] . "</td>";
+        echo "<td>" . $row['sex'] . "</td>";
+        echo "<td>" . $row['telephone'] . "</td>";
+        echo "<td>" . $row['age'] . "</td>";
+        echo "<td>" . $row['country'] . "</td>";
+        echo "<td> <a href='../pages/admin_usersUpdate.php?id=", $row["id"], " '><img id='img1' src='../assets/Icons/bx-edit.svg'/></a></td>";
+        echo "<td> <a href='../controller/action_adminUsersDelete.php?id=", $row["id"], "'><img id='img2' src='../assets/Icons/bx-trash.svg' alt='' onclick='return confirmDelete(event)'/></a></td>";
+        echo "</tr>";
+      }
+    } else {
+      echo "No data found.";
+    }
   }
 
   public function createNotification($tableName, $data)

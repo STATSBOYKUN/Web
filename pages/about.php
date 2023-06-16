@@ -66,6 +66,7 @@ session_start();
       </div>
       ';
       } else {
+        echo '<script src="../script/profile.js"></script>';
         echo '
       <div id="profile" class="profile">
         <a href="#">
@@ -140,7 +141,6 @@ session_start();
     <div class="rain front-row"></div>
     <div class="rain back-row"></div>
     <script src="../script/notification.js"></script>
-    <script src="../script/profile.js"></script>
     
   </main>
 

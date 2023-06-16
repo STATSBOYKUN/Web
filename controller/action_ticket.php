@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $tableName = "users";
-    $data['username'] = "aaa6";
+    $data['username'] = $_SESSION['username'];
     $userData = $connection->searchUsers($tableName, $data);
 
     $name = $_POST['name'];
