@@ -189,13 +189,13 @@ class DatabaseConnection
     $query = "SELECT * FROM $tableName WHERE username = '$username'";
     $result = $this->connection->query($query);
 
-    $dateTime = new DateTime();
-    $dateTime->setTimezone(new DateTimeZone('Asia/Jakarta'));
-    $currentDate = $dateTime->format('Y-m-d H:i:s'); // Format the current date and time
+    $sumRead = 0; // Variable to track the sum of 'read' values
 
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-        echo "<div class='notification__body'>";
+        $sumRead += $row['read']; // Add 'read' value to the sum
+
+        echo "<div class='notification__body' style='background: " . ($row['read'] == 0 ? 'none' : '#ffddbf') . ";'>";
         echo "<div class='notification__image'>";
         echo "<img src='../assets/Events/animisc.svg' alt='logo' />";
         echo "</div>";
@@ -205,17 +205,37 @@ class DatabaseConnection
         echo "</div>";
         echo "<div class='notification__text2'>Admin •";
 
-        // Calculate the difference in seconds
-        $rowDate = new DateTime($row['time']);
+        // Set the timezones for both DateTime objects
+        $timezone = new DateTimeZone('Asia/Jakarta'); // Replace 'Your_Timezone' with your desired timezone
+
+        // Create DateTime objects with the specified timezones
+        $rowDate = new DateTime($row['time'], $timezone);
+        $dateTime = new DateTime(null, $timezone); // Assuming you want the current date and time
+
+        // Calculate the difference
         $interval = $dateTime->diff($rowDate);
+        $yearsDifference = $interval->y;
+        $monthsDifference = $interval->m;
+        $daysDifference = $interval->d;
+        $hoursDifference = $interval->h;
+        $minutesDifference = $interval->i;
         $secondsDifference = $interval->s;
-        if ($interval->i < 1) {
-          echo " ({$secondsDifference} seconds ago)";
-        } elseif ($interval->h < 1) {
-          echo " ({$interval->i} minutes ago)";
+
+        // Display the time difference
+        if ($yearsDifference > 0) {
+          echo " ({$yearsDifference} years ago)";
+        } elseif ($monthsDifference > 0) {
+          echo " ({$monthsDifference} months ago)";
+        } elseif ($daysDifference > 0) {
+          echo " ({$daysDifference} days ago)";
+        } elseif ($hoursDifference > 0) {
+          echo " ({$hoursDifference} hours ago)";
+        } elseif ($minutesDifference > 0) {
+          echo " ({$minutesDifference} minutes ago)";
         } else {
-          echo " ({$interval->h} hours ago)";
+          echo " ({$secondsDifference} seconds ago)";
         }
+
 
         echo "</div>";
         echo "</div>";
@@ -227,7 +247,18 @@ class DatabaseConnection
       echo "</p>";
     }
 
+    // Check if the sum of 'read' values is zero and change the image
+    if ($sumRead == 0) {
+      echo "<script>";
+      echo "document.getElementById('notification__logo').src = '../assets/Icons/notification.svg';";
+      echo "</script>";
+    } else {
+      echo "<script>";
+      echo "document.getElementById('notification__logo').src = '../assets/Icons/notification-up.svg';";
+      echo "</script>";
+    }
   }
+
 
   public function updateAdmins($tableName, $data, $id)
   {

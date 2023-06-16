@@ -621,10 +621,11 @@ navbar {
 }
 
 .testimonial__titles .p1 {
-  width: 422px;
+  width: auto;
 
   font-family: "Eczar";
   font-style: normal;
+  text-align: center;
   font-weight: 600;
   font-size: 40px;
   line-height: 125%;

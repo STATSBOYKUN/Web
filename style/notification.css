@@ -122,12 +122,13 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: auto;
-  height: 50px;
+  height: auto;
   padding-left: 20px;
 }
 
 .notification__text1 {
   width: auto;
+  height: auto;
   text-decoration: none;
   font-family: "Work Sans";
   font-style: normal;

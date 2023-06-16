@@ -39,7 +39,7 @@ session_start();
     <div class="users__items">
       <div class="notification__button">
         <a href="#">
-          <img src="../assets/Icons/notification.svg" alt="notification" />
+          <img id="notification__logo" src="../assets/Icons/notification.svg" alt="notification" />
         </a>
         <div class="notification__popup" id="notificationPopup">
           <?php include '../pages/notification.php'; ?>
@@ -172,7 +172,7 @@ session_start();
 
     <div class="testimonial__groups">
       <div class="testimonial__titles">
-        <p class="p1">Some Generous Words</p>
+        <p class="p1">Testimonials</p>
         <p class="p2">Some of my favorite testimonials from my clients</p>
       </div>
 
