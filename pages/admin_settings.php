@@ -77,7 +77,7 @@ if (!isset($_SESSION['admin'])) {
 
             <div class="password__input">
               <input pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!])(?=.*[a-zA-Z\d@#$%^&+=!]).{8,}$"
-                type="confirmPassword" name="confirmPassword" id="password"
+                type="password" name="confirmPassword" id="confirmPassword"
                 title="Password must be at least 8 combination of alphanumeric and special character"
                 placeholder="Re-enter password" required />
             </div>

@@ -5,8 +5,14 @@ $connection = new DatabaseConnection();
 $connection->connect();
 
 $tableName = "ticket";
+$search = $_POST['search'];
 
-$connection -> getTickets($tableName);
+if ($search === '' || $search === null) {
+  $connection -> getTickets($tableName);
+} else {
+  $searchData = array('name' => $search, 'email' => $search, 'date' => $search, 'status' => $search);
+  $connection -> hintTickets($tableName, $searchData);
+}
 
 $connection->close();
 ?>

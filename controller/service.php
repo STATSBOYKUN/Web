@@ -142,6 +142,17 @@ class DatabaseConnection
     $query = "SELECT * FROM $tableName";
     $result = $this->connection->query($query);
 
+    echo "<tr>";
+    echo "<th>#</th>";
+    echo "<th>Full Name</th>";
+    echo "<th>Email</th>";
+    echo "<th>Order Date</th>";
+    echo "<th>Tickets</th>";
+    echo "<th>Invoices</th>";
+    echo "<th>Status</th>";
+    echo "<th>Action</th>";
+    echo "</tr>";
+
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
         echo "<tr>";
@@ -357,7 +368,64 @@ class DatabaseConnection
         echo "</tr>";
       }
     } else {
+      echo "<p>";
       echo "No data found.";
+      echo "</p>";
+    }
+  }
+
+  public function hintTickets($tableName, $searchData)
+  {
+    $conditions = [];
+    foreach ($searchData as $field => $value) {
+      $conditions[] = "$field LIKE '%$value%'";
+    }
+    $conditionString = implode(" OR ", $conditions);
+
+    $query = "SELECT * FROM $tableName WHERE $conditionString";
+
+    $result = $this->connection->query($query);
+
+    echo "<tr>";
+    echo "<th>#</th>";
+    echo "<th>Full Name</th>";
+    echo "<th>Email</th>";
+    echo "<th>Order Date</th>";
+    echo "<th>Tickets</th>";
+    echo "<th>Invoices</th>";
+    echo "<th>Status</th>";
+    echo "<th>Action</th>";
+    echo "</tr>";
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['name'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
+        echo "<td>" . $row['date'] . "</td>";
+        echo "<td>" . $row['tickets'] . "</td>";
+        echo "<td>";
+
+        if (!empty($row['invoices'])) {
+          $invoicePath = "../assets/dataImage/" . $row['invoices'];
+          echo "<a href='$invoicePath' class='invoice-link'>View Invoice</a>";
+        } else {
+          echo "No invoice attached";
+        }
+
+        echo "</td>";
+        echo "<td>";
+        echo "<div class='dropdown'>";
+        echo "" . $row['status'];
+        echo "</div>";
+        echo "</td>";
+        echo "<td> <a href='../pages/admin_ticketsUpdate.php?id=", $row["id"], " '><img id='img1' src='../assets/Icons/bx-edit.svg'/></a></td>";
+        echo "</tr>";
+      }
+    } else {
+      echo "<p>";
+      echo "No data found.";
+      echo "</p>";
     }
   }
 

@@ -58,7 +58,7 @@ if (!isset($_SESSION['admin'])) {
         <form action="">
           <div class="search__wrapper">
             <div class="search__input">
-              <input type="text" placeholder="Search ...." required />
+              <input onkeyup="hintTickets(this.value, true)" type="text" placeholder="Search ...." required />
             </div>
 
             <div class="sign__button">
@@ -73,26 +73,12 @@ if (!isset($_SESSION['admin'])) {
       <div class="visitors__card">
         <div class="table__wrapper">
           <!-- table -->
-          <table>
-            <tr>
-              <th>#</th>
-              <th>Full Name</th>
-              <th>Email</th>
-              <th>Order Date</th>
-              <th>Tickets</th>
-              <th>Invoices</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-
-            <?php
-              require_once("../controller/action_adminTickets.php");
-            ?>
-          </table>
+          <table id="table__content" ></table>
         </div>
       </div>
     </div>
     <script src="../script/admin_ticket.js"></script>
     <script src="../script/preview__invoices.js"></script>
+    <script src="../script/view__hintTickets.js"></script>
   </body>
 </html>

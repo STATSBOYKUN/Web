@@ -83,6 +83,8 @@ if (!isset($_SESSION['admin'])) {
               <p>
                 <?php echo $email; ?>
               </p>
+
+              <input type="hidden" id="email" name="email" value="<?php echo $email; ?>" >
             </div>
           </div>
 

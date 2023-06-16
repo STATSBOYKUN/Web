@@ -15,8 +15,6 @@ $data = [
 $tableName = "ticket";
 $connection->updateTickets($tableName, $data, $id);
 
-$username = $_GET['username'];
-
 if ($status == "Pending") {
   $text = "Your ticket status is $status! Please wait for the admin to review your ticket.";
 }
@@ -37,6 +35,13 @@ $dateTime->setTimezone(new DateTimeZone('Asia/Jakarta'));
 
 // Format the date as ISO 8601
 $currentDate = $dateTime->format('c');
+
+$tableName = "users";
+
+$email = $_POST['email'];
+$searchData = array('email' => $email);
+$result = $connection->searchUsers($tableName, $searchData);
+$username = $result['username'];
 
 $data2 = [
   'username' => $username,
