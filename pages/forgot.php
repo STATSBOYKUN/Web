@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animisc</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../style/forgot.css" />
-    <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
-  </head>
-  <body>
-    <form action="../controller/action_forgot.php" method="post" >
-      <div class="login__groups">
-        <div class="login__title">
-          <p>Forgot Password</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animisc</title>
 
-        <div class="login__card">
-          <div class="username__items">
-            <div class="username__text">
-              <p>Email or Telephone Number</p>
-            </div>
+  <link rel="stylesheet" href="../style/forgot.css" />
+  <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
+</head>
 
-            <div class="username__input">
-              <input
-                type="text" id="username" name="username"
-                placeholder="Enter email or telephone number" required
-              />
-            </div>
+<body>
+  <form action="../controller/action_forgot.php" method="post">
+    <div class="login__groups">
+      <div class="login__title">
+        <p>Forgot Password</p>
+      </div>
+
+      <div class="login__card">
+        <div class="username__items">
+          <div class="username__text">
+            <p>Email or Telephone Number</p>
           </div>
 
-          <div class="forgot__password">
-            <p>Reset again in 00:00</p>
-          </div>
-
-          <div class="login__button">
-            <a href="../pages/index.php">
-              <button type="submit" id="sendButton">Send</button>
-            </a>
-            <img src="../assets/Icons/chevron-right-square.svg" />
+          <div class="username__input">
+            <input type="text" id="username" name="username" placeholder="Enter email or telephone number" required />
           </div>
         </div>
 
-        <div class="character">
-          <img src="../assets/Char/Char (6).png" alt="char" />
+        <div class="forgot__password">
+          <p>Reset again in 00:00</p>
+        </div>
+
+        <div class="login__button">
+          <a href="../pages/index.php">
+            <button type="submit" id="sendButton">Send</button>
+          </a>
+          <img src="../assets/Icons/chevron-right-square.svg" />
         </div>
       </div>
-    </form>
-  </body>
+
+      <div class="character">
+        <img src="../assets/Char/Char (6).png" alt="char" />
+      </div>
+    </div>
+  </form>
+</body>
+
 </html>

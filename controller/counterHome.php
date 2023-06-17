@@ -10,7 +10,7 @@ $counterPage = $connection->getCountPage($tableName);
 
 $data = [
   'events' => $counterPage['events'],
-  'home' => $counterPage['home']+1,
+  'home' => $counterPage['home'] + 1,
   'community' => $counterPage['community'],
   'about' => $counterPage['about']
 ];

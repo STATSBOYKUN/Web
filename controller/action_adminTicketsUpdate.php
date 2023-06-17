@@ -27,13 +27,8 @@ if ($status == "Rejected") {
   $text = "Your ticket status is $status! Please contact the admin for more information.";
 }
 
-// Create a new DateTime object with the current date and time
 $dateTime = new DateTime();
-
-// Set the time zone to Jakarta
 $dateTime->setTimezone(new DateTimeZone('Asia/Jakarta'));
-
-// Format the date as ISO 8601
 $currentDate = $dateTime->format('c');
 
 $tableName = "users";

@@ -11,7 +11,6 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/home.css" />
   <link rel="stylesheet" href="../style/notification.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
@@ -21,7 +20,6 @@ session_start();
   <?php include '../controller/counterHome.php'; ?>
   <navbar>
     <div class="logo">
-      <!-- image with link -->
       <a href="../pages/index.php">
         <img src="../assets/Logo/logo.png" alt="logo" />
       </a>
@@ -177,7 +175,7 @@ session_start();
       </div>
 
       <div class="testimonial__text">
-        <img id="caret__left" onclick="prev()"  src="../assets/Icons/Caret left.svg" />
+        <img id="caret__left" onclick="prev()" src="../assets/Icons/Caret left.svg" />
         <div class="testimonial__items">
           <div class="umaru__items">
             <div class="umaru__text">

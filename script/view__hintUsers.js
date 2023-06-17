@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   getUsers();
 });
 
@@ -9,7 +9,7 @@ function getUsers() {
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       document.getElementById("table__content").innerHTML = xhr.responseText;
     }
@@ -26,7 +26,7 @@ function hintUsers(keyword, isKeyUp) {
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       document.getElementById("table__content").innerHTML = xhr.responseText;
     }

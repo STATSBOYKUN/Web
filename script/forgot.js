@@ -1,4 +1,4 @@
-event.preventDefault(); 
+event.preventDefault();
 var sendButton = document.getElementById("sendButton");
 sendButton.disabled = true;
 

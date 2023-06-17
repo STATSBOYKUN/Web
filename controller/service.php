@@ -66,15 +66,12 @@ class DatabaseConnection
     $columns = implode(", ", array_keys($data));
     $placeholders = implode(", ", array_fill(0, count($data), "?"));
 
-    // Prepare the SQL statement with placeholders
     $query = "INSERT INTO $tableName ($columns) VALUES ($placeholders)";
 
-    // Prepare the statement
     $stmt = $this->connection->prepare($query);
 
-    // Bind the parameters to the statement
-    $bindTypes = ""; // Parameter types
-    $bindParams = []; // Parameter values
+    $bindTypes = "";
+    $bindParams = [];
 
     foreach ($data as $value) {
       if (is_string($value)) {
@@ -88,13 +85,10 @@ class DatabaseConnection
 
     $stmt->bind_param($bindTypes, ...$bindParams);
 
-    // Execute the statement
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
-      // Success
     } else {
-      // Error
     }
 
     $stmt->close();
@@ -189,11 +183,11 @@ class DatabaseConnection
     $query = "SELECT * FROM $tableName WHERE username = '$username'";
     $result = $this->connection->query($query);
 
-    $sumRead = 0; // Variable to track the sum of 'read' values
+    $sumRead = 0;
 
     if ($result->num_rows > 0) {
       while ($row = $result->fetch_assoc()) {
-        $sumRead += $row['read']; // Add 'read' value to the sum
+        $sumRead += $row['read'];
 
         echo "<div class='notification__body' style='background: " . ($row['read'] == 0 ? 'none' : '#ffddbf') . ";'>";
         echo "<div class='notification__image'>";
@@ -205,14 +199,11 @@ class DatabaseConnection
         echo "</div>";
         echo "<div class='notification__text2'>Admin •";
 
-        // Set the timezones for both DateTime objects
-        $timezone = new DateTimeZone('Asia/Jakarta'); // Replace 'Your_Timezone' with your desired timezone
+        $timezone = new DateTimeZone('Asia/Jakarta');
 
-        // Create DateTime objects with the specified timezones
         $rowDate = new DateTime($row['time'], $timezone);
-        $dateTime = new DateTime(null, $timezone); // Assuming you want the current date and time
+        $dateTime = new DateTime(null, $timezone);
 
-        // Calculate the difference
         $interval = $dateTime->diff($rowDate);
         $yearsDifference = $interval->y;
         $monthsDifference = $interval->m;
@@ -221,7 +212,6 @@ class DatabaseConnection
         $minutesDifference = $interval->i;
         $secondsDifference = $interval->s;
 
-        // Display the time difference
         if ($yearsDifference > 0) {
           echo " ({$yearsDifference} years ago)";
         } elseif ($monthsDifference > 0) {
@@ -247,7 +237,6 @@ class DatabaseConnection
       echo "</p>";
     }
 
-    // Check if the sum of 'read' values is zero and change the image
     if ($sumRead == 0) {
       echo "<script>";
       echo "document.getElementById('notification__logo').src = '../assets/Icons/notification.svg';";
@@ -271,9 +260,7 @@ class DatabaseConnection
     $query = "UPDATE $tableName SET $updateString WHERE id = $id";
 
     if ($this->connection->query($query) === true) {
-      // Update successful
     } else {
-      // Update failed
     }
   }
 
@@ -289,9 +276,7 @@ class DatabaseConnection
     $query = "UPDATE $tableName SET $updateString WHERE id = $id";
 
     if ($this->connection->query($query) === true) {
-      // Update successful
     } else {
-      // Update failed
     }
   }
 
@@ -306,9 +291,7 @@ class DatabaseConnection
     $query = "UPDATE $tableName SET $updateString WHERE id = $id";
 
     if ($this->connection->query($query) === true) {
-      // Update successful
     } else {
-      // Update failed
     }
   }
 
@@ -468,9 +451,7 @@ class DatabaseConnection
     $query = "INSERT INTO $tableName ($columns) VALUES ($values)";
 
     if ($this->connection->query($query) === true) {
-      // Insert successful
     } else {
-      // Insert failed
     }
   }
 
@@ -485,9 +466,7 @@ class DatabaseConnection
     $query = "UPDATE $tableName SET $updateString";
 
     if ($this->connection->query($query) === true) {
-      // Update successful
     } else {
-      // Update failed
     }
   }
 

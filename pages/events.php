@@ -10,7 +10,6 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/events.css" />
   <link rel="stylesheet" href="../style/notification.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
@@ -20,7 +19,6 @@ session_start();
   <?php include '../controller/counterEvents.php'; ?>
   <navbar>
     <div class="logo">
-      <!-- image with link -->
       <a href="../pages/index.php">
         <img src="../assets/Logo/logo.png" alt="logo" />
       </a>

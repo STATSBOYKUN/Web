@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var userData = localStorage.getItem('user_data');
+document.addEventListener("DOMContentLoaded", function () {
+  var userData = localStorage.getItem("user_data");
   if (userData) {
     userData = JSON.parse(userData);
 
-    // Check if the radio button exists and set its checked property
     function setRadioButtonValue(radioName, value) {
       var radioButtons = document.getElementsByName(radioName);
       if (radioButtons.length > 0) {
@@ -16,11 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
 
-    document.getElementById('email').value = userData.email || '';
-    document.getElementById('username').value = userData.username || '';
-    setRadioButtonValue('sex', userData.sex);
-    document.getElementById('telephone').value = userData.telephone || '';
-    document.getElementById('age').value = userData.age || '';
-    document.getElementById('country').value = userData.country || '';
+    document.getElementById("email").value = userData.email || "";
+    document.getElementById("username").value = userData.username || "";
+    setRadioButtonValue("sex", userData.sex);
+    document.getElementById("telephone").value = userData.telephone || "";
+    document.getElementById("age").value = userData.age || "";
+    document.getElementById("country").value = userData.country || "";
   }
 });

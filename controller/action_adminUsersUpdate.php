@@ -26,7 +26,6 @@ $data = [
   'password' => $hashedPassword
 ];
 
-// Check if the passwords match
 if ($password !== $confirmPassword) {
   echo "<script type='text/javascript'>alert('Passwords do not match!');</script>";
   echo "<script type='text/javascript'>localStorage.setItem('user_data', JSON.stringify(" . json_encode($data) . "));</script>";

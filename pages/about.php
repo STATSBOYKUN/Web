@@ -11,7 +11,6 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/about.css" />
   <link rel="stylesheet" href="../style/notification.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
@@ -21,7 +20,6 @@ session_start();
   <?php include '../controller/counterAbout.php'; ?>
   <navbar>
     <div class="logo">
-      <!-- image with link -->
       <a href="../pages/index.php">
         <img src="../assets/Logo/logo.png" alt="logo" />
       </a>
@@ -141,7 +139,7 @@ session_start();
     <div class="rain front-row"></div>
     <div class="rain back-row"></div>
     <script src="../script/notification.js"></script>
-    
+
   </main>
 
   <footer>

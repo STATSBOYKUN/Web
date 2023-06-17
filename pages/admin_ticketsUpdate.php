@@ -16,7 +16,6 @@ if (!isset($_SESSION['admin'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/admin_ticketsUpdate.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
@@ -84,7 +83,7 @@ if (!isset($_SESSION['admin'])) {
                 <?php echo $email; ?>
               </p>
 
-              <input type="hidden" id="email" name="email" value="<?php echo $email; ?>" >
+              <input type="hidden" id="email" name="email" value="<?php echo $email; ?>">
             </div>
           </div>
 

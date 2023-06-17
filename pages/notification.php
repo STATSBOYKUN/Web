@@ -6,7 +6,7 @@
 
   <div class="notification__card">
     <?php
-      include '../controller/getNotification.php';
+    include '../controller/getNotification.php';
     ?>
   </div>
 </div>

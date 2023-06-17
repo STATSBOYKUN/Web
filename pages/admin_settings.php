@@ -16,7 +16,6 @@ if (!isset($_SESSION['admin'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/admin_settings.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>

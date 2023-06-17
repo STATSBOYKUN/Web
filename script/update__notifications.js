@@ -8,7 +8,6 @@ function update_notifications() {
     card.style.background = "none";
   });
   alert("All notifications marked as read!");
-  // Send an AJAX request to update the read status in the database
   var xhr = new XMLHttpRequest();
   var url = "../controller/update_notifications.php";
 
@@ -17,7 +16,6 @@ function update_notifications() {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      // console.log(xhr.responseText);
       alert("All notifications marked as read!");
     }
   };

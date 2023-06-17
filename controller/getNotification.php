@@ -12,7 +12,7 @@ if (!isset($_SESSION['username'])) {
 
   $tableName = "notifications";
   $username = $_SESSION['username'];
-  
+
   $connection->getNotifications($tableName, $username);
 }
 

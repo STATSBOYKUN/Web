@@ -17,7 +17,6 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/ticket.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 
@@ -111,6 +110,7 @@ if (!isset($_SESSION['username'])) {
       <img src="../assets/Char/Char (10).png" alt="char" />
     </div>
   </form>
+  
   <script src="../script/update__payment.js"></script>
   <script src="../script/ticket.js"></script>
 </body>

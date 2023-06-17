@@ -17,8 +17,7 @@ if ($user === null) {
     exit();
 }
 
-// Compare passwords with using password_verify()
-if ($user && password_verify($password, $user['password']) ) {
+if ($user && password_verify($password, $user['password'])) {
     $_SESSION['username'] = $user['username'];
     echo "<script type='text/javascript'>alert('Login Success!');</script>";
     echo "<script type='text/javascript'>window.location.href = '../pages/index.php';</script>";

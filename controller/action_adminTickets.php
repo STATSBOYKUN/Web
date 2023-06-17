@@ -8,10 +8,10 @@ $tableName = "ticket";
 $search = $_POST['search'];
 
 if ($search === '' || $search === null) {
-  $connection -> getTickets($tableName);
+  $connection->getTickets($tableName);
 } else {
   $searchData = array('name' => $search, 'email' => $search, 'date' => $search, 'status' => $search);
-  $connection -> hintTickets($tableName, $searchData);
+  $connection->hintTickets($tableName, $searchData);
 }
 
 $connection->close();

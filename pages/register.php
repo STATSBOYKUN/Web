@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animisc</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="../style/signup.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
@@ -28,8 +27,7 @@
 
           <div class="signemail__input">
             <input type="email" name="email" id="email" placeholder="Enter email"
-              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter email correctly :)"
-              required />
+              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter email correctly :)" required />
           </div>
         </div>
 
@@ -105,8 +103,8 @@
           </div>
 
           <div class="signtelephone__input">
-            <input type="text" pattern="^\d{9,15}$" name="telephone" id="telephone"
-              placeholder="Enter telephone number" title="Please enter a valid telephone number :)" required />
+            <input type="text" pattern="^\d{9,15}$" name="telephone" id="telephone" placeholder="Enter telephone number"
+              title="Please enter a valid telephone number :)" required />
           </div>
         </div>
 
