@@ -44,7 +44,7 @@ if (!isset($_SESSION['username'])) {
           </div>
 
           <div class="name__input">
-            <input id="name" name="name" type="text" placeholder="Enter name" pattern="[A-Za-z]{3,32}$"
+            <input id="name" name="name" type="text" placeholder="Enter name" pattern="^[A-Za-z ]{3,32}$"
               title="Please enter name correctly" required />
             <input type="hidden" id="status" name="status" value="Review">
           </div>
@@ -110,7 +110,7 @@ if (!isset($_SESSION['username'])) {
       <img src="../assets/Char/Char (10).png" alt="char" />
     </div>
   </form>
-  
+
   <script src="../script/update__payment.js"></script>
   <script src="../script/ticket.js"></script>
 </body>

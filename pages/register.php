@@ -27,7 +27,7 @@
 
           <div class="signemail__input">
             <input type="email" name="email" id="email" placeholder="Enter email"
-              pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter email correctly :)" required />
+              pattern="(?i)^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter email correctly :)" required />
           </div>
         </div>
 

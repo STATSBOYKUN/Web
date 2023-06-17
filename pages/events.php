@@ -36,7 +36,7 @@ session_start();
     <div class="users__items">
       <div class="notification__button">
         <a href="#">
-          <img src="../assets/Icons/notification.svg" alt="notification" />
+          <img id="notification__logo" src="../assets/Icons/notification.svg" alt="notification" />
         </a>
         <div class="notification__popup" id="notificationPopup">
           <?php include '../pages/notification.php'; ?>
@@ -181,14 +181,16 @@ session_start();
       </div>
     </div>
 
-    <script src="../script/events.js"></script>
-    <script src="../script/notification.js"></script>
+
   </main>
 
   <footer>
     <p>©2023 Animisc. Made with &ensp;</p>
     <p class="love">♥</p>
   </footer>
+
+  <script src="../script/events.js"></script>
+  <script src="../script/notification.js"></script>
 </body>
 
 </html>
