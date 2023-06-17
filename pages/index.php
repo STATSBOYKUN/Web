@@ -88,16 +88,16 @@ session_start();
     </div>
   </navbar>
   <main>
-    <div class="welcome__groups">
+    <div class="welcome__groups fade-in">
       <div class="welcome__items">
         <div class="welcome__text">
           <div class="hi__text">
             <p>👋 Welcome....</p>
           </div>
           <p class="tagline">
-            Animisc... <br />
-            A Worldwide Events <br />
-            and Super Community
+            <span id="line1"></span> <br />
+            <span id="line2"></span> <br />
+            <span id="line3"></span>
           </p>
         </div>
 
@@ -121,20 +121,20 @@ session_start();
       </div>
     </div>
 
-    <div class="collaborate__groups">
+    <div class="collaborate__groups fade-in">
       <div class="collaborate__text">
         <p>Collaborate With</p>
       </div>
 
       <div class="collaborate__logo">
-        <img src="../assets/Logo/netflix.svg" />
-        <img src="../assets/Logo/kyoto.svg" />
-        <img src="../assets/Logo/myanimelist 1.svg" />
-        <img src="../assets/Logo/reddit.svg" />
+        <img class="animate" src="../assets/Logo/netflix.svg" />
+        <img class="animate" src="../assets/Logo/kyoto.svg" />
+        <img class="animate" src="../assets/Logo/myanimelist 1.svg" />
+        <img class="animate"src="../assets/Logo/reddit.svg" />
       </div>
     </div>
 
-    <div class="home__groups" id="home">
+    <div class="home__groups fade-in" id="home">
       <div class="home__text">
         <p>What We Do?</p>
       </div>
@@ -168,7 +168,7 @@ session_start();
       </div>
     </div>
 
-    <div class="testimonial__groups">
+    <div class="testimonial__groups fade-in">
       <div class="testimonial__titles">
         <p class="p1">Testimonials</p>
         <p class="p2">Some of my favorite testimonials from my clients</p>
@@ -207,7 +207,7 @@ session_start();
       </div>
     </div>
 
-    <div class="communication__groups">
+    <div class="communication__groups fade-in">
       <p>
         Discover your kawaii powers and embark on an epic journey of adorable utility.
       </p>
@@ -223,7 +223,7 @@ session_start();
           <a href="https://www.instagram.com/umarhp_">
             <img src="../assets/Icons/instagram.svg" />
           </a>
-          <a href="https://www.pinterest.com/">
+          <a href="https://www.pinterest.com/"></a>
             <img src="../assets/Icons/pinterest.svg" />
           </a>
           <a href="https://www.linkedin.com/">

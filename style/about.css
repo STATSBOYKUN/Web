@@ -18,6 +18,17 @@
   border-radius: 6px;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 3s ease, transform 2s ease;
+}
+
+.fade-in.fade-in-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body {
   box-sizing: border-box;
   display: flex;

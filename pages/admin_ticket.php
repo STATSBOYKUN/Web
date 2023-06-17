@@ -17,15 +17,22 @@ if (!isset($_SESSION['admin'])) {
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/admin_ticket.css" />
+  <link rel="stylesheet" href="../style/notification.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
   <aside class="sidebar">
     <div class="sidebar__notification">
-      <a href="../pages/notification.php">
-        <img src="../assets/Icons/notification.svg" alt="notification" />
-      </a>
+    <div class="notification__button">
+        <a href="#">
+          <img id="notification__logo" src="../assets/Icons/notification.svg" alt="notification" />
+        </a>
+        <div class="notification__popup" id="notificationPopup">
+          <?php include '../pages/notification.php'; ?>
+          <div class="notification-overlay"></div>
+        </div>
+      </div>
     </div>
 
     <div class="sidebar__logo">
@@ -80,6 +87,7 @@ if (!isset($_SESSION['admin'])) {
   <script src="../script/admin_ticket.js"></script>
   <script src="../script/preview__invoices.js"></script>
   <script src="../script/view__hintTickets.js"></script>
+  <script src="../script/notification.js"></script>
 </body>
 
 </html>

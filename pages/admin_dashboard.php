@@ -18,18 +18,23 @@ if (!isset($_SESSION['admin'])) {
 
   <!-- CSS -->
   <link rel="stylesheet" href="../style/admin_dashboard.css" />
+  <link rel="stylesheet" href="../style/notification.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
 
 </head>
 
 <body>
   <aside class="sidebar">
     <div class="sidebar__notification">
-      <a href="../pages/notification.php">
-        <img src="../assets/Icons/notification.svg" alt="notification" />
-      </a>
+      <div class="notification__button">
+        <a href="#">
+          <img id="notification__logo" src="../assets/Icons/notification.svg" alt="notification" />
+        </a>
+        <div class="notification__popup" id="notificationPopup">
+          <?php include '../pages/notification.php'; ?>
+          <div class="notification-overlay"></div>
+        </div>
+      </div>
     </div>
 
     <div class="sidebar__logo">
@@ -111,6 +116,7 @@ if (!isset($_SESSION['admin'])) {
   </div>
 
   <script src="../script/admin_dashboard.js"></script>
+  <script src="../script/notification.js"></script>
 </body>
 
 </html>

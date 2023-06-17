@@ -94,7 +94,7 @@ session_start();
         <p class="p2">We've build and connect peoples for years</p>
       </div>
 
-      <div class="ceo__groups">
+      <div class="ceo__groups fade-in">
         <div class="ceo">
           <img src="../assets/Icons/ceo.png" alt="char" />
           <div class="ceo__title">
@@ -136,9 +136,8 @@ session_start();
 
     </div>
 
-    <div class="rain front-row"></div>
-    <div class="rain back-row"></div>
     <script src="../script/notification.js"></script>
+    <script src="../script/about.js"></script>
 
   </main>
 

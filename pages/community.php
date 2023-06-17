@@ -89,9 +89,16 @@ session_start();
   </navbar>
   <main>
     <div class="testimonial__groups">
-      <div class="testimonial__titles">
-        <p class="p1">"One Vision, One Voice, One World."</p>
-      </div>
+    <div class="testimonial__titles">
+      <p class="p1">
+        <span>"One</span>
+        <span>Vision,</span>
+        <span>One</span>
+        <span>Voice,</span>
+        <span>One</span>
+        <span>World."</span>
+      </p>
+    </div>
 
       <div class="start__buttons">
         <img src="../assets/Icons/reddit-logo.png" />

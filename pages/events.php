@@ -87,9 +87,9 @@ session_start();
     </div>
   </navbar>
   <main>
-    <div class="events__cards">
+    <div class="events__cards fade-in">
       <div class="events__logo">
-        <img src="../assets/Events/animisc.svg" alt="logo" />
+        <img id="logo" src="../assets/Events/animisc.svg" alt="logo" />
       </div>
 
       <div class="events__titles">
@@ -120,13 +120,13 @@ session_start();
       </div>
     </div>
 
-    <div class="guest__groups">
+    <div class="guest__groups fade-in">
       <div class="guest__title">
         <p>Special Guest</p>
       </div>
 
       <div class="guest__cards">
-        <div class="guest__boxs">
+        <div class="guest__boxs fade-in">
           <div class="guest__images">
             <img src="../assets/Events/yoasobi.png" />
           </div>
@@ -136,7 +136,7 @@ session_start();
           </div>
         </div>
 
-        <div class="guest__boxs">
+        <div class="guest__boxs fade-in">
           <div class="guest__images">
             <img src="../assets/Events/kobo.jpg" />
           </div>
@@ -146,7 +146,7 @@ session_start();
           </div>
         </div>
 
-        <div class="guest__boxs">
+        <div class="guest__boxs fade-in">
           <div class="guest__images">
             <img src="../assets/Events/kenshi.jpg" />
           </div>
@@ -158,7 +158,7 @@ session_start();
       </div>
     </div>
 
-    <div class="specialguest__groups">
+    <div class="specialguest__groups fade-in">
       <div class="specialguest__title">
         <p>Special Performance</p>
       </div>

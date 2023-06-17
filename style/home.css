@@ -18,6 +18,17 @@
   border-radius: 6px;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.fade-in.fade-in-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body {
   box-sizing: border-box;
   display: flex;
@@ -284,6 +295,36 @@ navbar {
   color: #403930;
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.tagline span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0px;
+  margin: -15px 0px;
+  animation: typing 3s steps(40, end);
+}
+
+#line1::before {
+  content: "Animisc...";
+}
+
+#line2::before {
+  content: "A Worldwide Events";
+}
+
+#line3::before {
+  content: "and Super Community";
+}
+
 .welcome__buttons {
   display: flex;
   flex-direction: row;
@@ -355,6 +396,7 @@ navbar {
   width: 527px;
   height: 486px;
 }
+
 
 .collaborate__groups {
   display: flex;
@@ -767,11 +809,6 @@ navbar {
 
 .fade-out {
   opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.fade-in {
-  opacity: 1;
   transition: opacity 0.3s ease;
 }
 
