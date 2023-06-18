@@ -8,10 +8,13 @@
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/forgot.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <form action="../controller/action_forgot.php" method="post">
     <div class="login__groups">
       <div class="login__title">

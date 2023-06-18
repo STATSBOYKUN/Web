@@ -8,10 +8,13 @@
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/reset.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <form action="">
     <div class="login__groups">
       <div class="login__title">

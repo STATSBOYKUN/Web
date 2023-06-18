@@ -19,11 +19,14 @@ if (!isset($_SESSION['admin'])) {
   <!-- CSS -->
   <link rel="stylesheet" href="../style/admin_dashboard.css" />
   <link rel="stylesheet" href="../style/notification.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <aside class="sidebar">
     <div class="sidebar__notification">
       <div class="notification__button">
@@ -70,13 +73,13 @@ if (!isset($_SESSION['admin'])) {
 
         <div class="visitors__numbers">
           <div class="visitors__today">
-            <p>Today :</p>
-            <p>100</p>
+            <p>Cooming</p>
+            <p>Soon !!</p>
           </div>
 
           <div class="visitors__total">
-            <p>Total :</p>
-            <p>100</p>
+            <p>Cooming</p>
+            <p>Soon !!</p>
           </div>
         </div>
       </div>
@@ -92,8 +95,8 @@ if (!isset($_SESSION['admin'])) {
           <canvas class="tickets__chart" width="200" height="200"></canvas>
 
           <div class="tickets__numbers">
-            <p></p>
-            <p>/100</p>
+            <p>Cooming</p>
+            <p>Soon !!</p>
           </div>
         </div>
       </div>
@@ -107,8 +110,8 @@ if (!isset($_SESSION['admin'])) {
           <canvas class="users__chart" width="200" height="200"></canvas>
 
           <div class="users__numbers">
-            <p></p>
-            <p>/100</p>
+            <p>Cooming</p>
+            <p>Soon !!</p>
           </div>
         </div>
       </div>

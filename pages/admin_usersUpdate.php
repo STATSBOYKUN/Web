@@ -19,10 +19,13 @@ if (!isset($_SESSION['admin'])) {
 
   <link rel="stylesheet" href="../style/admin_usersUpdate.css" />
   <link rel="stylesheet" href="../style/notification.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+<script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <script src="../script/admin_usersUpdate.js"></script>
   <aside class="sidebar">
     <div class="sidebar__notification">

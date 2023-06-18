@@ -8,10 +8,13 @@
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/error.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <main>
     <div class="testimonial__groups">
       <div class="testimonial__titles">

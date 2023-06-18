@@ -8,11 +8,14 @@
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/admin_login.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
   <script src="../script/admin_login.js"></script>
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <form id="admin_login_form" action="../controller/action_admin.php" method="post">
     <div class="login__groups">
       <div class="login__title">

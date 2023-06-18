@@ -18,11 +18,14 @@ if (!isset($_SESSION['username'])) {
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/ticket.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <form action="../controller/action_ticket.php" method="post" enctype="multipart/form-data">
     <div class="ticket__groups">
       <div class="ticket__title">

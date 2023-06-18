@@ -12,10 +12,13 @@ session_start();
 
   <link rel="stylesheet" href="../style/events.css" />
   <link rel="stylesheet" href="../style/notification.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <?php include '../controller/counterEvents.php'; ?>
   <navbar>
     <div class="logo">

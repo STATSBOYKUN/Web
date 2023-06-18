@@ -18,10 +18,13 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/login.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <div class="login__groups">
     <div class="login__title">
       <p>Login</p>

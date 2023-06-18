@@ -8,11 +8,14 @@
   <title>Animisc</title>
 
   <link rel="stylesheet" href="../style/signup.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
   <script src="../script/register.js"></script>
+  <div class="loader loader-hidden"></div>
   <form action="../controller/action_register.php" method="post">
     <div class="signup__groups">
       <div class="signup__title">

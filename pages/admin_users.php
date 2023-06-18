@@ -18,13 +18,16 @@ if (!isset($_SESSION['admin'])) {
 
   <link rel="stylesheet" href="../style/admin_users.css" />
   <link rel="stylesheet" href="../style/notification.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <aside class="sidebar">
     <div class="sidebar__notification">
-    <div class="notification__button">
+      <div class="notification__button">
         <a href="#">
           <img id="notification__logo" src="../assets/Icons/notification.svg" alt="notification" />
         </a>

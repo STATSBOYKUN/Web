@@ -13,10 +13,13 @@ session_start();
 
   <link rel="stylesheet" href="../style/home.css" />
   <link rel="stylesheet" href="../style/notification.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <?php include '../controller/counterHome.php'; ?>
   <navbar>
     <div class="logo">
@@ -130,7 +133,7 @@ session_start();
         <img class="animate" src="../assets/Logo/netflix.svg" />
         <img class="animate" src="../assets/Logo/kyoto.svg" />
         <img class="animate" src="../assets/Logo/myanimelist 1.svg" />
-        <img class="animate"src="../assets/Logo/reddit.svg" />
+        <img class="animate" src="../assets/Logo/reddit.svg" />
       </div>
     </div>
 
@@ -224,7 +227,7 @@ session_start();
             <img src="../assets/Icons/instagram.svg" />
           </a>
           <a href="https://www.pinterest.com/"></a>
-            <img src="../assets/Icons/pinterest.svg" />
+          <img src="../assets/Icons/pinterest.svg" />
           </a>
           <a href="https://www.linkedin.com/">
             <img src="../assets/Icons/linkedin.svg" />

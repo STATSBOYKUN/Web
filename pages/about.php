@@ -13,10 +13,13 @@ session_start();
 
   <link rel="stylesheet" href="../style/about.css" />
   <link rel="stylesheet" href="../style/notification.css" />
+  <link rel="stylesheet" href="../style/loader.css" />
   <link rel="icon" href="../assets/Logo/title.svg" type="image/png" />
 </head>
 
 <body>
+  <script src="../script/loader.js"></script>
+  <div class="loader loader-hidden"></div>
   <?php include '../controller/counterAbout.php'; ?>
   <navbar>
     <div class="logo">
@@ -138,7 +141,6 @@ session_start();
 
     <script src="../script/notification.js"></script>
     <script src="../script/about.js"></script>
-
   </main>
 
   <footer>
