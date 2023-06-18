@@ -166,7 +166,7 @@ session_start();
       <div class="specialguest__cards">
         <div class="specialguest__boxs">
           <div class="specialguest__images">
-            <img src="../assets/Events/minasa ikirawa.png" />
+            <img src="../assets/Events/minasa ikirawa.svg" />
           </div>
           <div class="specialguest__names">
             <p>Minasa Ikirawa</p>
