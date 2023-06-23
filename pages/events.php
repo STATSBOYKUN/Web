@@ -22,17 +22,17 @@ session_start();
   <?php include '../controller/counterEvents.php'; ?>
   <navbar>
     <div class="logo">
-      <a href="../pages/index.php">
+      <a href="../pages/index">
         <img src="../assets/Logo/logo.png" alt="logo" />
       </a>
     </div>
 
     <div class="nav__items">
       <ul>
-        <li><a href="../pages/index.php">Home</a></li>
-        <li><a href="../pages/events.php">Events</a></li>
-        <li><a href="../pages/community.php">Community</a></li>
-        <li><a href="../pages/about.php">About</a></li>
+        <li><a href="../pages/index">Home</a></li>
+        <li><a href="../pages/events">Events</a></li>
+        <li><a href="../pages/community">Community</a></li>
+        <li><a href="../pages/about">About</a></li>
       </ul>
     </div>
 
@@ -178,7 +178,7 @@ session_start();
       </div>
 
       <div class="buy__buttons">
-        <a href="../pages/ticket.php">
+        <a href="../pages/ticket">
           <button>Buy Ticket</button>
         </a>
       </div>

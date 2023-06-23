@@ -30,10 +30,10 @@ session_start();
 
     <div class="nav__items">
       <ul>
-        <li><a href="../pages/index.php">Home</a></li>
-        <li><a href="../pages/events.php">Events</a></li>
-        <li><a href="../pages/community.php">Community</a></li>
-        <li><a href="../pages/about.php">About</a></li>
+        <li><a href="../pages/index">Home</a></li>
+        <li><a href="../pages/events">Events</a></li>
+        <li><a href="../pages/community">Community</a></li>
+        <li><a href="../pages/about">About</a></li>
       </ul>
     </div>
 
@@ -106,14 +106,14 @@ session_start();
 
         <div class="welcome__buttons">
           <div class="start__buttons">
-            <a href="../pages/index.php#home">
+            <a href="../pages/index">
               <button>Get Started</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />
           </div>
 
           <div class="about__button">
-            <a href="../pages/about.php">
+            <a href="../pages/about">
               <button>About Us</button>
             </a>
           </div>
@@ -150,7 +150,7 @@ session_start();
               Artists and illustrators showcase their talent at anime events, displaying stunning artwork and offering
               unique creations to fans.
             </p>
-            <a href="../pages/events.php">Visit Events >></a>
+            <a href="../pages/events">Visit Events >></a>
           </div>
           <div>
             <img src="../assets/Events/events.png" alt="" />
@@ -162,7 +162,7 @@ session_start();
             <p class="p1">Community</p>
             <p class="p2">Fosters a sense of belonging and camaraderie among fans, forming lifelong friendships based on
               shared interests.</p>
-            <a href="../pages/community.php">Visit Community >></a>
+            <a href="../pages/community">Visit Community >></a>
           </div>
           <div>
             <img src="../assets/Events/4305916.jpg" alt="" />
