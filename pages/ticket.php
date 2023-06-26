@@ -3,7 +3,7 @@
 session_start();
 if (!isset($_SESSION['username'])) {
   echo "<script>alert('You must log in first!');</script>";
-  header("Location: ../pages/login.php");
+  header("Location: ../pages/login");
 }
 
 ?>
@@ -101,7 +101,7 @@ if (!isset($_SESSION['username'])) {
         </div>
 
         <div class="order__button">
-          <a href="../pages/index.php">
+          <a href="../pages/index">
             <button type="submit">Order</button>
           </a>
           <img src="../assets/Icons/chevron-right-square.svg" />

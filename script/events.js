@@ -1,4 +1,4 @@
-const targetDate = new Date('June 19, 2023 08:00:00').getTime();
+const targetDate = new Date('July 7, 2023 08:00:00').getTime();
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 
@@ -6,6 +6,10 @@ function updateCountdown() {
   const currentDate = new Date().getTime();
 
   const timeRemaining = targetDate - currentDate;
+
+  if (timeRemaining < 0) {
+    timeRemaining = 0;
+  }
 
   const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
   const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -16,10 +20,6 @@ function updateCountdown() {
   document.getElementById('hours').textContent = formatTime(hours);
   document.getElementById('minutes').textContent = formatTime(minutes);
   document.getElementById('seconds').textContent = formatTime(seconds);
-
-  if (timeRemaining < 0) {
-    clearInterval(countdownInterval);
-  }
 }
 
 function formatTime(time) {

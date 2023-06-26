@@ -47,10 +47,10 @@ if (!isset($_SESSION['admin'])) {
     </div>
 
     <div class="sidebar__menu">
-      <a href="../pages/admin_dashboard.php">Dashboard</a>
-      <a href="../pages/admin_ticket.php">Ticket</a>
-      <a href="../pages/admin_users.php">Users</a>
-      <a href="../pages/admin_settings.php">Settings</a>
+      <a href="../pages/admin_dashboard">Dashboard</a>
+      <a href="../pages/admin_ticket">Ticket</a>
+      <a href="../pages/admin_users">Users</a>
+      <a href="../pages/admin_settings">Settings</a>
 
       <div class="sign__button">
         <a href="../pages/logOut.php">
@@ -93,7 +93,7 @@ if (!isset($_SESSION['admin'])) {
           </div>
 
           <div class="login__button">
-            <a href="../pages/index.php">
+            <a href="../pages/index">
               <button type="submit">Change</button>
             </a>
             <img src="../assets/Icons/chevron-right-square.svg" />

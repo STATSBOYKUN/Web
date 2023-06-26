@@ -1,8 +1,9 @@
-<?
-if (isset($_SESSION['username'])) {
-  header("location:../pages/index.php");
-}
+<?php
 session_start();
+
+if (isset($_SESSION['username'])) {
+  header("location:../pages/index");
+}
 
 $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
 $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
@@ -37,7 +38,7 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
           </div>
 
           <div class="username__input">
-            <input type="text" id="username" name="username" placeholder="Enter username or email" required />
+            <input type="text" id="username" name="username" placeholder="Enter username or email" value="<?php echo $username; ?>" required />
           </div>
         </div>
 
@@ -47,12 +48,12 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
           </div>
 
           <div class="password__input">
-            <input type="password" id="password" name="password" placeholder="Enter password" required />
+            <input type="password" id="password" name="password" placeholder="Enter password" value="<?php echo $password; ?>" required />
           </div>
         </div>
 
         <div class="forgot__pasword">
-          <a href="../pages/forgot.php">Forgot Password?</a>
+          <a href="../pages/forgot">Forgot Password?</a>
 
           <div class="signagree__input">
             <input type="checkbox" id="rememberCheckbox" placeholder="Enter password" />
@@ -61,7 +62,7 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
         </div>
 
         <div class="login__button">
-          <a href="../pages/index.php">
+          <a href="../pages/index">
             <button type="submit">Login</button>
           </a>
           <img src="../assets/Icons/chevron-right-square.svg" />
@@ -71,7 +72,7 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
         <div class="have__account">
           <p>
             Don't have an account?
-            <a href="../pages/register.php">Register here</a>
+            <a href="../pages/register">Register here</a>
           </p>
         </div>
       </div>
@@ -79,7 +80,7 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
   </div>
 
   <div class="character">
-    <a href="../pages/admin_login.php">
+    <a href="../pages/admin_login">
       <img id="characterImage" src="../assets/Char2/Char2 (1).png" alt="char" />
     </a>
   </div>

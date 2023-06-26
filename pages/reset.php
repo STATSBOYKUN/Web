@@ -47,7 +47,7 @@
         </div>
 
         <div class="login__button">
-          <a href="../pages/index.php">
+          <a href="../pages/index">
             <button type="submit">Reset</button>
           </a>
           <img src="../assets/Icons/chevron-right-square.svg" />
@@ -56,7 +56,7 @@
         <div class="have__account">
           <p>
             Have remember your account?
-            <a href="../pages/login.php">Login here</a>
+            <a href="../pages/login">Login here</a>
           </p>
         </div>
       </div>

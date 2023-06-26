@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
     header('HTTP/1.0 403 Forbidden', TRUE, 403);
-    die(header('location: ../pages/error.php'));
+    die(header('location: ../pages/error'));
   }
 session_start();
 require_once("service.php");
@@ -25,7 +25,7 @@ function validateForm()
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validateForm()) {
-        echo "<script type='text/javascript'>window.location.href = '../pages/ticket.php';</script>";
+        echo "<script type='text/javascript'>window.location.href = '../pages/ticket';</script>";
         exit;
     }
 
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tableName = "notifications";
     $connection->createNotification($tableName, $data2);
     echo "<script type='text/javascript'>alert('Ticket Submitted!');</script>";
-    echo "<script type='text/javascript'>window.location.href = '../pages/events.php';</script>";
+    echo "<script type='text/javascript'>window.location.href = '../pages/events';</script>";
 
     $connection->close();
 }

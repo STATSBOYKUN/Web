@@ -23,7 +23,7 @@
       </div>
 
       <div class="start__buttons">
-        <a href="../pages/index.php">
+        <a href="../pages/index">
           <button>/Back</button>
         </a>
       </div>

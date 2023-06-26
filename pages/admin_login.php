@@ -1,3 +1,14 @@
+<?
+session_start();
+
+if (isset($_SESSION['admin'])) {
+  header("location:../pages/admin_dashboard");
+}
+
+$username = isset($_COOKIE['username']) ? $_COOKIE['username'] : '';
+$password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +64,7 @@
         <div class="forgot__pasword">
           <p>
             Not an admin?
-            <a href="../pages/login.php">Click here</a>
+            <a href="../pages/login">Click here</a>
           </p>
         </div>
       </div>

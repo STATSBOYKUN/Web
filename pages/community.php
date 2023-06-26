@@ -82,7 +82,7 @@ session_start();
         echo $username;
 
         echo ' </li>
-          <li><img src="../assets/Icons/bx-log-out.svg" alt="profile" /><a href="../pages/logOut">Sign Out</a></li>
+          <li><img src="../assets/Icons/bx-log-out.svg" alt="profile" /><a href="../pages/logOut.php">Sign Out</a></li>
         </ul>
       </div>
       ';

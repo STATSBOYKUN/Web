@@ -19,11 +19,12 @@ session_start();
 
 <body>
   <script src="../script/loader.js"></script>
+  <?php echo "<script type='text/javascript'>alert('Website is still under construction, some functions may not work properly :)). Use Microsoft Edge for best view');</script>"; ?>
   <div class="loader loader-hidden"></div>
   <?php include '../controller/counterHome.php'; ?>
   <navbar>
     <div class="logo">
-      <a href="../pages/index.php">
+      <a href="../pages/index">
         <img src="../assets/Logo/logo.png" alt="logo" />
       </a>
     </div>
@@ -61,7 +62,7 @@ session_start();
       if (!isset($_SESSION['username'])) {
         echo '
       <div class="sign__button">
-        <a href="../pages/login.php">
+        <a href="../pages/login">
           <button>Sign In</button>
         </a>
       </div>
@@ -174,7 +175,7 @@ session_start();
     <div class="testimonial__groups fade-in">
       <div class="testimonial__titles">
         <p class="p1">Testimonials</p>
-        <p class="p2">Some of my favorite testimonials from my clients</p>
+        <p class="p2">Some testimonials from fans.</p>
       </div>
 
       <div class="testimonial__text">

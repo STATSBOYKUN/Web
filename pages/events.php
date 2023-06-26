@@ -60,7 +60,7 @@ session_start();
       if (!isset($_SESSION['username'])) {
         echo '
       <div class="sign__button">
-        <a href="../pages/login.php">
+        <a href="../pages/login">
           <button>Sign In</button>
         </a>
       </div>

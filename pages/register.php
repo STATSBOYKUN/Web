@@ -141,14 +141,14 @@
         </div>
 
         <div class="signup__button">
-          <a href="../pages/index.php">
+          <a href="../pages/index">
             <button type="submit" value="Sign Up"">Sign Up</button>
             </a>
             <img src=" ../assets/Icons/chevron-right-square.svg" />
         </div>
 
         <div class="have__account">
-          <p>Have an account? <a href="../pages/login.php">Login here</a></p>
+          <p>Have an account? <a href="../pages/login">Login here</a></p>
         </div>
       </div>
     </div>
