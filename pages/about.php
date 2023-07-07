@@ -122,6 +122,9 @@ session_start();
               <a href="https://www.linkedin.com/">
                 <img src="../assets/Icons/linkedin.svg" />
               </a>
+              <a href="https://api.whatsapp.com/send/?phone=085156069570&text&type=phone_number&app_absent=0">
+                <img src="../assets/Icons/whatsapp.svg" />
+              </a>
             </div>
           </div>
         </div>

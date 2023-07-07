@@ -15,7 +15,15 @@ $search = $_POST['search'];
 if ($search === '' || $search === null) {
   $connection->getUsers($tableName);
 } else {
-  $searchData = array('username' => $search, 'email' => $search, 'sex' => $search, 'telephone' => $search, 'age' => $search, 'country' => $search);
+  $searchData = [
+    'username' => $search, 
+    'email' => $search, 
+    'sex' => $search, 
+    'telephone' => $search, 
+    'age' => $search, 
+    'country' => $search
+  ];
+
   $connection->hintUsers($tableName, $searchData);
 }
 

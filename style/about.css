@@ -365,11 +365,11 @@ navbar {
 .sosmed__icons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: end;
-  gap: 10px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 5px;
 
-  width: 607px;
+  width: auto;
   height: 32px;
 }
 

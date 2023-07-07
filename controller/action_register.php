@@ -32,17 +32,24 @@ $data = [
 $isValid = true;
 
 for ($i = 0; $i < strlen($email); $i++) {
-    $char = $email[$i];
+  $char = $email[$i];
 
-    if (ctype_upper($char)) {
-        $isValid = false;
-        break; 
-    }
+  if (ctype_upper($char)) {
+    $isValid = false;
+    break;
+  }
 
 }
 
 if (!$isValid) {
   echo "<script type='text/javascript'>alert('Email is not valid!');</script>";
+  echo "<script type='text/javascript'>localStorage.setItem('user_data', JSON.stringify(" . json_encode($data) . "));</script>";
+  echo "<script type='text/javascript'>window.location.href = '../pages/register';</script>";
+  exit();
+}
+
+if (!preg_match("/^[a-z0-9]*$/", $username)) {
+  echo "<script type='text/javascript'>alert('Username is not valid!');</script>";
   echo "<script type='text/javascript'>localStorage.setItem('user_data', JSON.stringify(" . json_encode($data) . "));</script>";
   echo "<script type='text/javascript'>window.location.href = '../pages/register';</script>";
   exit();

@@ -845,7 +845,7 @@ navbar {
 .communication {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content:space-between;
   align-items: flex-end;
   gap: 16px;
 
@@ -888,11 +888,11 @@ navbar {
 .sosmed__icons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 5px;
 
-  width: 607px;
+  width: auto;
   height: 32px;
 }
 

@@ -22,6 +22,12 @@ if ($user === null) {
     exit();
 }
 
+if (!preg_match("/^[a-z0-9]*$/", $username)) {
+    echo "<script type='text/javascript'>alert('Invalid username!');</script>";
+    echo "<script type='text/javascript'>window.location.href = '../pages/login';</script>";
+    exit();
+}
+
 if ($user && password_verify($password, $user['password'])) {
     $_SESSION['username'] = $user['username'];
     echo "<script type='text/javascript'>alert('Login Success!');</script>";

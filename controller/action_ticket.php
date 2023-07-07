@@ -20,6 +20,14 @@ function validateForm()
         return false;
     }
 
+    $allowedExtensions = ['jpg', 'jpeg', 'png', 'pdf'];
+    $fileExtension = pathinfo($attachedFile['name'], PATHINFO_EXTENSION);
+    if (!in_array($fileExtension, $allowedExtensions)) {
+        echo "<script>alert('Attached file type is not allowed. Only JPG, JPEG, PNG, and PDF are allowed.');";
+        echo "document.querySelector('.file__items input[type=\"file\"]').focus();</script>";
+        return false;
+    }
+
     return true;
 }
 
@@ -37,6 +45,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $userData['email'];
     $tickets = $_POST['tickets'];
     $status = $_POST['status'];
+    
+    if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
+        echo "<script type='text/javascript'>alert('Only letters and white space allowed for name!');</script>";
+        echo "<script type='text/javascript'>window.location.href = '../pages/ticket';</script>";
+        exit();
+    }
 
     $invoiceFile = $_FILES['invoices']['name'];
     $invoiceTmpFile = $_FILES['invoices']['tmp_name'];

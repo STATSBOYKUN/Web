@@ -98,8 +98,6 @@ class DatabaseConnection
     $stmt->close();
   }
 
-
-
   public function getUsers($tableName)
   {
     $query = "SELECT * FROM $tableName";
