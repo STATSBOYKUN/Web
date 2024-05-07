@@ -1,272 +1,394 @@
-/* Google Font Link */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Eczar");
 
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4e5e80;
+  border-radius: 6px;
 }
 
 body {
-  min-height: 100vh;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background: #594545;
-  padding: 30px;
-}
-
-.container {
-  position: relative;
-  max-width: 850px;
+  align-items: center;
   width: 100%;
-  background: #fefbf6;
-  padding: 40px 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  perspective: 2700px;
-}
-
-.container .cover {
-  position: absolute;
-  top: 0;
-  left: 50%;
   height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
+  background: #ffeed9;
 }
 
-.container #flip:checked ~ .cover {
-  transform: rotateY(-180deg);
-}
-
-.container .cover .front,
-.container .cover .back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.container .cover .back {
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-}
-
-.container .cover::before,
-.container .cover::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #594545;
-  opacity: 0.5;
-  z-index: 12;
-}
-
-.container .cover::after {
-  opacity: 0.3;
-  transform: rotateY(180deg);
-  backface-visibility: visible;
-}
-
-.container .cover img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 10;
-}
-
-a {
-  color: #9d684b;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffcb69;
-  text-decoration: underline;
-}
-
-
-.container .cover .text {
-  position: absolute;
-  z-index: 130;
-  height: 100%;
-  width: 100%;
+.login__groups {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
+  padding: 30px 0px;
+  gap: 10px;
 
-.container #flip:checked ~ .cover .text {
-  opacity: 0;
-}
-
-.cover .text .text-1,
-.cover .text .text-2 {
-  font-size: 26px;
-  font-weight: 600;
-  color: #fefbf6;
-  text-align: center;
-}
-
-.cover .text .text-2 {
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.container .forms {
-  height: 100%;
+  position: static;
   width: 100%;
-  background: #fefbf6;
+  height: fit-content;
 }
 
-.container .form-content {
+.login__title {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 10px;
+
+  width: 125px;
+  height: 66px;
 }
 
-.form-content .login-form,
-.form-content .signup-form {
-  width: calc(100% / 2 - 25px);
-}
-
-.forms .form-content .title {
-  position: relative;
-  font-size: 24px;
-  font-weight: 500;
-  color: #333;
-}
-
-.forms .form-content .title:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 25px;
-  background: #594545;
-}
-
-.forms .signup-form .title:before {
-  width: 20px;
-}
-
-.forms .form-content .input-boxes {
-  margin-top: 30px;
-}
-
-.forms .form-content .input-box {
-  display: flex;
-  align-items: center;
+.login__title p {
+  width: 109px;
   height: 50px;
-  width: 100%;
-  margin: 10px 0;
-  position: relative;
+
+  font-family: "Eczar";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 125%;
+  letter-spacing: 0.02em;
+
+  color: #403930;
 }
 
-.form-content .input-box input {
-  height: 100%;
-  width: 100%;
-  outline: none;
+.login__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  gap: 15px;
+
+  width: 650px;
+  height: 500px;
+
+  background: #ffe5cc;
+  border-radius: 16px;
+}
+
+.username__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.username__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #594f43;
+}
+
+.username__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.username__input input {
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  background: none;
+  color: #594f43;
   border: none;
-  padding: 0 30px;
+}
+
+.username__input input:focus{
+  outline: none;
+}
+
+.password__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+
+  width: 543px;
+  height: fit-content;
+}
+
+.password__text p {
+  width: 563px;
+  height: fit-content;
+
+  text-align: left;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #594f43;
+}
+
+.password__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 20px;
+  gap: 40px;
+
+  width: 543px;
+  height: fit-content;
+
+  background: #fff9f2;
+  border-radius: 16px;
+}
+
+.password__input input {
+  width: 500px;
+  height: fit-content;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  background: none;
+  color: #594f43;
+  border: none;
+}
+
+.password__input input:focus{
+  outline: none;
+}
+
+.forgot__pasword {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 5px;
+
+  width: 513px;
+  height: fit-content;
+}
+
+.forgot__pasword a {
+  width: 391px;
+  height: 24px;
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
-  font-weight: 500;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  line-height: 150%;
+  color: #594f43;
 }
 
-.form-content .input-box input:focus,
-.form-content .input-box input:valid {
-  border-color: #594545;
+.forgot__pasword a:hover {
+  color: #4e5e80;
 }
 
-.form-content .input-box i {
-  position: absolute;
-  color: #594545;
-  font-size: 17px;
+.signagree__input {
+  display: flex;
+  flex-direction: row;
+  align-content: calc();
+  width: auto;
 }
 
-.forms .form-content .text {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
+.signagree__input input {
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #594f43;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
-.forms .form-content .text a {
-  text-decoration: none;
+.signagree__input p {
+  margin-left: 5px;
+  width: auto;
 }
 
-.forms .form-content .text a:hover {
-  text-decoration: underline;
+.signagree__input input:checked {
+  border-color: #594f43;
+  background-color: #594f43;
 }
 
-.forms .form-content .button {
-  color: #fefbf6;
-  margin-top: 40px;
+.login__button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 12px 24px;
+  gap: 10px;
+
+  width: 146px;
+  height: 60px;
+
+  background: #4e5e80;
+  border-radius: 16px;
 }
 
-.forms .form-content .button input {
-  color: #fefbf6;
-  background: #594545;
-  border-radius: 6px;
-  padding: 0;
-  cursor: pointer;
-  transition: all 0.4s ease;
+.login__button a button {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #f3f2ff;
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.forms .form-content .button input:hover {
-  background: #362222;
+.login__button:hover {
+  scale: 1.1;
 }
 
-.forms .form-content label {
-  color: #362222;
-  cursor: pointer;
+.have__account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 391px;
+  height: 24px;
 }
 
-.forms .form-content label:hover {
-  text-decoration: underline;
-}
+.have__account a,
+p {
+  width: 391px;
+  height: 24px;
 
-.forms .form-content .login-text,
-.forms .form-content .sign-up-text {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
   text-align: center;
-  margin-top: 25px;
+
+  color: #594f43;
 }
 
-.container #flip {
-  display: none;
+.have__account a:hover {
+  color: #4e5e80;
 }
 
-@media (max-width: 730px) {
-  .container .cover {
-    display: none;
-  }
+.character img {
+  position: fixed;
+  width: auto;
+  height: 400px;
+  right: 0px;
+  bottom: 0px;
+  opacity: 0;
+  animation: glitchFadeIn 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+  transition: opacity 0.5s ease-in-out;
+}
 
-  .form-content .login-form,
-  .form-content .signup-form {
-    width: 100%;
+@keyframes glitchFadeIn {
+  0% {
+    opacity: 0;
   }
-
-  .form-content .signup-form {
-    display: none;
+  10% {
+    opacity: 1;
+    transform: scale(1.02);
   }
-
-  .container #flip:checked ~ .forms .signup-form {
-    display: block;
+  20% {
+    opacity: 1;
+    transform: scale(0.98);
   }
+  30% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.98);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-  .container #flip:checked ~ .forms .login-form {
-    display: none;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@media (height < 768px) {
+  .character img {
+    position: fixed;
+    width: auto;
+    height: 200px;
+    right: 0px;
+    bottom: 0px;
   }
 }
